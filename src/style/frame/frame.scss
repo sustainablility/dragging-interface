@@ -1,0 +1,30 @@
+#dragging-frame {
+  position: absolute;
+  display: flex;
+  left: 10rem;
+  top: 10rem;
+  width: 50rem;
+  height: 20rem;
+  border: 0.1em #000 solid;
+}
+#dragging-frame-side {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  border: 0.1em #AAA solid;
+}
+#dragging-frame-main {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  border: 0.1em #AAA solid;
+}
+
+#dragging-frame-toolsBar {
+  position: absolute;
+  border: 0.1em #AAA solid;
+  height: 10%;
+  width: 100%;
+  top: -11%;
+  left: -0.1em;
+}
