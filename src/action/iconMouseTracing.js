@@ -10,6 +10,7 @@ function mouseTracing(icon) {
         document.onmousemove = (onmouseMoveEvent) => {
             icon.style.top = (onmouseMoveEvent.clientY - distanceYFromCentralOfMouseToIconBorder) + "px";
             icon.style.left = (onmouseMoveEvent.clientX - distanceXFromCentralOfMouseToIconBorder) + "px";
+
         };
 
         document.onmouseup = (onmouseUpEvent) => {

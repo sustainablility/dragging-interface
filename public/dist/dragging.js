@@ -11146,7 +11146,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "#dragging-frame {\n  position: absolute;\n  display: flex;\n  left: 10rem;\n  top: 10rem;\n  width: 50rem;\n  height: 20rem;\n  border: 0.1em #000 solid; }\n\n#dragging-frame-side {\n  position: relative;\n  width: 20%;\n  height: 100%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-main {\n  position: relative;\n  width: 80%;\n  height: 100%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-toolsBar {\n  position: absolute;\n  border: 0.1em #AAA solid;\n  height: 10%;\n  width: 100%;\n  top: -11%;\n  left: -0.1em; }\n\n.dragging-database {\n  position: absolute;\n  border-left: 0.1rem #000 solid;\n  border-right: 0.1rem #000 solid;\n  margin: 2rem;\n  width: 3rem;\n  height: 2rem; }\n\n.dragging-database::before {\n  content: '';\n  display: block;\n  width: 3rem;\n  height: 1rem;\n  margin-left: -0.1rem;\n  margin-top: -0.6rem;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-database::after {\n  content: '';\n  display: block;\n  width: 3rem;\n  height: 1rem;\n  margin-left: -0.1rem;\n  margin-top: 0.7rem;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-tool {\n  position: absolute;\n  border: 0.1rem #000 solid;\n  margin: 2rem;\n  width: 3.3rem;\n  height: 2.3rem; }\n\n.dragging-tool::after {\n  content: 'T'; }\n\n.dragging-process {\n  position: absolute;\n  border: 0.1rem #000 solid;\n  margin: 2rem;\n  width: 3.3rem;\n  height: 2.3rem; }\n\n.dragging-process::after {\n  content: 'P'; }\n\n.dragging-sideICON-container {\n  position: relative;\n  height: 5rem;\n  width: 10rem; }\n", ""]);
+exports.push([module.i, "#dragging-frame {\n  position: absolute;\n  display: flex;\n  left: 10rem;\n  top: 10rem;\n  width: 50rem;\n  height: 30rem;\n  border: 0.1em #000 solid; }\n\n#dragging-frame-side {\n  position: relative;\n  width: 20%;\n  height: 100%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-main {\n  position: relative;\n  width: 80%;\n  height: 100%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-toolsBar {\n  position: absolute;\n  border: 0.1em #AAA solid;\n  height: 10%;\n  width: 100%;\n  top: -11%;\n  left: -0.1em; }\n\n.dragging-database {\n  position: absolute;\n  border-left: 0.1rem #000 solid;\n  border-right: 0.1rem #000 solid;\n  margin: 2rem;\n  width: 3rem;\n  height: 2rem; }\n\n.dragging-database::before {\n  content: '';\n  display: block;\n  width: 3rem;\n  height: 1rem;\n  margin-left: -0.1rem;\n  margin-top: -0.6rem;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-database::after {\n  content: '';\n  display: block;\n  width: 3rem;\n  height: 1rem;\n  margin-left: -0.1rem;\n  margin-top: 0.7rem;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-tool {\n  position: absolute;\n  border: 0.1rem #000 solid;\n  margin: 2rem;\n  width: 3.3rem;\n  height: 2.3rem; }\n\n.dragging-tool::after {\n  content: 'T'; }\n\n.dragging-process {\n  position: absolute;\n  border: 0.1rem #000 solid;\n  margin: 2rem;\n  width: 3.3rem;\n  height: 2.3rem; }\n\n.dragging-process::after {\n  content: 'P'; }\n\n.dragging-sideICON-container {\n  position: relative;\n  height: 5rem;\n  width: 10rem; }\n\n.dragging-datavalue {\n  position: absolute;\n  border-left: 0.1rem #000 solid;\n  border-right: 0.1rem #000 solid;\n  margin: 2rem;\n  width: 3rem;\n  height: 2rem; }\n\n.dragging-datavalue::before {\n  content: 'int';\n  display: block;\n  width: 3rem;\n  height: 1rem;\n  margin-left: -0.1rem;\n  margin-top: -0.6rem;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-datavalue::after {\n  content: '';\n  display: block;\n  width: 3rem;\n  height: 1rem;\n  margin-left: -0.1rem;\n  margin-top: 0.7rem;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n", ""]);
 
 // exports
 
@@ -11798,6 +11798,9 @@ function actionOnClickingSide(workspace, iconType) {
   var newElement = document.createElement("div");
 
   switch (iconType) {
+    case "datavalue":
+      newElement.classList.add("dragging-datavalue");
+
     case "database":
       newElement.classList.add("dragging-database");
       break;
@@ -12091,7 +12094,7 @@ function _iconOnSide() {
   _iconOnSide = _asyncToGenerator(
   /*#__PURE__*/
   regeneratorRuntime.mark(function _callee(father) {
-    var databaseContainer, toolContainer, processContainer, databaseICON, toolICON, processICON, workspace;
+    var databaseContainer, toolContainer, processContainer, dataValueContainer, databaseICON, toolICON, processICON, dataValue, workspace;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -12099,9 +12102,11 @@ function _iconOnSide() {
             databaseContainer = document.createElement("div");
             toolContainer = document.createElement("div");
             processContainer = document.createElement("div");
+            dataValueContainer = document.createElement("div");
             databaseICON = document.createElement("div");
             toolICON = document.createElement("div");
             processICON = document.createElement("div");
+            dataValue = document.createElement("div");
             workspace = document.getElementById("dragging-frame-main");
             databaseContainer.classList.add("dragging-sideICON-container");
 
@@ -12121,17 +12126,26 @@ function _iconOnSide() {
               Object(_action_actionOnClickingSideAndCreateIconOnWorkspace__WEBPACK_IMPORTED_MODULE_0__["default"])(workspace, "process");
             };
 
+            dataValueContainer.classList.add("dragging-sideICON-container");
+
+            processContainer.onclick = function () {
+              Object(_action_actionOnClickingSideAndCreateIconOnWorkspace__WEBPACK_IMPORTED_MODULE_0__["default"])(workspace, "datavalue");
+            };
+
             databaseICON.classList.add("dragging-database");
             toolICON.classList.add("dragging-tool");
             processICON.classList.add("dragging-process");
+            dataValue.classList.add("dragging-datavalue");
             databaseContainer.append(databaseICON);
             toolContainer.append(toolICON);
             processContainer.append(processICON);
+            dataValueContainer.append(dataValue);
             father.append(databaseContainer);
             father.append(toolContainer);
             father.append(processContainer);
+            father.append(dataValueContainer);
 
-          case 22:
+          case 29:
           case "end":
             return _context.stop();
         }

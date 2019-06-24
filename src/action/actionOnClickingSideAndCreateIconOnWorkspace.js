@@ -3,6 +3,8 @@ import iconFingerTracing from './iconFingerTracing';
 function actionOnClickingSide(workspace,iconType) {
     let newElement = document.createElement("div");
     switch (iconType) {
+        case "datavalue":
+            newElement.classList.add("dragging-datavalue");
         case "database":
             newElement.classList.add("dragging-database");
             break;

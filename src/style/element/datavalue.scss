@@ -1,0 +1,32 @@
+.dragging-datavalue {
+  position: absolute;
+  border-left: 0.1rem #000 solid;
+  border-right: 0.1rem #000 solid;
+  margin: 2rem;
+  width: 3rem;
+  height: 2rem;
+}
+
+// Top oval
+.dragging-datavalue::before {
+  content: 'int';
+  display: block;
+  width: 3rem;
+  height: 1rem;
+  margin-left: -0.1rem;
+  margin-top: -0.6rem;
+  border-radius: 50%;
+  border: 0.1rem #000 solid;
+}
+
+// foot oval
+.dragging-datavalue::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 1rem;
+  margin-left: -0.1rem;
+  margin-top: 0.7rem;
+  border-radius: 50%;
+  border: 0.1rem #000 solid;
+}
