@@ -26,7 +26,7 @@ async function iconOnSide(father) {
         actionOnClickingIcon(workspace,"process");
     };
     dataValueContainer.classList.add("dragging-sideICON-container");
-    processContainer.onclick = () => {
+    dataValueContainer.onclick = () => {
         actionOnClickingIcon(workspace,"datavalue");
     };
 

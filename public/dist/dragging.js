@@ -11146,7 +11146,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "#dragging-frame {\n  position: absolute;\n  display: flex;\n  left: 10rem;\n  top: 10rem;\n  width: 50rem;\n  height: 30rem;\n  border: 0.1em #000 solid; }\n\n#dragging-frame-side {\n  position: relative;\n  width: 20%;\n  height: 100%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-main {\n  position: relative;\n  width: 80%;\n  height: 100%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-toolsBar {\n  position: absolute;\n  border: 0.1em #AAA solid;\n  height: 10%;\n  width: 100%;\n  top: -11%;\n  left: -0.1em; }\n\n.dragging-database {\n  position: absolute;\n  border-left: 0.1rem #000 solid;\n  border-right: 0.1rem #000 solid;\n  margin: 2rem;\n  width: 3rem;\n  height: 2rem; }\n\n.dragging-database::before {\n  content: '';\n  display: block;\n  width: 3rem;\n  height: 1rem;\n  margin-left: -0.1rem;\n  margin-top: -0.6rem;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-database::after {\n  content: '';\n  display: block;\n  width: 3rem;\n  height: 1rem;\n  margin-left: -0.1rem;\n  margin-top: 0.7rem;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-tool {\n  position: absolute;\n  border: 0.1rem #000 solid;\n  margin: 2rem;\n  width: 3.3rem;\n  height: 2.3rem; }\n\n.dragging-tool::after {\n  content: 'T'; }\n\n.dragging-process {\n  position: absolute;\n  border: 0.1rem #000 solid;\n  margin: 2rem;\n  width: 3.3rem;\n  height: 2.3rem; }\n\n.dragging-process::after {\n  content: 'P'; }\n\n.dragging-sideICON-container {\n  position: relative;\n  height: 5rem;\n  width: 10rem; }\n\n.dragging-datavalue {\n  position: absolute;\n  border-left: 0.1rem #000 solid;\n  border-right: 0.1rem #000 solid;\n  margin: 2rem;\n  width: 3rem;\n  height: 2rem; }\n\n.dragging-datavalue::before {\n  content: 'int';\n  display: block;\n  width: 3rem;\n  height: 1rem;\n  margin-left: -0.1rem;\n  margin-top: -0.6rem;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-datavalue::after {\n  content: '';\n  display: block;\n  width: 3rem;\n  height: 1rem;\n  margin-left: -0.1rem;\n  margin-top: 0.7rem;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n", ""]);
+exports.push([module.i, "#dragging-frame {\n  position: absolute;\n  display: flex;\n  left: 10rem;\n  top: 10rem;\n  width: 50rem;\n  height: 30rem;\n  border: 0.1em #000 solid; }\n\n#dragging-frame-side {\n  position: relative;\n  width: 20%;\n  height: 100%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-main {\n  position: relative;\n  width: 80%;\n  height: 100%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-toolsBar {\n  position: absolute;\n  border: 0.1em #AAA solid;\n  height: 10%;\n  width: 100%;\n  top: -11%;\n  left: -0.1em; }\n\n.dragging-database {\n  position: absolute;\n  border-left: 0.1rem #000 solid;\n  border-right: 0.1rem #000 solid;\n  width: 70%;\n  margin-left: 12%;\n  margin-top: 20%;\n  height: 60%; }\n\n.dragging-database::before {\n  content: '';\n  display: block;\n  width: 100%;\n  height: 50%;\n  margin-left: -0.1em;\n  margin-top: -20%;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-database::after {\n  content: '';\n  display: block;\n  width: 100%;\n  height: 50%;\n  margin-left: -0.1rem;\n  margin-top: 25%;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-tool {\n  position: absolute;\n  border: 0.1rem #000 solid;\n  width: 80%;\n  margin-top: 15%;\n  margin-left: 7%;\n  height: 60%; }\n\n.dragging-tool::after {\n  content: 'T'; }\n\n.dragging-process {\n  position: absolute;\n  border: 0.1rem #000 solid;\n  width: 80%;\n  margin-top: 15%;\n  margin-left: 7%;\n  height: 60%; }\n\n.dragging-process::after {\n  content: 'P'; }\n\n.dragging-sideICON-container {\n  position: relative;\n  height: 5rem;\n  width: 5rem; }\n\n.dragging-datavalue {\n  position: absolute;\n  border-left: 0.1rem #000 solid;\n  border-right: 0.1rem #000 solid;\n  width: 70%;\n  margin-left: 12%;\n  margin-top: 20%;\n  height: 60%; }\n\n.dragging-datavalue::before {\n  content: 'int';\n  display: block;\n  width: 100%;\n  height: 50%;\n  margin-left: -0.1em;\n  margin-top: -20%;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-datavalue::after {\n  content: '';\n  display: block;\n  width: 100%;\n  height: 50%;\n  margin-left: -0.1rem;\n  margin-top: 25%;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-icon-frame {\n  position: absolute;\n  height: 4rem;\n  width: 4rem;\n  border: 0.1rem #000 solid; }\n\n.dragging-icon-connecting-point {\n  position: absolute;\n  height: 0.5rem;\n  width: 0.5rem;\n  border: 0.05rem #777 solid;\n  border-radius: 50%;\n  margin-left: -0.25rem;\n  margin-top: -0.25rem; }\n\n.dragging-icon-connecting-point-position-0 {\n  left: 50%;\n  top: 0; }\n\n.dragging-icon-connecting-point-position-1 {\n  left: 100%;\n  top: 50%; }\n\n.dragging-icon-connecting-point-position-2 {\n  left: 50%;\n  top: 100%; }\n\n.dragging-icon-connecting-point-position-3 {\n  left: 0;\n  top: 50%; }\n\n.dragging-lineSet {\n  position: absolute; }\n", ""]);
 
 // exports
 
@@ -11789,39 +11789,13 @@ module.exports = g;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _iconMouseTracing__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./iconMouseTracing */ "./src/action/iconMouseTracing.js");
-/* harmony import */ var _iconFingerTracing__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iconFingerTracing */ "./src/action/iconFingerTracing.js");
+/* harmony import */ var _render_renderStuffOnWorkspaceWhenIconOnSideHasBeenClicked__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../render/renderStuffOnWorkspaceWhenIconOnSideHasBeenClicked */ "./src/render/renderStuffOnWorkspaceWhenIconOnSideHasBeenClicked.js");
+/* harmony import */ var _lib_randomIDGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../lib/randomIDGenerator */ "./src/lib/randomIDGenerator.js");
 
 
 
 function actionOnClickingSide(workspace, iconType) {
-  var newElement = document.createElement("div");
-
-  switch (iconType) {
-    case "datavalue":
-      newElement.classList.add("dragging-datavalue");
-
-    case "database":
-      newElement.classList.add("dragging-database");
-      break;
-
-    case "tool":
-      newElement.classList.add("dragging-tool");
-      break;
-
-    case "process":
-      newElement.classList.add("dragging-process");
-      break;
-
-    default:
-      throw new Error("icon type invalid");
-  }
-
-  newElement.style.top = "30%";
-  newElement.style.left = "30%";
-  Object(_iconMouseTracing__WEBPACK_IMPORTED_MODULE_0__["default"])(newElement);
-  Object(_iconFingerTracing__WEBPACK_IMPORTED_MODULE_1__["default"])(newElement);
-  workspace.append(newElement);
+  Object(_render_renderStuffOnWorkspaceWhenIconOnSideHasBeenClicked__WEBPACK_IMPORTED_MODULE_0__["default"])(workspace, iconType, Object(_lib_randomIDGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])());
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (actionOnClickingSide);
@@ -11867,7 +11841,7 @@ function fingerTracing(icon) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function mouseTracing(icon) {
+function mouseTracing(icon, iconForClick) {
   icon.onmousedown = function (onmouseDownEvent) {
     onmouseDownEvent.preventDefault();
     var distanceXFromCentralOfMouseToIconBorder = onmouseDownEvent.clientX - icon.offsetLeft + 2 * 16;
@@ -12016,6 +11990,26 @@ window.dragging = handler;
 
 /***/ }),
 
+/***/ "./src/lib/randomIDGenerator.js":
+/*!**************************************!*\
+  !*** ./src/lib/randomIDGenerator.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * @return {string}
+ */
+function IDGenerator() {
+  return Math.random().toString(36).substr(2);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (IDGenerator);
+
+/***/ }),
+
 /***/ "./src/render/frameWork.js":
 /*!*********************************!*\
   !*** ./src/render/frameWork.js ***!
@@ -12128,7 +12122,7 @@ function _iconOnSide() {
 
             dataValueContainer.classList.add("dragging-sideICON-container");
 
-            processContainer.onclick = function () {
+            dataValueContainer.onclick = function () {
               Object(_action_actionOnClickingSideAndCreateIconOnWorkspace__WEBPACK_IMPORTED_MODULE_0__["default"])(workspace, "datavalue");
             };
 
@@ -12156,6 +12150,75 @@ function _iconOnSide() {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (iconOnSide);
+
+/***/ }),
+
+/***/ "./src/render/renderStuffOnWorkspaceWhenIconOnSideHasBeenClicked.js":
+/*!**************************************************************************!*\
+  !*** ./src/render/renderStuffOnWorkspaceWhenIconOnSideHasBeenClicked.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _action_iconMouseTracing__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../action/iconMouseTracing */ "./src/action/iconMouseTracing.js");
+/* harmony import */ var _action_iconFingerTracing__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../action/iconFingerTracing */ "./src/action/iconFingerTracing.js");
+
+
+
+function render(workspace, iconType, elementID) {
+  // Initialize element frame
+  var newElementFrame = document.createElement("div");
+  newElementFrame.className = "dragging-icon-frame";
+  newElementFrame.id = elementID; // Initialize element
+
+  var newElement = document.createElement("div"); // Chose the element
+
+  switch (iconType) {
+    case "datavalue":
+      newElement.classList.add("dragging-datavalue");
+      break;
+
+    case "database":
+      newElement.classList.add("dragging-database");
+      break;
+
+    case "tool":
+      newElement.classList.add("dragging-tool");
+      break;
+
+    case "process":
+      newElement.classList.add("dragging-process");
+      break;
+
+    default:
+      throw new Error("icon type invalid");
+  } // Set initial Position
+
+
+  newElementFrame.style.top = "30%";
+  newElementFrame.style.left = "30%"; // Apply mouse and finger tracing
+
+  Object(_action_iconMouseTracing__WEBPACK_IMPORTED_MODULE_0__["default"])(newElementFrame);
+  Object(_action_iconFingerTracing__WEBPACK_IMPORTED_MODULE_1__["default"])(newElementFrame); // Apply connecting point
+
+  var connectingPoints = [];
+
+  for (var i = 0; i < 4; i++) {
+    var connectingPoint = document.createElement("div");
+    connectingPoint.classList.add("dragging-icon-connecting-point");
+    connectingPoint.classList.add("dragging-icon-connecting-point-position-" + String(i));
+    newElementFrame.append(connectingPoint);
+    connectingPoints.push(connectingPoint);
+  }
+
+  newElementFrame.append(newElement);
+  workspace.append(newElementFrame);
+  console.log("Added");
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (render);
 
 /***/ }),
 

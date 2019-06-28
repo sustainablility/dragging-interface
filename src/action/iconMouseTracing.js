@@ -1,5 +1,5 @@
 
-function mouseTracing(icon) {
+function mouseTracing(icon,iconForClick) {
     icon.onmousedown = (onmouseDownEvent) => {
 
         onmouseDownEvent.preventDefault();
