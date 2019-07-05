@@ -3,6 +3,7 @@
   height: 4rem;
   width: 4rem;
   border: 0.1rem #000 solid;
+  z-index: 5;
 }
 
 .dragging-icon-connecting-point {
@@ -15,20 +16,10 @@
   margin-top: -0.25rem;
 }
 
-.dragging-icon-connecting-point-position-0 {
-  left: 50%;
-  top: 0;
+.dragging-icon-connecting-point-position-in {
+  top: -2%;
+  background-color: #777;
 }
-.dragging-icon-connecting-point-position-1 {
-  left: 100%;
-  top: 50%;
-
-}
-.dragging-icon-connecting-point-position-2 {
-  left: 50%;
+.dragging-icon-connecting-point-position-out {
   top: 100%;
-}
-.dragging-icon-connecting-point-position-3 {
-  left: 0;
-  top: 50%;
 }

@@ -1,3 +1,16 @@
 .dragging-lineSet {
   position: absolute;
+  z-index: 1;
+}
+
+.dragging-line-vertical {
+  position: absolute;
+  border: 0.05em #000 solid;
+  width: 0;
+}
+
+.dragging-line-horizontal {
+  position: absolute;
+  border: 0.05em #000 solid;
+  height: 0;
 }

@@ -1,5 +1,7 @@
 import iconMouseTracing from "../action/iconMouseTracing";
 import iconFingerTracing from "../action/iconFingerTracing";
+import createLine from '../action/createLine';
+import idGenerator from '../lib/randomIDGenerator';
 
 function render(workspace,iconType,elementID) {
     
@@ -34,24 +36,38 @@ function render(workspace,iconType,elementID) {
     newElementFrame.style.left = "30%";
     
     // Apply mouse and finger tracing
-    iconMouseTracing(newElementFrame);
+    iconMouseTracing(newElementFrame,newElement,workspace);
     iconFingerTracing(newElementFrame);
     
     // Apply connecting point
-    let connectingPoints = [];
-    
-    for (let i = 0;i < 4; i ++) {
-        let connectingPoint = document.createElement("div");
-        connectingPoint.classList.add("dragging-icon-connecting-point");
-        connectingPoint.classList.add("dragging-icon-connecting-point-position-" + String(i));
-        newElementFrame.append(connectingPoint);
-        connectingPoints.push(connectingPoint);
-    }
+
+    createConnectingPointIn(workspace,newElementFrame,25);
+    createConnectingPointIn(workspace,newElementFrame,75);
+    createConnectingPointOut(workspace,newElementFrame,25);
+    createConnectingPointOut(workspace,newElementFrame,75);
     
     
     newElementFrame.append(newElement);
     workspace.append(newElementFrame);
-    console.log("Added");
+}
+
+function createConnectingPointIn(workspace, newElementFrame, distanceToLeft) {
+    let connectingPoint = document.createElement("div");
+    connectingPoint.classList.add("dragging-icon-connecting-point");
+    connectingPoint.classList.add("dragging-icon-connecting-point-position-in");
+    connectingPoint.style.left = distanceToLeft + "%";
+    connectingPoint.id = idGenerator();
+    newElementFrame.append(connectingPoint);
+}
+
+function createConnectingPointOut(workspace, newElementFrame, distanceToLeft) {
+    let connectingPoint = document.createElement("div");
+    connectingPoint.classList.add("dragging-icon-connecting-point");
+    connectingPoint.classList.add("dragging-icon-connecting-point-position-out");
+    connectingPoint.style.left = distanceToLeft + "%";
+    connectingPoint.id = idGenerator();
+    createLine(workspace,connectingPoint);
+    newElementFrame.append(connectingPoint);
 }
 
 export default render;
