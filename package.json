@@ -7,7 +7,7 @@
     "build": "webpack",
     "test": "mocha",
     "watch": "webpack --watch",
-    "dev": "webpack-dev-server --open && webpack --watch"
+    "dev": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",

@@ -17,15 +17,35 @@ function render(workspace,iconType,elementID) {
     switch (iconType) {
         case "datavalue":
             newElement.classList.add("dragging-datavalue");
+            createConnectingPointOut(workspace,newElementFrame,50);
             break;
         case "database":
             newElement.classList.add("dragging-database");
+            createConnectingPointOut(workspace,newElementFrame,50);
             break;
         case "tool":
             newElement.classList.add("dragging-tool");
+            createConnectingPointIn(workspace,newElementFrame,25);
+            createConnectingPointIn(workspace,newElementFrame,75);
+            createConnectingPointOut(workspace,newElementFrame,25);
+            createConnectingPointOut(workspace,newElementFrame,75);
             break;
         case "process":
             newElement.classList.add("dragging-process");
+            createConnectingPointIn(workspace,newElementFrame,25);
+            createConnectingPointIn(workspace,newElementFrame,75);
+            createConnectingPointOut(workspace,newElementFrame,25);
+            createConnectingPointOut(workspace,newElementFrame,75);
+            break;
+        case "start":
+            newElement.classList.add("dragging-start");
+            createConnectingPointOut(workspace,newElementFrame,25);
+            createConnectingPointOut(workspace,newElementFrame,75);
+            break;
+        case "end":
+            newElement.classList.add("dragging-end");
+            createConnectingPointIn(workspace,newElementFrame,25);
+            createConnectingPointIn(workspace,newElementFrame,75);
             break;
         default:
             throw new Error("icon type invalid");
@@ -34,17 +54,11 @@ function render(workspace,iconType,elementID) {
     // Set initial Position
     newElementFrame.style.top = "30%";
     newElementFrame.style.left = "30%";
-    
+
     // Apply mouse and finger tracing
+
     iconMouseTracing(newElementFrame,newElement,workspace);
     iconFingerTracing(newElementFrame);
-    
-    // Apply connecting point
-
-    createConnectingPointIn(workspace,newElementFrame,25);
-    createConnectingPointIn(workspace,newElementFrame,75);
-    createConnectingPointOut(workspace,newElementFrame,25);
-    createConnectingPointOut(workspace,newElementFrame,75);
     
     
     newElementFrame.append(newElement);

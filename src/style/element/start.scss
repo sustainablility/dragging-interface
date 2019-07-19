@@ -1,4 +1,4 @@
-.dragging-process {
+.dragging-start {
   position: absolute;
   border: 0.1rem #000 solid;
   width: 80%;
@@ -6,6 +6,6 @@
   margin-left: 7%;
   height: 60%;
 }
-.dragging-process::after {
-  content: 'Process';
+.dragging-start::after {
+  content: 'Start';
 }

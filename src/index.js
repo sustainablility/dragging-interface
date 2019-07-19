@@ -14,6 +14,9 @@ async function handler(basicElementSelector) {
     let [frameSide,frameMain,frameToolsBar] = await frameRender(basicElement);
     await iconsRender(frameSide);
     await toolsBarRender(frameToolsBar,frameMain);
+    document.oncontextmenu = () => {
+        return false;
+    };
 }
 
 window.dragging = handler;

@@ -11146,7 +11146,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "#dragging-frame {\n  position: absolute;\n  display: flex;\n  left: 10rem;\n  top: 10rem;\n  width: 50rem;\n  height: 30rem;\n  border: 0.1em #000 solid; }\n\n#dragging-frame-side {\n  position: relative;\n  width: 20%;\n  height: 100%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-main {\n  position: relative;\n  width: 80%;\n  height: 100%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-toolsBar {\n  position: absolute;\n  border: 0.1em #AAA solid;\n  height: 10%;\n  width: 100%;\n  top: -11%;\n  left: -0.1em; }\n\n.dragging-database {\n  position: absolute;\n  border-left: 0.1rem #000 solid;\n  border-right: 0.1rem #000 solid;\n  width: 70%;\n  margin-left: 12%;\n  margin-top: 20%;\n  height: 60%; }\n\n.dragging-database::before {\n  content: '';\n  display: block;\n  width: 100%;\n  height: 50%;\n  margin-left: -0.1em;\n  margin-top: -20%;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-database::after {\n  content: '';\n  display: block;\n  width: 100%;\n  height: 50%;\n  margin-left: -0.1rem;\n  margin-top: 25%;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-tool {\n  position: absolute;\n  border: 0.1rem #000 solid;\n  width: 80%;\n  margin-top: 15%;\n  margin-left: 7%;\n  height: 60%; }\n\n.dragging-tool::after {\n  content: 'T'; }\n\n.dragging-process {\n  position: absolute;\n  border: 0.1rem #000 solid;\n  width: 80%;\n  margin-top: 15%;\n  margin-left: 7%;\n  height: 60%; }\n\n.dragging-process::after {\n  content: 'P'; }\n\n.dragging-sideICON-container {\n  position: relative;\n  height: 5rem;\n  width: 5rem; }\n\n.dragging-datavalue {\n  position: absolute;\n  border-left: 0.1rem #000 solid;\n  border-right: 0.1rem #000 solid;\n  width: 70%;\n  margin-left: 12%;\n  margin-top: 20%;\n  height: 60%; }\n\n.dragging-datavalue::before {\n  content: 'int';\n  display: block;\n  width: 100%;\n  height: 50%;\n  margin-left: -0.1em;\n  margin-top: -20%;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-datavalue::after {\n  content: '';\n  display: block;\n  width: 100%;\n  height: 50%;\n  margin-left: -0.1rem;\n  margin-top: 25%;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-icon-frame {\n  position: absolute;\n  height: 4rem;\n  width: 4rem;\n  border: 0.1rem #000 solid;\n  z-index: 5; }\n\n.dragging-icon-connecting-point {\n  position: absolute;\n  height: 0.5rem;\n  width: 0.5rem;\n  border: 0.05rem #777 solid;\n  border-radius: 50%;\n  margin-left: -0.25rem;\n  margin-top: -0.25rem; }\n\n.dragging-icon-connecting-point-position-in {\n  top: -2%;\n  background-color: #777; }\n\n.dragging-icon-connecting-point-position-out {\n  top: 100%; }\n\n.dragging-lineSet {\n  position: absolute;\n  z-index: 1; }\n\n.dragging-line-vertical {\n  position: absolute;\n  border: 0.05em #000 solid;\n  width: 0; }\n\n.dragging-line-horizontal {\n  position: absolute;\n  border: 0.05em #000 solid;\n  height: 0; }\n", ""]);
+exports.push([module.i, "#dragging-frame {\n  position: absolute;\n  display: flex;\n  left: 10rem;\n  top: 10rem;\n  width: 50rem;\n  height: 30rem;\n  border: 0.1em #000 solid; }\n\n#dragging-frame-side {\n  position: relative;\n  width: 20%;\n  height: 100%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-main {\n  position: relative;\n  width: 80%;\n  height: 100%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-toolsBar {\n  position: absolute;\n  border: 0.1em #AAA solid;\n  height: 10%;\n  width: 100%;\n  top: -11%;\n  left: -0.1em; }\n\n.dragging-database {\n  position: absolute;\n  border-left: 0.1rem #000 solid;\n  border-right: 0.1rem #000 solid;\n  width: 70%;\n  margin-left: 12%;\n  margin-top: 20%;\n  height: 60%; }\n\n.dragging-database::before {\n  content: '';\n  display: block;\n  width: 100%;\n  height: 50%;\n  margin-left: -0.1em;\n  margin-top: -20%;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-database::after {\n  content: '';\n  display: block;\n  width: 100%;\n  height: 50%;\n  margin-left: -0.1rem;\n  margin-top: 25%;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-tool {\n  position: absolute;\n  border: 0.1rem #000 solid;\n  width: 80%;\n  margin-top: 15%;\n  margin-left: 7%;\n  height: 60%; }\n\n.dragging-tool::after {\n  content: 'Tool'; }\n\n.dragging-process {\n  position: absolute;\n  border: 0.1rem #000 solid;\n  width: 80%;\n  margin-top: 15%;\n  margin-left: 7%;\n  height: 60%; }\n\n.dragging-process::after {\n  content: 'Process'; }\n\n.dragging-sideICON-container {\n  position: relative;\n  height: 5rem;\n  width: 5rem; }\n\n.dragging-datavalue {\n  position: absolute;\n  border-left: 0.1rem #000 solid;\n  border-right: 0.1rem #000 solid;\n  width: 70%;\n  margin-left: 12%;\n  margin-top: 20%;\n  height: 60%; }\n\n.dragging-datavalue::before {\n  content: 'int';\n  display: block;\n  width: 100%;\n  height: 50%;\n  margin-left: -0.1em;\n  margin-top: -20%;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-datavalue::after {\n  content: '';\n  display: block;\n  width: 100%;\n  height: 50%;\n  margin-left: -0.1rem;\n  margin-top: 25%;\n  border-radius: 50%;\n  border: 0.1rem #000 solid; }\n\n.dragging-icon-frame {\n  position: absolute;\n  height: 4rem;\n  width: 4rem;\n  border: 0.1rem #000 solid;\n  z-index: 5; }\n\n.dragging-icon-connecting-point {\n  position: absolute;\n  height: 0.5rem;\n  width: 0.5rem;\n  border: 0.05rem #777 solid;\n  border-radius: 50%;\n  margin-left: -0.25rem;\n  margin-top: -0.25rem; }\n\n.dragging-icon-connecting-point-position-in {\n  top: -2%;\n  background-color: #777; }\n\n.dragging-icon-connecting-point-position-out {\n  top: 100%; }\n\n.dragging-start {\n  position: absolute;\n  border: 0.1rem #000 solid;\n  width: 80%;\n  margin-top: 15%;\n  margin-left: 7%;\n  height: 60%; }\n\n.dragging-start::after {\n  content: 'Start'; }\n\n.dragging-end {\n  position: absolute;\n  border: 0.1rem #000 solid;\n  width: 80%;\n  margin-top: 15%;\n  margin-left: 7%;\n  height: 60%; }\n\n.dragging-end::after {\n  content: 'End'; }\n\n.dragging-lineSet {\n  position: absolute;\n  z-index: 1; }\n\n.dragging-line-vertical {\n  position: absolute;\n  border: 0.05em #000 solid;\n  width: 0; }\n\n.dragging-line-horizontal {\n  position: absolute;\n  border: 0.05em #000 solid;\n  height: 0; }\n\n.dragging-icon-rightClick-manu {\n  position: absolute;\n  height: 10em;\n  width: 6em;\n  background-color: #FFF;\n  border: 0.1em #000 solid;\n  z-index: 10; }\n\n.dragging-icon-rightClick-manu-bg {\n  position: absolute;\n  height: 98%;\n  width: 98%;\n  z-index: 9; }\n\n.dragging-rightClick-deleteButton {\n  position: relative;\n  height: 20%;\n  width: 100%; }\n\n.dragging-rightClick-input {\n  width: 100%; }\n", ""]);
 
 // exports
 
@@ -11827,12 +11827,13 @@ function createLine(workspaceObject, pointObject) {
 
     var pointPosition = pointObject.getBoundingClientRect();
     var workspacePosition = workspaceObject.getBoundingClientRect();
-    var initialXPosition = pointPosition.left - workspacePosition.left;
-    var initialYPosition = pointPosition.top - workspacePosition.top; // Line ID
+    var initialXPosition = pointPosition.left - workspacePosition.left + range / 2;
+    var initialYPosition = pointPosition.top - workspacePosition.top + range / 2; // Line ID
 
     var lineID = Object(_lib_randomIDGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])(); // Initial render
 
-    Object(_render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_1__["default"])(lineID, initialXPosition, initialYPosition, initialXPosition, initialYPosition, workspaceObject, pointObject.id); // Initial mouse position
+    Object(_render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_1__["default"])(lineID, initialXPosition, initialYPosition, initialXPosition, initialYPosition, workspaceObject, pointObject.id);
+    ""; // Initial mouse position
 
     var mousePositionX;
     var mousePositionY;
@@ -11863,8 +11864,8 @@ function createLine(workspaceObject, pointObject) {
           if (mousePositionXRelatedToScreen > pointRelativeToScreen.left && mousePositionXRelatedToScreen < pointRelativeToScreen.left + range && mousePositionYRelatedToScreen > pointRelativeToScreen.top && mousePositionYRelatedToScreen < pointRelativeToScreen.top + range && pointObject.id !== point.id && pointObject.parentNode.id !== point.parentNode.id) {
             flagOfDestinationExisted = true;
             var destinationPointPosition = point.getBoundingClientRect();
-            var destinationPointPositionX = destinationPointPosition.left - workspacePosition.left;
-            var destinationPointPositionY = destinationPointPosition.top - workspacePosition.top;
+            var destinationPointPositionX = destinationPointPosition.left - workspacePosition.left + range / 2;
+            var destinationPointPositionY = destinationPointPosition.top - workspacePosition.top + range / 2;
             Object(_render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_1__["default"])(lineID, initialXPosition, initialYPosition, destinationPointPositionX, destinationPointPositionY, workspaceObject, pointObject.id, point.id);
             break;
           }
@@ -11940,85 +11941,97 @@ function fingerTracing(icon) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_size__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lib/size */ "./src/lib/size.js");
 /* harmony import */ var _lib_size__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lib_size__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../render/connectingLine/randerTheLine */ "./src/render/connectingLine/randerTheLine.js");
+/* harmony import */ var _render_renderManuAfterRightClickInIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../render/renderManuAfterRightClickInIcon */ "./src/render/renderManuAfterRightClickInIcon.js");
+/* harmony import */ var _render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../render/connectingLine/randerTheLine */ "./src/render/connectingLine/randerTheLine.js");
+
 
 
 
 function mouseTracing(iconFrame, iconForClick, workspace) {
   iconForClick.onmousedown = function (onmouseDownEvent) {
     onmouseDownEvent.preventDefault();
-    var distanceXFromCentralOfMouseToIconBorder = onmouseDownEvent.clientX - iconFrame.offsetLeft;
-    var distanceYFromCentralOfMouseToIconBorder = onmouseDownEvent.clientY - iconFrame.offsetTop;
 
-    document.onmousemove = function (onmouseMoveEvent) {
-      iconFrame.style.top = _lib_size__WEBPACK_IMPORTED_MODULE_0___default.a.pxConvertToRem(onmouseMoveEvent.clientY - distanceYFromCentralOfMouseToIconBorder) + "rem";
-      iconFrame.style.left = _lib_size__WEBPACK_IMPORTED_MODULE_0___default.a.pxConvertToRem(onmouseMoveEvent.clientX - distanceXFromCentralOfMouseToIconBorder) + "rem";
-      var childPoints = iconFrame.childNodes;
-      var workspacePosition = workspace.getBoundingClientRect();
-      var _iteratorNormalCompletion = true;
-      var _didIteratorError = false;
-      var _iteratorError = undefined;
+    if (onmouseDownEvent.button === 2) {
+      Object(_render_renderManuAfterRightClickInIcon__WEBPACK_IMPORTED_MODULE_1__["default"])(_lib_size__WEBPACK_IMPORTED_MODULE_0___default.a.pxConvertToRem(onmouseDownEvent.clientX), _lib_size__WEBPACK_IMPORTED_MODULE_0___default.a.pxConvertToRem(onmouseDownEvent.clientY), iconFrame);
+    } // diameter of connecting point
 
-      try {
-        for (var _iterator = childPoints[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          var point = _step.value;
 
-          if (point.classList.contains('dragging-icon-connecting-point-position-out')) {
-            var line = document.querySelector("[_from='" + point.id + "']");
+    var range = _lib_size__WEBPACK_IMPORTED_MODULE_0___default.a.remConvertToPx(0.5);
 
-            if (line !== null) {
-              var toPoint = document.getElementById(line.getAttribute("_to"));
-              var startPointPosition = point.getBoundingClientRect();
-              var toPointPosition = toPoint.getBoundingClientRect();
-              var startPointPositionX = startPointPosition.left - workspacePosition.left;
-              var startPointPositionY = startPointPosition.top - workspacePosition.top;
-              var toPointPositionX = toPointPosition.left - workspacePosition.left;
-              var toPointPositionY = toPointPosition.top - workspacePosition.top;
-              Object(_render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_1__["default"])(line.id, startPointPositionX, startPointPositionY, toPointPositionX, toPointPositionY, workspace, point.id, toPoint.id);
-            }
-          }
+    if (onmouseDownEvent.button === 0) {
+      var distanceXFromCentralOfMouseToIconBorder = onmouseDownEvent.clientX - iconFrame.offsetLeft;
+      var distanceYFromCentralOfMouseToIconBorder = onmouseDownEvent.clientY - iconFrame.offsetTop;
 
-          if (point.classList.contains('dragging-icon-connecting-point-position-in')) {
-            var _line = document.querySelector("[_to='" + point.id + "']");
+      document.onmousemove = function (onmouseMoveEvent) {
+        iconFrame.style.top = _lib_size__WEBPACK_IMPORTED_MODULE_0___default.a.pxConvertToRem(onmouseMoveEvent.clientY - distanceYFromCentralOfMouseToIconBorder) + "rem";
+        iconFrame.style.left = _lib_size__WEBPACK_IMPORTED_MODULE_0___default.a.pxConvertToRem(onmouseMoveEvent.clientX - distanceXFromCentralOfMouseToIconBorder) + "rem";
+        var childPoints = iconFrame.childNodes;
+        var workspacePosition = workspace.getBoundingClientRect();
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
 
-            if (_line !== null) {
-              var startPoint = document.getElementById(_line.getAttribute("_from"));
-
-              var _startPointPosition = startPoint.getBoundingClientRect();
-
-              var _toPointPosition = point.getBoundingClientRect();
-
-              var _startPointPositionX = _startPointPosition.left - workspacePosition.left;
-
-              var _startPointPositionY = _startPointPosition.top - workspacePosition.top;
-
-              var _toPointPositionX = _toPointPosition.left - workspacePosition.left;
-
-              var _toPointPositionY = _toPointPosition.top - workspacePosition.top;
-
-              Object(_render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_1__["default"])(_line.id, _startPointPositionX, _startPointPositionY, _toPointPositionX, _toPointPositionY, workspace, startPoint.id, point.id);
-            }
-          }
-        }
-      } catch (err) {
-        _didIteratorError = true;
-        _iteratorError = err;
-      } finally {
         try {
-          if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-            _iterator["return"]();
+          for (var _iterator = childPoints[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var point = _step.value;
+
+            if (point.classList.contains('dragging-icon-connecting-point-position-out')) {
+              var line = document.querySelector("[_from='" + point.id + "']");
+
+              if (line !== null) {
+                var toPoint = document.getElementById(line.getAttribute("_to"));
+                var startPointPosition = point.getBoundingClientRect();
+                var toPointPosition = toPoint.getBoundingClientRect();
+                var startPointPositionX = startPointPosition.left - workspacePosition.left + range / 2;
+                var startPointPositionY = startPointPosition.top - workspacePosition.top + range / 2;
+                var toPointPositionX = toPointPosition.left - workspacePosition.left + range / 2;
+                var toPointPositionY = toPointPosition.top - workspacePosition.top + range / 2;
+                Object(_render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_2__["default"])(line.id, startPointPositionX, startPointPositionY, toPointPositionX, toPointPositionY, workspace, point.id, toPoint.id);
+              }
+            }
+
+            if (point.classList.contains('dragging-icon-connecting-point-position-in')) {
+              var _line = document.querySelector("[_to='" + point.id + "']");
+
+              if (_line !== null) {
+                var startPoint = document.getElementById(_line.getAttribute("_from"));
+
+                var _startPointPosition = startPoint.getBoundingClientRect();
+
+                var _toPointPosition = point.getBoundingClientRect();
+
+                var _startPointPositionX = _startPointPosition.left - workspacePosition.left + range / 2;
+
+                var _startPointPositionY = _startPointPosition.top - workspacePosition.top + range / 2;
+
+                var _toPointPositionX = _toPointPosition.left - workspacePosition.left + range / 2;
+
+                var _toPointPositionY = _toPointPosition.top - workspacePosition.top + range / 2;
+
+                Object(_render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_2__["default"])(_line.id, _startPointPositionX, _startPointPositionY, _toPointPositionX, _toPointPositionY, workspace, startPoint.id, point.id);
+              }
+            }
           }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
         } finally {
-          if (_didIteratorError) {
-            throw _iteratorError;
+          try {
+            if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+              _iterator["return"]();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
           }
         }
-      }
-    };
+      };
 
-    document.onmouseup = function (onmouseUpEvent) {
-      document.onmousemove = null;
-    };
+      document.onmouseup = function (onmouseUpEvent) {
+        document.onmousemove = null;
+      };
+    }
   };
 }
 
@@ -12141,6 +12154,11 @@ function _handler() {
             return Object(_render_toolsBar__WEBPACK_IMPORTED_MODULE_2__["default"])(frameToolsBar, frameMain);
 
           case 14:
+            document.oncontextmenu = function () {
+              return false;
+            };
+
+          case 15:
           case "end":
             return _context.stop();
         }
@@ -12391,20 +12409,36 @@ function _iconOnSide() {
   _iconOnSide = _asyncToGenerator(
   /*#__PURE__*/
   regeneratorRuntime.mark(function _callee(father) {
-    var databaseContainer, toolContainer, processContainer, dataValueContainer, databaseICON, toolICON, processICON, dataValue, workspace;
+    var startContainer, endContainer, databaseContainer, toolContainer, processContainer, dataValueContainer, startIcon, endIcon, databaseICON, toolICON, processICON, dataValue, workspace;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
+            startContainer = document.createElement("div");
+            endContainer = document.createElement("div");
             databaseContainer = document.createElement("div");
             toolContainer = document.createElement("div");
             processContainer = document.createElement("div");
             dataValueContainer = document.createElement("div");
+            startIcon = document.createElement("div");
+            endIcon = document.createElement("div");
             databaseICON = document.createElement("div");
             toolICON = document.createElement("div");
             processICON = document.createElement("div");
             dataValue = document.createElement("div");
             workspace = document.getElementById("dragging-frame-main");
+            startContainer.classList.add("dragging-sideICON-container");
+
+            startContainer.onclick = function () {
+              Object(_action_actionOnClickingSideAndCreateIconOnWorkspace__WEBPACK_IMPORTED_MODULE_0__["default"])(workspace, "start");
+            };
+
+            endContainer.classList.add("dragging-sideICON-container");
+
+            endContainer.onclick = function () {
+              Object(_action_actionOnClickingSideAndCreateIconOnWorkspace__WEBPACK_IMPORTED_MODULE_0__["default"])(workspace, "end");
+            };
+
             databaseContainer.classList.add("dragging-sideICON-container");
 
             databaseContainer.onclick = function () {
@@ -12433,16 +12467,22 @@ function _iconOnSide() {
             toolICON.classList.add("dragging-tool");
             processICON.classList.add("dragging-process");
             dataValue.classList.add("dragging-datavalue");
+            startIcon.classList.add("dragging-start");
+            endIcon.classList.add("dragging-end");
+            startContainer.append(startIcon);
+            endContainer.append(endIcon);
             databaseContainer.append(databaseICON);
             toolContainer.append(toolICON);
             processContainer.append(processICON);
             dataValueContainer.append(dataValue);
+            father.append(startContainer);
+            father.append(endContainer);
             father.append(databaseContainer);
             father.append(toolContainer);
             father.append(processContainer);
             father.append(dataValueContainer);
 
-          case 29:
+          case 43:
           case "end":
             return _context.stop();
         }
@@ -12453,6 +12493,119 @@ function _iconOnSide() {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (iconOnSide);
+
+/***/ }),
+
+/***/ "./src/render/renderManuAfterRightClickInIcon.js":
+/*!*******************************************************!*\
+  !*** ./src/render/renderManuAfterRightClickInIcon.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function renderManu(locationX, locationY, element) {
+  var man = document.createElement("div");
+  var manuBg = document.createElement("div");
+  man.classList.add("dragging-icon-rightClick-manu");
+  manuBg.classList.add("dragging-icon-rightClick-manu-bg");
+  man.style.left = locationX + "em";
+  man.style.top = locationY + "em"; // Render delete button
+
+  var deleteButton = document.createElement("button");
+  deleteButton.classList.add("dragging-rightClick-deleteButton");
+
+  deleteButton.onclick = function () {
+    deleteElement(element);
+    removeManu(manuBg, man);
+  };
+
+  deleteButton.innerText = "Delete";
+  man.append(deleteButton);
+  man.append(document.createElement("hr"));
+  var dataInputFrame = document.createElement("div");
+  dataInputFrame.classList.add("dragging-rightClick-inputFrame");
+  var dataInputArea = document.createElement("input");
+  dataInputArea.type = "text";
+  var previousData = element.getAttribute("_data");
+
+  if (previousData !== null) {
+    dataInputArea.value = previousData;
+  }
+
+  dataInputArea.classList.add("dragging-rightClick-input");
+  var dataInputSubmit = document.createElement("button");
+  dataInputSubmit.innerText = "Enter";
+
+  dataInputSubmit.onclick = function () {
+    element.setAttribute("_data", dataInputArea.value);
+    removeManu(manuBg, man);
+  };
+
+  dataInputFrame.append(dataInputArea);
+  dataInputFrame.append(dataInputSubmit);
+  man.append(dataInputFrame);
+  document.body.append(man);
+  document.body.append(manuBg);
+
+  manuBg.onclick = function () {
+    removeManu(manuBg, man);
+  };
+}
+
+function removeManu(manuBg, man) {
+  document.body.removeChild(manuBg);
+  document.body.removeChild(man);
+}
+
+function deleteElement(element) {
+  console.log(element.id);
+  var points = element.childNodes;
+  var workspace = document.getElementById("dragging-frame-main");
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = points[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var point = _step.value;
+
+      if (point.classList.contains('dragging-icon-connecting-point-position-in')) {
+        var line = document.querySelector("[_to='" + point.id + "']");
+
+        if (line !== null) {
+          workspace.removeChild(line);
+        }
+      }
+
+      if (point.classList.contains('dragging-icon-connecting-point-position-out')) {
+        var _line = document.querySelector("[_from='" + point.id + "']");
+
+        if (_line !== null) {
+          workspace.removeChild(_line);
+        }
+      }
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  workspace.removeChild(element);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (renderManu);
 
 /***/ }),
 
@@ -12485,18 +12638,40 @@ function render(workspace, iconType, elementID) {
   switch (iconType) {
     case "datavalue":
       newElement.classList.add("dragging-datavalue");
+      createConnectingPointOut(workspace, newElementFrame, 50);
       break;
 
     case "database":
       newElement.classList.add("dragging-database");
+      createConnectingPointOut(workspace, newElementFrame, 50);
       break;
 
     case "tool":
       newElement.classList.add("dragging-tool");
+      createConnectingPointIn(workspace, newElementFrame, 25);
+      createConnectingPointIn(workspace, newElementFrame, 75);
+      createConnectingPointOut(workspace, newElementFrame, 25);
+      createConnectingPointOut(workspace, newElementFrame, 75);
       break;
 
     case "process":
       newElement.classList.add("dragging-process");
+      createConnectingPointIn(workspace, newElementFrame, 25);
+      createConnectingPointIn(workspace, newElementFrame, 75);
+      createConnectingPointOut(workspace, newElementFrame, 25);
+      createConnectingPointOut(workspace, newElementFrame, 75);
+      break;
+
+    case "start":
+      newElement.classList.add("dragging-start");
+      createConnectingPointOut(workspace, newElementFrame, 25);
+      createConnectingPointOut(workspace, newElementFrame, 75);
+      break;
+
+    case "end":
+      newElement.classList.add("dragging-end");
+      createConnectingPointIn(workspace, newElementFrame, 25);
+      createConnectingPointIn(workspace, newElementFrame, 75);
       break;
 
     default:
@@ -12508,12 +12683,7 @@ function render(workspace, iconType, elementID) {
   newElementFrame.style.left = "30%"; // Apply mouse and finger tracing
 
   Object(_action_iconMouseTracing__WEBPACK_IMPORTED_MODULE_0__["default"])(newElementFrame, newElement, workspace);
-  Object(_action_iconFingerTracing__WEBPACK_IMPORTED_MODULE_1__["default"])(newElementFrame); // Apply connecting point
-
-  createConnectingPointIn(workspace, newElementFrame, 25);
-  createConnectingPointIn(workspace, newElementFrame, 75);
-  createConnectingPointOut(workspace, newElementFrame, 25);
-  createConnectingPointOut(workspace, newElementFrame, 75);
+  Object(_action_iconFingerTracing__WEBPACK_IMPORTED_MODULE_1__["default"])(newElementFrame);
   newElementFrame.append(newElement);
   workspace.append(newElementFrame);
 }

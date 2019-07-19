@@ -11,8 +11,8 @@ function createLine(workspaceObject,pointObject) {
         // Initial point position
         let pointPosition = pointObject.getBoundingClientRect();
         let workspacePosition = workspaceObject.getBoundingClientRect();
-        let initialXPosition = pointPosition.left - workspacePosition.left;
-        let initialYPosition = pointPosition.top - workspacePosition.top;
+        let initialXPosition = pointPosition.left - workspacePosition.left + range / 2;
+        let initialYPosition = pointPosition.top - workspacePosition.top + range / 2;
 
         // Line ID
         let lineID = idGenerator();
@@ -21,7 +21,7 @@ function createLine(workspaceObject,pointObject) {
         // Initial render
         lineRander(lineID,initialXPosition,initialYPosition,initialXPosition, initialYPosition,workspaceObject, pointObject.id);
 
-
+``
         // Initial mouse position
         let mousePositionX;
         let mousePositionY;
@@ -60,8 +60,8 @@ function createLine(workspaceObject,pointObject) {
                 ) {
                     flagOfDestinationExisted = true;
                     let destinationPointPosition = point.getBoundingClientRect();
-                    let destinationPointPositionX = destinationPointPosition.left - workspacePosition.left;
-                    let destinationPointPositionY = destinationPointPosition.top - workspacePosition.top;
+                    let destinationPointPositionX = destinationPointPosition.left - workspacePosition.left + range / 2;
+                    let destinationPointPositionY = destinationPointPosition.top - workspacePosition.top + range / 2;
                     lineRander(lineID,initialXPosition,initialYPosition,destinationPointPositionX, destinationPointPositionY,workspaceObject, pointObject.id,point.id);
                     break;
                 }
