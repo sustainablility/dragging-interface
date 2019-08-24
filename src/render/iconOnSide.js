@@ -1,68 +1,38 @@
 import actionOnClickingIcon from '../action/actionOnClickingSideAndCreateIconOnWorkspace';
+import {initialCreate} from "./iconCreateAndRender";
 
 async function iconOnSide(father) {
-    let startContainer = document.createElement("div");
-    let endContainer = document.createElement("div");
-    let databaseContainer = document.createElement("div");
-    let toolContainer = document.createElement("div");
-    let processContainer = document.createElement("div");
-    let dataValueContainer = document.createElement("div");
 
-    let startIcon = document.createElement("div");
-    let endIcon = document.createElement("div");
-    let databaseICON = document.createElement("div");
-    let toolICON = document.createElement("div");
-    let processICON = document.createElement("div");
-    let dataValue = document.createElement("div");
+    let data = initialCreate("data");
+    let tool = initialCreate("tool");
+    let procedure = initialCreate("procedure");
+    let dataFrame = document.createElement("div");
+    dataFrame.classList.add("dragging-icon-side-frame");
+    dataFrame.append(data[0]);
+
+    let toolFrame = document.createElement("div");
+    toolFrame.classList.add("dragging-icon-side-frame");
+    toolFrame.append(tool[0]);
+
+    let procedureFrame = document.createElement("div");
+    procedureFrame.classList.add("dragging-icon-side-frame");
+    procedureFrame.append(procedure[0]);
 
     let workspace = document.getElementById("dragging-frame-main");
 
-    startContainer.classList.add("dragging-sideICON-container");
-    startContainer.onclick = () => {
-        actionOnClickingIcon(workspace,"start");
+    dataFrame.onclick = () => {
+        actionOnClickingIcon(workspace,"data");
     };
-    endContainer.classList.add("dragging-sideICON-container");
-    endContainer.onclick = () => {
-        actionOnClickingIcon(workspace,"end");
-    };
-    databaseContainer.classList.add("dragging-sideICON-container");
-    databaseContainer.onclick = () => {
-        actionOnClickingIcon(workspace,"database");
-    };
-    toolContainer.classList.add("dragging-sideICON-container");
-    toolContainer.onclick = () => {
+    toolFrame.onclick = () => {
         actionOnClickingIcon(workspace,"tool");
     };
-    processContainer.classList.add("dragging-sideICON-container");
-    processContainer.onclick = () => {
-        actionOnClickingIcon(workspace,"process");
-    };
-    dataValueContainer.classList.add("dragging-sideICON-container");
-    dataValueContainer.onclick = () => {
-        actionOnClickingIcon(workspace,"datavalue");
+    procedureFrame.onclick = () => {
+        actionOnClickingIcon(workspace,"procedure");
     };
 
-    databaseICON.classList.add("dragging-database");
-    toolICON.classList.add("dragging-tool");
-    processICON.classList.add("dragging-process");
-    dataValue.classList.add("dragging-datavalue");
-    startIcon.classList.add("dragging-start");
-    endIcon.classList.add("dragging-end");
-
-    startContainer.append(startIcon);
-    endContainer.append(endIcon);
-    databaseContainer.append(databaseICON);
-    toolContainer.append(toolICON);
-    processContainer.append(processICON);
-    dataValueContainer.append(dataValue);
-
-    father.append(startContainer);
-    father.append(endContainer);
-    father.append(databaseContainer);
-    father.append(toolContainer);
-    father.append(processContainer);
-    father.append(dataValueContainer);
-
+    father.append(dataFrame);
+    father.append(toolFrame);
+    father.append(procedureFrame);
 }
 
 export default iconOnSide;

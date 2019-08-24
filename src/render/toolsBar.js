@@ -1,9 +1,9 @@
-import saveAsHTMLAction from '../action/saveAsHTML';
+import runProcedure from '../action/runTheProcedure';
 async function toolsBar(father,workspace) {
     let saveButton = document.createElement("button");
-    saveButton.innerText = "Save";
+    saveButton.innerText = "Run";
     saveButton.onclick = () => {
-        saveAsHTMLAction(workspace);
+        runProcedure(workspace);
     };
     father.append(saveButton);
 }

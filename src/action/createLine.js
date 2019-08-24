@@ -21,7 +21,6 @@ function createLine(workspaceObject,pointObject) {
         // Initial render
         lineRander(lineID,initialXPosition,initialYPosition,initialXPosition, initialYPosition,workspaceObject, pointObject.id);
 
-``
         // Initial mouse position
         let mousePositionX;
         let mousePositionY;

@@ -1,22 +1,5 @@
-import iconMouseTracing from "../action/iconMouseTracing";
-import createLine from '../action/createLine';
-import idGenerator from '../lib/randomIDGenerator';
-import {initialCreate} from "./iconCreateAndRender";
-
-function render(workspace,iconType,elementID) {
-    
-    // Initialize element
-    let newElement = initialCreate(iconType);
-    newElement[0].id = elementID;
-    // Set initial Position
-    newElement[0].style.top = "30%";
-    newElement[0].style.left = "30%";
-
-    // Apply mouse and finger tracing
-    iconMouseTracing(newElement[0],newElement[1],workspace);
-
-    workspace.append(newElement[0]);
-}
+import idGenerator from "../../lib/randomIDGenerator";
+import createLine from "../../action/createLine";
 
 function createConnectingPointIn(workspace, newElementFrame, distanceToLeft) {
     let connectingPoint = document.createElement("div");
@@ -25,6 +8,7 @@ function createConnectingPointIn(workspace, newElementFrame, distanceToLeft) {
     connectingPoint.style.left = distanceToLeft + "%";
     connectingPoint.id = idGenerator();
     newElementFrame.append(connectingPoint);
+    return connectingPoint.id;
 }
 
 function createConnectingPointOut(workspace, newElementFrame, distanceToLeft) {
@@ -35,6 +19,7 @@ function createConnectingPointOut(workspace, newElementFrame, distanceToLeft) {
     connectingPoint.id = idGenerator();
     createLine(workspace,connectingPoint);
     newElementFrame.append(connectingPoint);
+    return connectingPoint.id;
 }
 
-export default render;
+export {createConnectingPointIn,createConnectingPointOut};

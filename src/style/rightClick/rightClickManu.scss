@@ -1,9 +1,8 @@
 .dragging-icon-rightClick-manu {
   position: absolute;
-  height: 10em;
-  width: 6em;
+  height: 10rem;
   background-color: #FFF;
-  border: 0.1em #000 solid;
+  border: 0.1rem #000 solid;
   z-index: 10;
 }
 
@@ -14,3 +13,31 @@
   z-index: 9;
 }
 
+.dragging-icon-rightClick-manu-row {
+  position: relative;
+  display: flex;
+  height: 2rem;
+  margin: 0.5rem;
+}
+
+.dragging-rightClick-deleteButton {
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
+.dragging-rightClick-testButton {
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
+.dragging-rightClick-saveButton {
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
+
+.dragging-rightClick-text {
+  position: relative;
+  height: 100%;
+  margin: 0.5rem;
+}
