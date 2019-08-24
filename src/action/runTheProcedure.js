@@ -31,7 +31,7 @@ async function runTheProcedure(workspace) {
                 }
                 break;
             case "tool":
-                if (element) 
+
         }
     }
 
@@ -41,6 +41,21 @@ function getConnectingElement(workspace, element) {
     let dataPointIDs = JSON.parse(element.getAttribute("_datapoint"));
     if (dataPointIDs !== null) {
         let line = workspace.querySelector("[_from='" + dataPointIDs[0] + "']");
+        let destPoint = workspace.getElementById(line.getAttribute("_to"));
+        let destElement = destPoint.parentNode;
+        return destElement;
+    }
+    return null;
+}
+
+function getConnectingElements(workspace, element) {
+    let dataPointIDs = JSON.parse(element.getAttribute("_datapoint"));
+    let elements
+    if (dataPointIDs !== null) {
+        let lines = workspace.querySelectorAll("[_from='" + dataPointIDs[0] + "']");
+        for (let line of lines) {
+
+        }
         let destPoint = workspace.getElementById(line.getAttribute("_to"));
         let destElement = destPoint.parentNode;
         return destElement;

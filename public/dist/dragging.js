@@ -12028,9 +12028,215 @@ function mouseTracing(iconFrame, iconForClick, workspace) {
   !*** ./src/action/runTheProcedure.js ***!
   \***************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/linbin/Documents/sustainablility/dragging-interface/src/action/runTheProcedure.js: Unexpected token (35:8)\n\n\u001b[0m \u001b[90m 33 | \u001b[39m            \u001b[36mcase\u001b[39m \u001b[32m\"tool\"\u001b[39m\u001b[33m:\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 34 | \u001b[39m                \u001b[36mif\u001b[39m (element) \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 | \u001b[39m        }\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 36 | \u001b[39m    }\u001b[0m\n\u001b[0m \u001b[90m 37 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 38 | \u001b[39m}\u001b[0m\n    at Parser.raise (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:6344:17)\n    at Parser.unexpected (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:7659:16)\n    at Parser.parseExprAtom (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:8828:20)\n    at Parser.parseExprSubscripts (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:8413:23)\n    at Parser.parseMaybeUnary (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:8393:21)\n    at Parser.parseExprOps (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:8280:23)\n    at Parser.parseMaybeConditional (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:8253:23)\n    at Parser.parseMaybeAssign (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:8200:21)\n    at Parser.parseExpression (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:8148:23)\n    at Parser.parseStatementContent (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:9917:23)\n    at Parser.parseStatement (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Parser.parseIfStatement (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:10142:28)\n    at Parser.parseStatementContent (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:9833:21)\n    at Parser.parseStatement (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Parser.parseSwitchStatement (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:10195:36)\n    at Parser.parseStatementContent (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:9839:21)\n    at Parser.parseStatement (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Parser.parseBlockOrModuleBlockBody (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:10364:25)\n    at Parser.parseBlockBody (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:10351:10)\n    at Parser.parseBlock (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:10335:10)\n    at Parser.parseStatementContent (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:9864:21)\n    at Parser.parseStatement (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:9788:17)\n    at node.body.withTopicForbiddingContext (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:10267:60)\n    at Parser.withTopicForbiddingContext (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:9683:14)\n    at Parser.parseWhileStatement (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:10267:22)\n    at Parser.parseStatementContent (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:9858:21)\n    at Parser.parseStatement (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Parser.parseBlockOrModuleBlockBody (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:10364:25)\n    at Parser.parseBlockBody (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:10351:10)\n    at Parser.parseBlock (/home/linbin/Documents/sustainablility/dragging-interface/node_modules/@babel/parser/lib/index.js:10335:10)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ajax_getDataViaAPI__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ajax/getDataViaAPI */ "./src/ajax/getDataViaAPI.js");
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+function runTheProcedure(_x) {
+  return _runTheProcedure.apply(this, arguments);
+}
+
+function _runTheProcedure() {
+  _runTheProcedure = _asyncToGenerator(
+  /*#__PURE__*/
+  regeneratorRuntime.mark(function _callee(workspace) {
+    var que, startPoints1, _iteratorNormalCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, i, startPoints2, _iteratorNormalCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, _i, element, destPoint, url, dataFromAPI;
+
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            que = [];
+            startPoints1 = workspace.querySelectorAll("[_type='data'][_datatype='api']");
+            _iteratorNormalCompletion2 = true;
+            _didIteratorError2 = false;
+            _iteratorError2 = undefined;
+            _context.prev = 5;
+
+            for (_iterator2 = startPoints1[Symbol.iterator](); !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+              i = _step2.value;
+              que.push(i);
+            }
+
+            _context.next = 13;
+            break;
+
+          case 9:
+            _context.prev = 9;
+            _context.t0 = _context["catch"](5);
+            _didIteratorError2 = true;
+            _iteratorError2 = _context.t0;
+
+          case 13:
+            _context.prev = 13;
+            _context.prev = 14;
+
+            if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
+              _iterator2["return"]();
+            }
+
+          case 16:
+            _context.prev = 16;
+
+            if (!_didIteratorError2) {
+              _context.next = 19;
+              break;
+            }
+
+            throw _iteratorError2;
+
+          case 19:
+            return _context.finish(16);
+
+          case 20:
+            return _context.finish(13);
+
+          case 21:
+            startPoints2 = workspace.querySelectorAll("[_type='data'][_datatype='custom']");
+            _iteratorNormalCompletion3 = true;
+            _didIteratorError3 = false;
+            _iteratorError3 = undefined;
+            _context.prev = 25;
+
+            for (_iterator3 = startPoints2[Symbol.iterator](); !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+              _i = _step3.value;
+              que.push(_i);
+            }
+
+            _context.next = 33;
+            break;
+
+          case 29:
+            _context.prev = 29;
+            _context.t1 = _context["catch"](25);
+            _didIteratorError3 = true;
+            _iteratorError3 = _context.t1;
+
+          case 33:
+            _context.prev = 33;
+            _context.prev = 34;
+
+            if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
+              _iterator3["return"]();
+            }
+
+          case 36:
+            _context.prev = 36;
+
+            if (!_didIteratorError3) {
+              _context.next = 39;
+              break;
+            }
+
+            throw _iteratorError3;
+
+          case 39:
+            return _context.finish(36);
+
+          case 40:
+            return _context.finish(33);
+
+          case 41:
+            if (!(que.length > 0)) {
+              _context.next = 50;
+              break;
+            }
+
+            element = que.pop();
+            _context.t2 = element.getAttribute("_type");
+            _context.next = _context.t2 === "data" ? 46 : _context.t2 === "tool" ? 48 : 48;
+            break;
+
+          case 46:
+            if (element.getAttribute("_datatype") === "output") {
+              console.log(element.getAttribute("_result"));
+            } else {
+              destPoint = getConnectingElement(workspace, element);
+              url = element.getAttribute("_dataapi");
+              dataFromAPI = Object(_ajax_getDataViaAPI__WEBPACK_IMPORTED_MODULE_0__["default"])(url);
+
+              if (destPoint !== null) {
+                if (destPoint) destPoint.setAttribute("_result", JSON.stringify(dataFromAPI));
+              }
+
+              que.push(destPoint);
+            }
+
+            return _context.abrupt("break", 48);
+
+          case 48:
+            _context.next = 41;
+            break;
+
+          case 50:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, null, [[5, 9, 13, 21], [14,, 16, 20], [25, 29, 33, 41], [34,, 36, 40]]);
+  }));
+  return _runTheProcedure.apply(this, arguments);
+}
+
+function getConnectingElement(workspace, element) {
+  var dataPointIDs = JSON.parse(element.getAttribute("_datapoint"));
+
+  if (dataPointIDs !== null) {
+    var _line = workspace.querySelector("[_from='" + dataPointIDs[0] + "']");
+
+    var destPoint = workspace.getElementById(_line.getAttribute("_to"));
+    var destElement = destPoint.parentNode;
+    return destElement;
+  }
+
+  return null;
+}
+
+function getConnectingElements(workspace, element) {
+  var dataPointIDs = JSON.parse(element.getAttribute("_datapoint"));
+  var elements;
+
+  if (dataPointIDs !== null) {
+    var lines = workspace.querySelectorAll("[_from='" + dataPointIDs[0] + "']");
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+      for (var _iterator = lines[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+        var _line2 = _step.value;
+      }
+    } catch (err) {
+      _didIteratorError = true;
+      _iteratorError = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+          _iterator["return"]();
+        }
+      } finally {
+        if (_didIteratorError) {
+          throw _iteratorError;
+        }
+      }
+    }
+
+    var destPoint = workspace.getElementById(line.getAttribute("_to"));
+    var destElement = destPoint.parentNode;
+    return destElement;
+  }
+
+  return null;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (runTheProcedure);
 
 /***/ }),
 
