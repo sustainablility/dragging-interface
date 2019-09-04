@@ -1,4 +1,5 @@
 import getDataViaAPI from '../ajax/getDataViaAPI';
+import runToolByAPI from '../ajax/runToolByAPI';
 async function runTheProcedure(workspace) {
 
     let que = [];
@@ -14,24 +15,48 @@ async function runTheProcedure(workspace) {
 
 
     while (que.length > 0) {
-        let element = que.pop();
+        let element = que.shift();
         switch (element.getAttribute("_type")) {
             case "data":
                 if (element.getAttribute("_datatype") === "output") {
-                    console.log(element.getAttribute("_result"));
+                    let dataInID = JSON.parse(element.getAttribute("_datapoint"))[0];
+                    let dataInElement = document.getElementById(dataInID);
+                    console.log(dataInElement.getAttribute("_result"));
                 }else {
-                    let destPoint = getConnectingElement(workspace, element);
+                    let dest = getConnectingElement(workspace, element);
+                    let destPoint = dest[0];
+                    let destElement = dest[1];
                     let url = element.getAttribute("_dataapi");
                     let dataFromAPI = getDataViaAPI(url);
                     if (destPoint !== null) {
-                        if (destPoint) 
                         destPoint.setAttribute("_result", JSON.stringify(dataFromAPI));
                     }
-                    que.push(destPoint)
+                    if (!que.includes(destElement)) {
+                        que.push(destElement);
+                    }
                 }
                 break;
             case "tool":
-
+                let pointInIDList = JSON.parse(element.getAttribute("_datapointin"));
+                let pointInDataList = [];
+                for (let pointID of pointInIDList) {
+                    let point = document.getElementById(pointID);
+                    let dataFromPoint = JSON.parse(point.getAttribute("_result"));
+                    pointInDataList.push(dataFromPoint);
+                }
+                let result = runToolByAPI(element.getAttribute("_toolapi"), pointInDataList);
+                if(result == null) {
+                    console.log("Tool Error");
+                    break;
+                }
+                let connectingElements = getConnectingElements(workspace,element);
+                for (let i = 0; i < result.length; i ++) {
+                    connectingElements[i][0].setAttribute("_result",JSON.stringify(result[i]));
+                    if (!que.includes(connectingElements[i])) {
+                        que.push(connectingElements[i][1]);
+                    }
+                }
+                break;
         }
     }
 
@@ -41,24 +66,24 @@ function getConnectingElement(workspace, element) {
     let dataPointIDs = JSON.parse(element.getAttribute("_datapoint"));
     if (dataPointIDs !== null) {
         let line = workspace.querySelector("[_from='" + dataPointIDs[0] + "']");
-        let destPoint = workspace.getElementById(line.getAttribute("_to"));
+        let destPoint = document.getElementById(line.getAttribute("_to"));
         let destElement = destPoint.parentNode;
-        return destElement;
+        return [destPoint, destElement];
     }
     return null;
 }
 
 function getConnectingElements(workspace, element) {
-    let dataPointIDs = JSON.parse(element.getAttribute("_datapoint"));
-    let elements
+    let dataPointIDs = JSON.parse(element.getAttribute("_datapointout"));
     if (dataPointIDs !== null) {
         let lines = workspace.querySelectorAll("[_from='" + dataPointIDs[0] + "']");
+        let returnList = [];
         for (let line of lines) {
-
+            let destPoint = document.getElementById(line.getAttribute("_to"));
+            let destElement = destPoint.parentNode;
+            returnList.push([destPoint, destElement])
         }
-        let destPoint = workspace.getElementById(line.getAttribute("_to"));
-        let destElement = destPoint.parentNode;
-        return destElement;
+        return returnList;
     }
     return null;
 }

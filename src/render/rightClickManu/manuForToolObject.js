@@ -121,8 +121,6 @@ function saveObject(manu, element) {
         let apiURL = manu.getElementsByClassName("dragging-rightClick-input")[0].value;
         element.setAttribute("_toolApi",apiURL);
         element.getElementsByClassName("dragging-icon-sub-title")[0].innerText = apiInfo.name;
-        console.log(apiInfo.parameter.length);
-        console.log(apiInfo.output.length);
         let dataPointIN = createConnectingPointsIn(element, apiInfo.parameter.length);
         let dataPointOut = createConnectingPointsOut(element, apiInfo.output.length);
 
