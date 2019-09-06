@@ -11913,7 +11913,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _render_rightClickManu_manuForDataObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../render/rightClickManu/manuForDataObject */ "./src/render/rightClickManu/manuForDataObject.js");
 /* harmony import */ var _render_rightClickManu_manuForToolObject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../render/rightClickManu/manuForToolObject */ "./src/render/rightClickManu/manuForToolObject.js");
 /* harmony import */ var _render_rightClickManu_manuForProcedureObject__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../render/rightClickManu/manuForProcedureObject */ "./src/render/rightClickManu/manuForProcedureObject.js");
-/* harmony import */ var _render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../render/connectingLine/randerTheLine */ "./src/render/connectingLine/randerTheLine.js");
+/* harmony import */ var _render_rightClickManu_manuForOutputObject__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../render/rightClickManu/manuForOutputObject */ "./src/render/rightClickManu/manuForOutputObject.js");
+/* harmony import */ var _render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../render/connectingLine/randerTheLine */ "./src/render/connectingLine/randerTheLine.js");
+
 
 
 
@@ -11936,6 +11938,11 @@ function mouseTracing(iconFrame, iconForClick, workspace) {
 
         case "procedure":
           Object(_render_rightClickManu_manuForProcedureObject__WEBPACK_IMPORTED_MODULE_3__["default"])(_lib_size__WEBPACK_IMPORTED_MODULE_0___default.a.pxConvertToRem(onmouseDownEvent.clientX), _lib_size__WEBPACK_IMPORTED_MODULE_0___default.a.pxConvertToRem(onmouseDownEvent.clientY), iconFrame);
+          break;
+
+        case "output":
+          Object(_render_rightClickManu_manuForOutputObject__WEBPACK_IMPORTED_MODULE_4__["default"])(_lib_size__WEBPACK_IMPORTED_MODULE_0___default.a.pxConvertToRem(onmouseDownEvent.clientX), _lib_size__WEBPACK_IMPORTED_MODULE_0___default.a.pxConvertToRem(onmouseDownEvent.clientY), iconFrame);
+          break;
       }
     } // diameter of connecting point
 
@@ -11970,7 +11977,7 @@ function mouseTracing(iconFrame, iconForClick, workspace) {
                 var startPointPositionY = startPointPosition.top - workspacePosition.top + range / 2;
                 var toPointPositionX = toPointPosition.left - workspacePosition.left + range / 2;
                 var toPointPositionY = toPointPosition.top - workspacePosition.top + range / 2;
-                Object(_render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_4__["default"])(line.id, startPointPositionX, startPointPositionY, toPointPositionX, toPointPositionY, workspace, point.id, toPoint.id);
+                Object(_render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_5__["default"])(line.id, startPointPositionX, startPointPositionY, toPointPositionX, toPointPositionY, workspace, point.id, toPoint.id);
               }
             }
 
@@ -11992,7 +11999,7 @@ function mouseTracing(iconFrame, iconForClick, workspace) {
 
                 var _toPointPositionY = _toPointPosition.top - workspacePosition.top + range / 2;
 
-                Object(_render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_4__["default"])(_line.id, _startPointPositionX, _startPointPositionY, _toPointPositionX, _toPointPositionY, workspace, startPoint.id, point.id);
+                Object(_render_connectingLine_randerTheLine__WEBPACK_IMPORTED_MODULE_5__["default"])(_line.id, _startPointPositionX, _startPointPositionY, _toPointPositionX, _toPointPositionY, workspace, startPoint.id, point.id);
               }
             }
           }
@@ -12049,7 +12056,7 @@ function _runTheProcedure() {
   _runTheProcedure = _asyncToGenerator(
   /*#__PURE__*/
   regeneratorRuntime.mark(function _callee(workspace) {
-    var que, startPoints1, _iteratorNormalCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, _i, startPoints2, _iteratorNormalCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, _i2, element, dataInID, dataInElement, dest, destPoint, destElement, url, dataFromAPI, pointInIDList, pointInDataList, _iteratorNormalCompletion4, _didIteratorError4, _iteratorError4, _iterator4, _step4, pointID, point, dataFromPoint, result, connectingElements, i;
+    var que, startPoints1, _iteratorNormalCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, _i, startPoints2, _iteratorNormalCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, _i2, element, dataInID, dataInElement, dest, destPoint, destElement, url, dataFromAPI, pointInIDList, pointInDataList, _iteratorNormalCompletion4, _didIteratorError4, _iteratorError4, _iterator4, _step4, pointID, point, dataFromPoint, result, connectingElements, i, _dataInElement, _dataInElement2, _dest, _destPoint, _destElement;
 
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
@@ -12147,13 +12154,13 @@ function _runTheProcedure() {
 
           case 41:
             if (!(que.length > 0)) {
-              _context.next = 78;
+              _context.next = 85;
               break;
             }
 
             element = que.shift();
             _context.t2 = element.getAttribute("_type");
-            _context.next = _context.t2 === "data" ? 46 : _context.t2 === "tool" ? 48 : 76;
+            _context.next = _context.t2 === "data" ? 46 : _context.t2 === "tool" ? 48 : _context.t2 === "output" ? 76 : 83;
             break;
 
           case 46:
@@ -12177,7 +12184,7 @@ function _runTheProcedure() {
               }
             }
 
-            return _context.abrupt("break", 76);
+            return _context.abrupt("break", 83);
 
           case 48:
             pointInIDList = JSON.parse(element.getAttribute("_datapointin"));
@@ -12236,7 +12243,7 @@ function _runTheProcedure() {
             }
 
             console.log("Tool Error");
-            return _context.abrupt("break", 76);
+            return _context.abrupt("break", 83);
 
           case 73:
             connectingElements = getConnectingElements(workspace, element);
@@ -12249,13 +12256,40 @@ function _runTheProcedure() {
               }
             }
 
-            return _context.abrupt("break", 76);
+            return _context.abrupt("break", 83);
 
           case 76:
+            if (!(element.getAttribute("_usefor") === "odas")) {
+              _context.next = 82;
+              break;
+            }
+
+            _dataInElement = element.getElementsByClassName("dragging-icon-connecting-point-position-in")[0];
+            console.log(_dataInElement.getAttribute("_result"));
+            return _context.abrupt("break", 83);
+
+          case 82:
+            if (element.getAttribute("_usefor") === "odac") {
+              _dataInElement2 = element.getElementsByClassName("dragging-icon-connecting-point-position-in")[0];
+              console.log(_dataInElement2.getAttribute("_result"));
+              _dest = getConnectingElements(workspace, element)[0];
+              _destPoint = _dest[0];
+              _destElement = _dest[1];
+
+              if (_destPoint !== null) {
+                _destPoint.setAttribute("_result", _dataInElement2.getAttribute("_result"));
+              }
+
+              if (!que.includes(_destElement)) {
+                que.push(_destElement);
+              }
+            }
+
+          case 83:
             _context.next = 41;
             break;
 
-          case 78:
+          case 85:
           case "end":
             return _context.stop();
         }
@@ -12793,6 +12827,11 @@ function initialCreate(iconType) {
       iconFrame.setAttribute("_type", "procedure");
       iconMainTitle.innerText = "Procedure";
       break;
+
+    case "output":
+      iconFrame.setAttribute("_type", "output");
+      iconMainTitle.innerText = "Output";
+      break;
   }
 
   iconInside.append(iconMainTitle);
@@ -12833,7 +12872,7 @@ function _iconOnSide() {
   _iconOnSide = _asyncToGenerator(
   /*#__PURE__*/
   regeneratorRuntime.mark(function _callee(father) {
-    var data, tool, procedure, dataFrame, toolFrame, procedureFrame, workspace;
+    var data, tool, procedure, output, dataFrame, toolFrame, procedureFrame, outputFrame, workspace;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -12841,6 +12880,7 @@ function _iconOnSide() {
             data = Object(_iconCreateAndRender__WEBPACK_IMPORTED_MODULE_1__["initialCreate"])("data");
             tool = Object(_iconCreateAndRender__WEBPACK_IMPORTED_MODULE_1__["initialCreate"])("tool");
             procedure = Object(_iconCreateAndRender__WEBPACK_IMPORTED_MODULE_1__["initialCreate"])("procedure");
+            output = Object(_iconCreateAndRender__WEBPACK_IMPORTED_MODULE_1__["initialCreate"])("output");
             dataFrame = document.createElement("div");
             dataFrame.classList.add("dragging-icon-side-frame");
             dataFrame.append(data[0]);
@@ -12850,6 +12890,9 @@ function _iconOnSide() {
             procedureFrame = document.createElement("div");
             procedureFrame.classList.add("dragging-icon-side-frame");
             procedureFrame.append(procedure[0]);
+            outputFrame = document.createElement("div");
+            outputFrame.classList.add("dragging-icon-side-frame");
+            outputFrame.append(output[0]);
             workspace = document.getElementById("dragging-frame-main");
 
             dataFrame.onclick = function () {
@@ -12864,11 +12907,16 @@ function _iconOnSide() {
               Object(_action_actionOnClickingSideAndCreateIconOnWorkspace__WEBPACK_IMPORTED_MODULE_0__["default"])(workspace, "procedure");
             };
 
+            outputFrame.onclick = function () {
+              Object(_action_actionOnClickingSideAndCreateIconOnWorkspace__WEBPACK_IMPORTED_MODULE_0__["default"])(workspace, "output");
+            };
+
             father.append(dataFrame);
             father.append(toolFrame);
             father.append(procedureFrame);
+            father.append(outputFrame);
 
-          case 19:
+          case 25:
           case "end":
             return _context.stop();
         }
@@ -13196,6 +13244,168 @@ function deleteElement(element) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (manuForData);
+
+/***/ }),
+
+/***/ "./src/render/rightClickManu/manuForOutputObject.js":
+/*!**********************************************************!*\
+  !*** ./src/render/rightClickManu/manuForOutputObject.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./renderPointsWhenSave */ "./src/render/rightClickManu/renderPointsWhenSave.js");
+/* harmony import */ var _connectingLine_removeConnectingPoint__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../connectingLine/removeConnectingPoint */ "./src/render/connectingLine/removeConnectingPoint.js");
+/* harmony import */ var _ajax_getDataViaAPI__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../ajax/getDataViaAPI */ "./src/ajax/getDataViaAPI.js");
+
+
+
+
+function manuForOutput(locationX, locationY, element) {
+  var man = document.createElement("div");
+  var manuBg = document.createElement("div");
+  man.classList.add("dragging-icon-rightClick-manu");
+  manuBg.classList.add("dragging-icon-rightClick-manu-bg");
+  man.style.left = locationX + "em";
+  man.style.top = locationY + "em"; // Render row 1
+  // -------------------------------------------------------
+
+  var row1 = document.createElement("div");
+  row1.classList.add("dragging-icon-rightClick-manu-row");
+  man.append(row1); // Render delete button
+
+  var deleteButton = document.createElement("button");
+  deleteButton.classList.add("dragging-rightClick-deleteButton");
+
+  deleteButton.onclick = function () {
+    deleteElement(element);
+    removeManu(manuBg, man);
+  };
+
+  deleteButton.innerText = "Delete";
+  row1.append(deleteButton); // Render save button
+
+  var saveButton = document.createElement("button");
+  saveButton.classList.add("dragging-rightClick-deleteButton");
+
+  saveButton.onclick = function () {
+    Object(_connectingLine_removeConnectingPoint__WEBPACK_IMPORTED_MODULE_1__["default"])(element);
+    saveObject(man, element, useForSelector);
+    removeManu(manuBg, man);
+  };
+
+  saveButton.innerText = "Save";
+  row1.append(saveButton); // End of Row 1
+  // ----------------------------------------------------------
+  // Render Row 2
+  // ---------------------------------------------------------
+
+  var row2 = document.createElement("div");
+  row2.classList.add("dragging-icon-rightClick-manu-row");
+  man.append(row2); // Render Text "Use For"
+
+  var useFor = document.createElement("div");
+  useFor.classList.add("dragging-rightClick-text");
+  useFor.innerText = "Use For";
+  row2.append(useFor);
+  var useForSelector = document.createElement("select");
+  var defaultOption = document.createElement("option");
+  defaultOption.innerText = "Select One";
+  defaultOption.value = "";
+  useForSelector.append(defaultOption);
+  var selectorOptionOutputAndStop = document.createElement("option");
+  selectorOptionOutputAndStop.innerText = "Output Data and Stop";
+  selectorOptionOutputAndStop.value = "odas";
+  useForSelector.append(selectorOptionOutputAndStop);
+  var selectorOptionOutputAndContinue = document.createElement("option");
+  selectorOptionOutputAndContinue.innerText = "Output Data and Continue";
+  selectorOptionOutputAndContinue.value = "odac";
+  useForSelector.append(selectorOptionOutputAndContinue);
+  row2.append(useForSelector); // End of row 2
+  // ---------------------------------------------
+
+  document.body.append(man);
+  document.body.append(manuBg);
+
+  manuBg.onclick = function () {
+    removeManu(manuBg, man);
+  };
+}
+
+function saveObject(manu, element, useForSelector) {
+  switch (useForSelector.value) {
+    case "odas":
+      element.setAttribute("_usefor", "odas");
+      element.getElementsByClassName("dragging-icon-sub-title")[0].innerText = "Output and Stop";
+      var points = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsIn"])(element, 1);
+      element.setAttribute("_dataPoint", JSON.stringify(points));
+      return null;
+
+    case "odac":
+      element.setAttribute("_usefor", "odac");
+      element.getElementsByClassName("dragging-icon-sub-title")[0].innerText = "Output and Continue";
+      var pointsIDIn = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsIn"])(element, 1);
+      var pointsIDOut = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsOut"])(element, 1);
+      element.setAttribute("_dataPointIn", JSON.stringify(pointsIDIn));
+      element.setAttribute("_dataPointOut", JSON.stringify(pointsIDOut));
+      return null;
+  }
+}
+
+function removeManu(manuBg, man) {
+  document.body.removeChild(manuBg);
+  document.body.removeChild(man);
+}
+
+function deleteElement(element) {
+  console.log(element.id);
+  var points = element.childNodes;
+  var workspace = document.getElementById("dragging-frame-main");
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = points[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var point = _step.value;
+
+      if (point.classList.contains('dragging-icon-connecting-point-position-in')) {
+        var line = document.querySelector("[_to='" + point.id + "']");
+
+        if (line !== null) {
+          workspace.removeChild(line);
+        }
+      }
+
+      if (point.classList.contains('dragging-icon-connecting-point-position-out')) {
+        var _line = document.querySelector("[_from='" + point.id + "']");
+
+        if (_line !== null) {
+          workspace.removeChild(_line);
+        }
+      }
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  workspace.removeChild(element);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (manuForOutput);
 
 /***/ }),
 

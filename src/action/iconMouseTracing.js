@@ -2,6 +2,7 @@ import  size from '../lib/size';
 import rightClickManuForDataObject from '../render/rightClickManu/manuForDataObject';
 import rightClickManuForToolObject from '../render/rightClickManu/manuForToolObject';
 import rightClickManuForProcedureObject from '../render/rightClickManu/manuForProcedureObject';
+import rightClickManuForOutputObject from '../render/rightClickManu/manuForOutputObject';
 import  renderLine from '../render/connectingLine/randerTheLine';
 function mouseTracing(iconFrame,iconForClick, workspace) {
     iconForClick.onmousedown = (onmouseDownEvent) => {
@@ -17,6 +18,10 @@ function mouseTracing(iconFrame,iconForClick, workspace) {
                     break;
                 case "procedure":
                     rightClickManuForProcedureObject(size.pxConvertToRem(onmouseDownEvent.clientX), size.pxConvertToRem(onmouseDownEvent.clientY),iconFrame);
+                    break;
+                case "output":
+                    rightClickManuForOutputObject(size.pxConvertToRem(onmouseDownEvent.clientX), size.pxConvertToRem(onmouseDownEvent.clientY),iconFrame);
+                    break;
             }
         }
         // diameter of connecting point

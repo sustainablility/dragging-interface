@@ -25,6 +25,10 @@ function initialCreate(iconType) {
             iconFrame.setAttribute("_type","procedure");
             iconMainTitle.innerText = "Procedure";
             break;
+        case "output":
+            iconFrame.setAttribute("_type","output");
+            iconMainTitle.innerText = "Output";
+            break;
     }
     iconInside.append(iconMainTitle);
     iconInside.append(iconSubTitle);

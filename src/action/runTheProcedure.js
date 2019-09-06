@@ -57,6 +57,24 @@ async function runTheProcedure(workspace) {
                     }
                 }
                 break;
+            case "output":
+                if (element.getAttribute("_usefor") === "odas") {
+                    let dataInElement = element.getElementsByClassName("dragging-icon-connecting-point-position-in")[0];
+                    console.log(dataInElement.getAttribute("_result"));
+                    break;
+                }else if (element.getAttribute("_usefor") === "odac"){
+                    let dataInElement = element.getElementsByClassName("dragging-icon-connecting-point-position-in")[0];
+                    console.log(dataInElement.getAttribute("_result"));
+                    let dest = getConnectingElements(workspace, element)[0];
+                    let destPoint = dest[0];
+                    let destElement = dest[1];
+                    if (destPoint !== null) {
+                        destPoint.setAttribute("_result", dataInElement.getAttribute("_result"));
+                    }
+                    if (!que.includes(destElement)) {
+                        que.push(destElement);
+                    }
+                }
         }
     }
 
