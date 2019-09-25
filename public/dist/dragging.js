@@ -12030,6 +12030,52 @@ function mouseTracing(iconFrame, iconForClick, workspace) {
 
 /***/ }),
 
+/***/ "./src/action/loadFromLocal.js":
+/*!*************************************!*\
+  !*** ./src/action/loadFromLocal.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _action_iconMouseTracing__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../action/iconMouseTracing */ "./src/action/iconMouseTracing.js");
+
+var testingData = "<div class=\"dragging-icon-frame\" _type=\"data\" id=\"cfqq3o1djb\" _datatype_temp=\"api\" _datatype=\"api\" _dataapi=\"http://127.0.0.1:3000/data1\" _datapoint=\"[&quot;7nfpzo8jhq4&quot;]\" style=\"top: 3.9375rem; left: 6.6875rem;\"><div class=\"dragging-icon\"><div class=\"dragging-icon-main-title\">Data</div><div class=\"dragging-icon-sub-title\">API</div></div><div class=\"dragging-icon-connecting-point dragging-icon-connecting-point-position-out\" id=\"7nfpzo8jhq4\" style=\"left: 50%;\"></div></div><div class=\"dragging-icon-frame\" _type=\"data\" id=\"udgx3nd9ld\" _datatype_temp=\"api\" _datatype=\"api\" _dataapi=\"http://127.0.0.1:3000/data2\" _datapoint=\"[&quot;2e0rq8640jm&quot;]\" style=\"top: 3.0625rem; left: 25.3125rem;\"><div class=\"dragging-icon\"><div class=\"dragging-icon-main-title\">Data</div><div class=\"dragging-icon-sub-title\">API</div></div><div class=\"dragging-icon-connecting-point dragging-icon-connecting-point-position-out\" id=\"2e0rq8640jm\" style=\"left: 50%;\"></div></div><div class=\"dragging-icon-frame\" _type=\"tool\" id=\"gzhmzcrb05f\" _method=\"Add up two Dataset\" _toolapi=\"http://127.0.0.1:3000/tool1\" _datapointin=\"[&quot;uysyojz196q&quot;,&quot;onelye9hazs&quot;]\" _datapointout=\"[&quot;qug0furi3a&quot;]\" _line_in_number_left=\"1\" style=\"top: 9.625rem; left: 14.125rem;\"><div class=\"dragging-icon\"><div class=\"dragging-icon-main-title\">Tool</div><div class=\"dragging-icon-sub-title\">Add up</div></div><div class=\"dragging-icon-connecting-point dragging-icon-connecting-point-position-in\" id=\"uysyojz196q\" _result=\"http://127.0.0.1:3000/data1\" style=\"left: 33.3333%;\"></div><div class=\"dragging-icon-connecting-point dragging-icon-connecting-point-position-in\" id=\"onelye9hazs\" _result=\"http://127.0.0.1:3000/data2\" style=\"left: 66.6667%;\"></div><div class=\"dragging-icon-connecting-point dragging-icon-connecting-point-position-out\" id=\"qug0furi3a\" style=\"left: 50%;\"></div></div><div class=\"dragging-icon-frame\" _type=\"output\" id=\"s0mjwlmuwuc\" _usefor=\"odas\" _datapoint=\"[&quot;f0hgnnuwwf&quot;]\" style=\"top: 19.5625rem; left: 8.375rem;\"><div class=\"dragging-icon\"><div class=\"dragging-icon-main-title\">Output</div><div class=\"dragging-icon-sub-title\">Output and Stop</div></div><div class=\"dragging-icon-connecting-point dragging-icon-connecting-point-position-in\" id=\"f0hgnnuwwf\" _result=\"http://127.0.0.1:2223/getData?dvo4lb1lynw\" style=\"left: 50%;\"></div></div><div class=\"dragging-lineSet\" id=\"xy0741rntha\" _from=\"7nfpzo8jhq4\" _to=\"uysyojz196q\" style=\"height: 1.6084rem; width: 6.77051rem; top: 8.13672rem; left: 8.88672rem;\"><div class=\"dragging-line-vertical\" style=\"height: 0.804199rem; left: 0rem; top: 0rem;\"></div><div class=\"dragging-line-horizontal\" style=\"width: 6.77051rem; left: 0rem; top: 0.804199rem;\"></div><div class=\"dragging-line-vertical\" style=\"height: 0.804199rem; left: 6.77051rem; top: 0.804199rem;\"></div></div><div class=\"dragging-lineSet\" id=\"v72jogjxqg\" _from=\"2e0rq8640jm\" _to=\"onelye9hazs\" style=\"height: 2.4834rem; width: 10.5215rem; top: 7.26172rem; left: 16.9902rem;\"><div class=\"dragging-line-vertical\" style=\"height: 1.2417rem; left: 10.5215rem; top: 0rem;\"></div><div class=\"dragging-line-horizontal\" style=\"width: 10.5215rem; left: 0rem; top: 1.2417rem;\"></div><div class=\"dragging-line-vertical\" style=\"height: 1.2417rem; left: 0rem; top: 1.2417rem;\"></div></div><div class=\"dragging-lineSet\" id=\"ce7kxgzuzef\" _from=\"qug0furi3a\" _to=\"f0hgnnuwwf\" style=\"height: 5.8584rem; width: 5.75rem; top: 13.8242rem; left: 10.5742rem;\"><div class=\"dragging-line-vertical\" style=\"height: 2.9292rem; left: 5.75rem; top: 0rem;\"></div><div class=\"dragging-line-horizontal\" style=\"width: 5.75rem; left: 0rem; top: 2.9292rem;\"></div><div class=\"dragging-line-vertical\" style=\"height: 2.9292rem; left: 0rem; top: 2.9292rem;\"></div></div>";
+
+function loadProcedure(workspace) {
+  workspace.innerHTML = testingData;
+  var iconsFrame = workspace.getElementsByClassName("dragging-icon-frame");
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = iconsFrame[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var iconFrame = _step.value;
+      var iconForClick = iconFrame.getElementsByClassName("dragging-icon")[0];
+      Object(_action_iconMouseTracing__WEBPACK_IMPORTED_MODULE_0__["default"])(iconFrame, iconForClick, workspace);
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (loadProcedure);
+
+/***/ }),
+
 /***/ "./src/action/runTheProcedure.js":
 /*!***************************************!*\
   !*** ./src/action/runTheProcedure.js ***!
@@ -12040,10 +12086,14 @@ function mouseTracing(iconFrame, iconForClick, workspace) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ajax_getDataViaAPI__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ajax/getDataViaAPI */ "./src/ajax/getDataViaAPI.js");
-/* harmony import */ var _ajax_runToolByAPI__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ajax/runToolByAPI */ "./src/ajax/runToolByAPI.js");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config */ "./src/config.js");
+/* harmony import */ var _ajax_runToolByAPI__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ajax/runToolByAPI */ "./src/ajax/runToolByAPI.js");
+/* harmony import */ var _ajax_cache_putDataToCache__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ajax/cache/putDataToCache */ "./src/ajax/cache/putDataToCache.js");
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
 
 
 
@@ -12056,7 +12106,7 @@ function _runTheProcedure() {
   _runTheProcedure = _asyncToGenerator(
   /*#__PURE__*/
   regeneratorRuntime.mark(function _callee(workspace) {
-    var que, startPoints1, _iteratorNormalCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, _i, startPoints2, _iteratorNormalCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, _i2, element, dataInID, dataInElement, dest, destPoint, destElement, url, dataFromAPI, pointInIDList, pointInDataList, _iteratorNormalCompletion4, _didIteratorError4, _iteratorError4, _iterator4, _step4, pointID, point, dataFromPoint, result, connectingElements, i, _dataInElement, _dataInElement2, _dest, _destPoint, _destElement;
+    var que, startPoints1, _iteratorNormalCompletion4, _didIteratorError4, _iteratorError4, _iterator4, _step4, _i, startPoints2, _iteratorNormalCompletion5, _didIteratorError5, _iteratorError5, _iterator5, _step5, _i2, element, dataInID, dataInElement, dest, destPoint, destElement, dataType, url, dataText, dataID, lineNumberLeft, pointInIDList, pointInDataList, _iteratorNormalCompletion6, _didIteratorError6, _iteratorError6, _iterator6, _step6, pointID, point, urlFromPoint, result, connectingElements, i, _dataInElement, _dataInElement2, _dest, _destPoint, _destElement;
 
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
@@ -12064,13 +12114,13 @@ function _runTheProcedure() {
           case 0:
             que = [];
             startPoints1 = workspace.querySelectorAll("[_type='data'][_datatype='api']");
-            _iteratorNormalCompletion2 = true;
-            _didIteratorError2 = false;
-            _iteratorError2 = undefined;
+            _iteratorNormalCompletion4 = true;
+            _didIteratorError4 = false;
+            _iteratorError4 = undefined;
             _context.prev = 5;
 
-            for (_iterator2 = startPoints1[Symbol.iterator](); !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-              _i = _step2.value;
+            for (_iterator4 = startPoints1[Symbol.iterator](); !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+              _i = _step4.value;
               que.push(_i);
             }
 
@@ -12080,26 +12130,26 @@ function _runTheProcedure() {
           case 9:
             _context.prev = 9;
             _context.t0 = _context["catch"](5);
-            _didIteratorError2 = true;
-            _iteratorError2 = _context.t0;
+            _didIteratorError4 = true;
+            _iteratorError4 = _context.t0;
 
           case 13:
             _context.prev = 13;
             _context.prev = 14;
 
-            if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
-              _iterator2["return"]();
+            if (!_iteratorNormalCompletion4 && _iterator4["return"] != null) {
+              _iterator4["return"]();
             }
 
           case 16:
             _context.prev = 16;
 
-            if (!_didIteratorError2) {
+            if (!_didIteratorError4) {
               _context.next = 19;
               break;
             }
 
-            throw _iteratorError2;
+            throw _iteratorError4;
 
           case 19:
             return _context.finish(16);
@@ -12109,13 +12159,13 @@ function _runTheProcedure() {
 
           case 21:
             startPoints2 = workspace.querySelectorAll("[_type='data'][_datatype='custom']");
-            _iteratorNormalCompletion3 = true;
-            _didIteratorError3 = false;
-            _iteratorError3 = undefined;
+            _iteratorNormalCompletion5 = true;
+            _didIteratorError5 = false;
+            _iteratorError5 = undefined;
             _context.prev = 25;
 
-            for (_iterator3 = startPoints2[Symbol.iterator](); !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-              _i2 = _step3.value;
+            for (_iterator5 = startPoints2[Symbol.iterator](); !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+              _i2 = _step5.value;
               que.push(_i2);
             }
 
@@ -12125,26 +12175,26 @@ function _runTheProcedure() {
           case 29:
             _context.prev = 29;
             _context.t1 = _context["catch"](25);
-            _didIteratorError3 = true;
-            _iteratorError3 = _context.t1;
+            _didIteratorError5 = true;
+            _iteratorError5 = _context.t1;
 
           case 33:
             _context.prev = 33;
             _context.prev = 34;
 
-            if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
-              _iterator3["return"]();
+            if (!_iteratorNormalCompletion5 && _iterator5["return"] != null) {
+              _iterator5["return"]();
             }
 
           case 36:
             _context.prev = 36;
 
-            if (!_didIteratorError3) {
+            if (!_didIteratorError5) {
               _context.next = 39;
               break;
             }
 
-            throw _iteratorError3;
+            throw _iteratorError5;
 
           case 39:
             return _context.finish(36);
@@ -12153,17 +12203,20 @@ function _runTheProcedure() {
             return _context.finish(33);
 
           case 41:
+            putLineNumberToTools(workspace);
+
+          case 42:
             if (!(que.length > 0)) {
-              _context.next = 85;
+              _context.next = 89;
               break;
             }
 
             element = que.shift();
             _context.t2 = element.getAttribute("_type");
-            _context.next = _context.t2 === "data" ? 46 : _context.t2 === "tool" ? 48 : _context.t2 === "output" ? 76 : 83;
+            _context.next = _context.t2 === "data" ? 47 : _context.t2 === "tool" ? 50 : _context.t2 === "output" ? 80 : 87;
             break;
 
-          case 46:
+          case 47:
             if (element.getAttribute("_datatype") === "output") {
               dataInID = JSON.parse(element.getAttribute("_datapoint"))[0];
               dataInElement = document.getElementById(dataInID);
@@ -12172,103 +12225,121 @@ function _runTheProcedure() {
               dest = getConnectingElement(workspace, element);
               destPoint = dest[0];
               destElement = dest[1];
+              dataType = element.getAttribute("_datatype");
               url = element.getAttribute("_dataapi");
-              dataFromAPI = Object(_ajax_getDataViaAPI__WEBPACK_IMPORTED_MODULE_0__["default"])(url);
 
-              if (destPoint !== null) {
-                destPoint.setAttribute("_result", JSON.stringify(dataFromAPI));
+              if (dataType === "api") {
+                destPoint.setAttribute("_result", url);
+              } else if (dataType === "custom") {
+                dataText = element.getAttribute("_datatext");
+                dataID = Object(_ajax_cache_putDataToCache__WEBPACK_IMPORTED_MODULE_3__["default"])(JSON.parse(dataText));
+                destPoint.setAttribute("_result", _config__WEBPACK_IMPORTED_MODULE_1__["cacheAPIGetData"] + "?" + dataID);
               }
 
               if (!que.includes(destElement)) {
-                que.push(destElement);
+                if (destElement.getAttribute("_type") === "tool") {
+                  lineNumberLeft = Number(destElement.getAttribute("_line_in_number_left"));
+
+                  if (lineNumberLeft <= 1) {
+                    que.push(destElement);
+                  } else {
+                    lineNumberLeft--;
+                    destElement.setAttribute("_line_in_number_left", String(lineNumberLeft));
+                  }
+                } else {
+                  que.push(destElement);
+                }
               }
             }
 
-            return _context.abrupt("break", 83);
+            console.log("Done Data");
+            return _context.abrupt("break", 87);
 
-          case 48:
+          case 50:
             pointInIDList = JSON.parse(element.getAttribute("_datapointin"));
             pointInDataList = [];
-            _iteratorNormalCompletion4 = true;
-            _didIteratorError4 = false;
-            _iteratorError4 = undefined;
-            _context.prev = 53;
+            pointInDataList.push(element.getAttribute("_method"));
+            _iteratorNormalCompletion6 = true;
+            _didIteratorError6 = false;
+            _iteratorError6 = undefined;
+            _context.prev = 56;
 
-            for (_iterator4 = pointInIDList[Symbol.iterator](); !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-              pointID = _step4.value;
+            for (_iterator6 = pointInIDList[Symbol.iterator](); !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+              pointID = _step6.value;
               point = document.getElementById(pointID);
-              dataFromPoint = JSON.parse(point.getAttribute("_result"));
-              pointInDataList.push(dataFromPoint);
+              urlFromPoint = point.getAttribute("_result");
+              pointInDataList.push(urlFromPoint);
             }
 
-            _context.next = 61;
+            _context.next = 64;
             break;
 
-          case 57:
-            _context.prev = 57;
-            _context.t3 = _context["catch"](53);
-            _didIteratorError4 = true;
-            _iteratorError4 = _context.t3;
-
-          case 61:
-            _context.prev = 61;
-            _context.prev = 62;
-
-            if (!_iteratorNormalCompletion4 && _iterator4["return"] != null) {
-              _iterator4["return"]();
-            }
+          case 60:
+            _context.prev = 60;
+            _context.t3 = _context["catch"](56);
+            _didIteratorError6 = true;
+            _iteratorError6 = _context.t3;
 
           case 64:
             _context.prev = 64;
+            _context.prev = 65;
 
-            if (!_didIteratorError4) {
-              _context.next = 67;
+            if (!_iteratorNormalCompletion6 && _iterator6["return"] != null) {
+              _iterator6["return"]();
+            }
+
+          case 67:
+            _context.prev = 67;
+
+            if (!_didIteratorError6) {
+              _context.next = 70;
               break;
             }
 
-            throw _iteratorError4;
+            throw _iteratorError6;
 
-          case 67:
+          case 70:
+            return _context.finish(67);
+
+          case 71:
             return _context.finish(64);
 
-          case 68:
-            return _context.finish(61);
-
-          case 69:
-            result = Object(_ajax_runToolByAPI__WEBPACK_IMPORTED_MODULE_1__["default"])(element.getAttribute("_toolapi"), pointInDataList);
+          case 72:
+            result = Object(_ajax_runToolByAPI__WEBPACK_IMPORTED_MODULE_2__["default"])(element.getAttribute("_toolapi"), pointInDataList);
 
             if (!(result == null)) {
-              _context.next = 73;
+              _context.next = 76;
               break;
             }
 
             console.log("Tool Error");
-            return _context.abrupt("break", 83);
+            return _context.abrupt("break", 87);
 
-          case 73:
+          case 76:
             connectingElements = getConnectingElements(workspace, element);
 
             for (i = 0; i < result.length; i++) {
-              connectingElements[i][0].setAttribute("_result", JSON.stringify(result[i]));
+              connectingElements[i][0].setAttribute("_result", result[i]);
 
               if (!que.includes(connectingElements[i])) {
                 que.push(connectingElements[i][1]);
               }
             }
 
-            return _context.abrupt("break", 83);
+            console.log("Done Tool");
+            return _context.abrupt("break", 87);
 
-          case 76:
+          case 80:
             if (!(element.getAttribute("_usefor") === "odas")) {
-              _context.next = 82;
+              _context.next = 86;
               break;
             }
 
             _dataInElement = element.getElementsByClassName("dragging-icon-connecting-point-position-in")[0];
             console.log(_dataInElement.getAttribute("_result"));
-            return _context.abrupt("break", 83);
+            return _context.abrupt("break", 87);
 
-          case 82:
+          case 86:
             if (element.getAttribute("_usefor") === "odac") {
               _dataInElement2 = element.getElementsByClassName("dragging-icon-connecting-point-position-in")[0];
               console.log(_dataInElement2.getAttribute("_result"));
@@ -12285,18 +12356,74 @@ function _runTheProcedure() {
               }
             }
 
-          case 83:
-            _context.next = 41;
+          case 87:
+            _context.next = 42;
             break;
 
-          case 85:
+          case 89:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[5, 9, 13, 21], [14,, 16, 20], [25, 29, 33, 41], [34,, 36, 40], [53, 57, 61, 69], [62,, 64, 68]]);
+    }, _callee, null, [[5, 9, 13, 21], [14,, 16, 20], [25, 29, 33, 41], [34,, 36, 40], [56, 60, 64, 72], [65,, 67, 71]]);
   }));
   return _runTheProcedure.apply(this, arguments);
+}
+
+function putLineNumberToTools(workspace) {
+  var tools = workspace.querySelectorAll("[_type='tool']");
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = tools[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var tool = _step.value;
+      var num = 0;
+      var dataPointIns = JSON.parse(tool.getAttribute("_datapointin"));
+      var _iteratorNormalCompletion2 = true;
+      var _didIteratorError2 = false;
+      var _iteratorError2 = undefined;
+
+      try {
+        for (var _iterator2 = dataPointIns[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+          var dataPointIn = _step2.value;
+
+          if (workspace.querySelector("[_to='" + dataPointIn + "']") !== null) {
+            num++;
+          }
+        }
+      } catch (err) {
+        _didIteratorError2 = true;
+        _iteratorError2 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
+            _iterator2["return"]();
+          }
+        } finally {
+          if (_didIteratorError2) {
+            throw _iteratorError2;
+          }
+        }
+      }
+
+      tool.setAttribute("_line_in_number_left", String(num));
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
 }
 
 function getConnectingElement(workspace, element) {
@@ -12318,28 +12445,28 @@ function getConnectingElements(workspace, element) {
   if (dataPointIDs !== null) {
     var lines = workspace.querySelectorAll("[_from='" + dataPointIDs[0] + "']");
     var returnList = [];
-    var _iteratorNormalCompletion = true;
-    var _didIteratorError = false;
-    var _iteratorError = undefined;
+    var _iteratorNormalCompletion3 = true;
+    var _didIteratorError3 = false;
+    var _iteratorError3 = undefined;
 
     try {
-      for (var _iterator = lines[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        var line = _step.value;
+      for (var _iterator3 = lines[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+        var line = _step3.value;
         var destPoint = document.getElementById(line.getAttribute("_to"));
         var destElement = destPoint.parentNode;
         returnList.push([destPoint, destElement]);
       }
     } catch (err) {
-      _didIteratorError = true;
-      _iteratorError = err;
+      _didIteratorError3 = true;
+      _iteratorError3 = err;
     } finally {
       try {
-        if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-          _iterator["return"]();
+        if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
+          _iterator3["return"]();
         }
       } finally {
-        if (_didIteratorError) {
-          throw _iteratorError;
+        if (_didIteratorError3) {
+          throw _iteratorError3;
         }
       }
     }
@@ -12351,6 +12478,52 @@ function getConnectingElements(workspace, element) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (runTheProcedure);
+
+/***/ }),
+
+/***/ "./src/action/saveProcedure.js":
+/*!*************************************!*\
+  !*** ./src/action/saveProcedure.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function saveProcedure(workspace) {
+  console.log(workspace.innerHTML);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (saveProcedure);
+
+/***/ }),
+
+/***/ "./src/ajax/cache/putDataToCache.js":
+/*!******************************************!*\
+  !*** ./src/ajax/cache/putDataToCache.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../config */ "./src/config.js");
+
+
+function putData(data) {
+  var ajax = new XMLHttpRequest();
+  ajax.open("POST", _config__WEBPACK_IMPORTED_MODULE_0__["cacheAPIPutData"], false);
+  ajax.setRequestHeader("Content-Type", "application/json");
+  ajax.send(JSON.stringify(data));
+
+  if (ajax.status === 200) {
+    return ajax.responseText;
+  } else {
+    return null;
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (putData); // putData({"a":1});
 
 /***/ }),
 
@@ -12402,6 +12575,24 @@ function run(url, dataIn) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (run);
+
+/***/ }),
+
+/***/ "./src/config.js":
+/*!***********************!*\
+  !*** ./src/config.js ***!
+  \***********************/
+/*! exports provided: cacheAPIPutData, cacheAPIGetData, cacheAPIPutDataAPI */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cacheAPIPutData", function() { return cacheAPIPutData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cacheAPIGetData", function() { return cacheAPIGetData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cacheAPIPutDataAPI", function() { return cacheAPIPutDataAPI; });
+var cacheAPIPutData = "http://127.0.0.1:2223/putData";
+var cacheAPIGetData = "http://127.0.0.1:2223/getData";
+var cacheAPIPutDataAPI = "http://127.0.0.1:2223/putDataAPI";
 
 /***/ }),
 
@@ -12707,7 +12898,7 @@ function makeVerticalLine(parent, locationX, locationY, length) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 function removeConnectingPoints(element) {
-  var points = element.getElementsByClassName("dragging-icon-connecting-point");
+  var points = element.querySelectorAll(".dragging-icon-connecting-point");
   var _iteratorNormalCompletion = true;
   var _didIteratorError = false;
   var _iteratorError = undefined;
@@ -13360,7 +13551,6 @@ function removeManu(manuBg, man) {
 }
 
 function deleteElement(element) {
-  console.log(element.id);
   var points = element.childNodes;
   var workspace = document.getElementById("dragging-frame-main");
   var _iteratorNormalCompletion = true;
@@ -13655,17 +13845,15 @@ function manuForTool(locationX, locationY, element) {
   row3.classList.add("dragging-icon-rightClick-manu-row");
   man.append(row3); // Render Test button
 
-  var testButton = document.createElement("button");
-  testButton.classList.add("dragging-rightClick-testButton");
+  var checkButton = document.createElement("button");
+  checkButton.classList.add("dragging-rightClick-testButton");
 
-  testButton.onclick = function () {
-    if (apiTest(man) !== null) {
-      man.getElementsByClassName("dragging-rightClick-testButton")[0].innerHTML = "It works";
-    }
+  checkButton.onclick = function () {
+    checkButtonAction(man, element);
   };
 
-  testButton.innerText = "Test";
-  row3.append(testButton);
+  checkButton.innerText = "Check";
+  row3.append(checkButton);
   document.body.append(man);
   document.body.append(manuBg);
 
@@ -13685,6 +13873,63 @@ function apiTest(manu) {
   }
 }
 
+function checkButtonAction(manu, element) {
+  var apiInfo = apiTest(manu);
+
+  if (apiInfo !== null) {
+    manu.getElementsByClassName("dragging-rightClick-testButton")[0].innerHTML = "It works";
+    renderMethodSelection(manu, apiInfo.methods, element);
+  }
+}
+
+function renderMethodSelection(manu, methodList, element) {
+  var row = document.createElement("div");
+  row.classList.add("dragging-icon-rightClick-manu-row");
+  manu.append(row);
+  var MethodText = document.createElement("div");
+  MethodText.classList.add("dragging-rightClick-text");
+  MethodText.innerText = "Method";
+  row.append(MethodText);
+  var methodSelect = document.createElement("select");
+  var defaultOption = document.createElement("option");
+  defaultOption.innerText = "Select a Method";
+  defaultOption.value = "";
+  methodSelect.append(defaultOption);
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = methodList[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var method = _step.value;
+      var methodOption = document.createElement("option");
+      methodOption.innerText = method.name;
+      methodOption.value = method.name;
+      methodSelect.append(methodOption);
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  methodSelect.onchange = function () {
+    element.setAttribute("_method", methodSelect.value);
+  };
+
+  row.append(methodSelect);
+  manu.append(row);
+}
+
 function renderAPIInputBox(manu) {
   var anotherRow = document.createElement("div");
   anotherRow.id = "dragging-annotherRow";
@@ -13700,30 +13945,46 @@ function renderAPIInputBox(manu) {
   manu.append(anotherRow);
 }
 
-function renderCustomizedDataBox(manu) {
-  var anotherRow = document.createElement("div");
-  anotherRow.id = "dragging-annotherRow";
-  anotherRow.classList.add("dragging-icon-rightClick-manu-row");
-  var word = document.createElement("div");
-  word.classList.add("dragging-rightClick-text");
-  word.innerText = "Data";
-  anotherRow.append(word);
-  var textarea = document.createElement("textarea");
-  textarea.classList.add("dragging-rightClick-textarea");
-  anotherRow.append(textarea);
-  manu.append(anotherRow);
-}
-
 function saveObject(manu, element) {
   Object(_connectingLine_removeConnectingPoint__WEBPACK_IMPORTED_MODULE_1__["default"])(element);
   var apiInfo = apiTest(manu);
+  var dataPointIN;
+  var dataPointOut;
 
   if (apiInfo !== null) {
     var apiURL = manu.getElementsByClassName("dragging-rightClick-input")[0].value;
     element.setAttribute("_toolApi", apiURL);
     element.getElementsByClassName("dragging-icon-sub-title")[0].innerText = apiInfo.name;
-    var dataPointIN = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsIn"])(element, apiInfo.parameter.length);
-    var dataPointOut = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsOut"])(element, apiInfo.output.length);
+    var methodName = element.getAttribute("_method");
+    var _iteratorNormalCompletion2 = true;
+    var _didIteratorError2 = false;
+    var _iteratorError2 = undefined;
+
+    try {
+      for (var _iterator2 = apiInfo.methods[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+        var method = _step2.value;
+
+        if (method.name === methodName) {
+          dataPointIN = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsIn"])(element, method.parameter.length);
+          dataPointOut = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsOut"])(element, method.output.length);
+          break;
+        }
+      }
+    } catch (err) {
+      _didIteratorError2 = true;
+      _iteratorError2 = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
+          _iterator2["return"]();
+        }
+      } finally {
+        if (_didIteratorError2) {
+          throw _iteratorError2;
+        }
+      }
+    }
+
     element.setAttribute("_dataPointIn", JSON.stringify(dataPointIN));
     element.setAttribute("_dataPointOut", JSON.stringify(dataPointOut));
   }
@@ -13738,13 +13999,13 @@ function deleteElement(element) {
   console.log(element.id);
   var points = element.childNodes;
   var workspace = document.getElementById("dragging-frame-main");
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
+  var _iteratorNormalCompletion3 = true;
+  var _didIteratorError3 = false;
+  var _iteratorError3 = undefined;
 
   try {
-    for (var _iterator = points[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var point = _step.value;
+    for (var _iterator3 = points[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+      var point = _step3.value;
 
       if (point.classList.contains('dragging-icon-connecting-point-position-in')) {
         var line = document.querySelector("[_to='" + point.id + "']");
@@ -13763,16 +14024,16 @@ function deleteElement(element) {
       }
     }
   } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
+    _didIteratorError3 = true;
+    _iteratorError3 = err;
   } finally {
     try {
-      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-        _iterator["return"]();
+      if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
+        _iterator3["return"]();
       }
     } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
+      if (_didIteratorError3) {
+        throw _iteratorError3;
       }
     }
   }
@@ -13836,9 +14097,13 @@ function createConnectingPointsOut(element, number) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _action_runTheProcedure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../action/runTheProcedure */ "./src/action/runTheProcedure.js");
+/* harmony import */ var _action_saveProcedure__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../action/saveProcedure */ "./src/action/saveProcedure.js");
+/* harmony import */ var _action_loadFromLocal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../action/loadFromLocal */ "./src/action/loadFromLocal.js");
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
 
 
 
@@ -13850,21 +14115,37 @@ function _toolsBar() {
   _toolsBar = _asyncToGenerator(
   /*#__PURE__*/
   regeneratorRuntime.mark(function _callee(father, workspace) {
-    var saveButton;
+    var runButton, saveButton, loadButton;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            saveButton = document.createElement("button");
-            saveButton.innerText = "Run";
+            runButton = document.createElement("button");
+            runButton.innerText = "Run";
 
-            saveButton.onclick = function () {
+            runButton.onclick = function () {
               Object(_action_runTheProcedure__WEBPACK_IMPORTED_MODULE_0__["default"])(workspace);
             };
 
-            father.append(saveButton);
+            saveButton = document.createElement("button");
+            saveButton.innerText = "Save";
 
-          case 4:
+            saveButton.onclick = function () {
+              Object(_action_saveProcedure__WEBPACK_IMPORTED_MODULE_1__["default"])(workspace);
+            };
+
+            loadButton = document.createElement("button");
+            loadButton.innerText = "Load";
+
+            loadButton.onclick = function () {
+              Object(_action_loadFromLocal__WEBPACK_IMPORTED_MODULE_2__["default"])(workspace);
+            };
+
+            father.append(runButton);
+            father.append(saveButton);
+            father.append(loadButton);
+
+          case 12:
           case "end":
             return _context.stop();
         }

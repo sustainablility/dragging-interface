@@ -114,7 +114,6 @@ function removeManu(manuBg,man) {
 }
 
 function deleteElement(element) {
-    console.log(element.id);
     let points = element.childNodes;
     let workspace = document.getElementById("dragging-frame-main");
     for (let point of points) {

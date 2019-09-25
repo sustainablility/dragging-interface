@@ -52,16 +52,13 @@ function manuForTool(locationX, locationY, element) {
     man.append(row3);
 
     // Render Test button
-    let testButton = document.createElement("button");
-    testButton.classList.add("dragging-rightClick-testButton");
-    testButton.onclick = () => {
-        if (apiTest(man) !== null) {
-            man.getElementsByClassName("dragging-rightClick-testButton")[0].innerHTML = "It works"
-        }
+    let checkButton = document.createElement("button");
+    checkButton.classList.add("dragging-rightClick-testButton");
+    checkButton.onclick = () => {
+        checkButtonAction(man,element)
     };
-    testButton.innerText = "Test";
-    row3.append(testButton);
-
+    checkButton.innerText = "Check";
+    row3.append(checkButton);
     document.body.append(man);
     document.body.append(manuBg);
     manuBg.onclick = () => {
@@ -77,6 +74,45 @@ function apiTest(manu) {
     }else {
         return null;
     }
+}
+
+function checkButtonAction(manu, element) {
+    let apiInfo = apiTest(manu);
+    if (apiInfo !== null) {
+        manu.getElementsByClassName("dragging-rightClick-testButton")[0].innerHTML = "It works";
+        renderMethodSelection(manu, apiInfo.methods, element);
+    }
+}
+
+function renderMethodSelection(manu, methodList, element) {
+    let row = document.createElement("div");
+    row.classList.add("dragging-icon-rightClick-manu-row");
+    manu.append(row);
+
+    let MethodText = document.createElement("div");
+    MethodText.classList.add("dragging-rightClick-text");
+    MethodText.innerText = "Method";
+    row.append(MethodText);
+
+    let methodSelect = document.createElement("select");
+
+    let defaultOption = document.createElement("option");
+    defaultOption.innerText = "Select a Method";
+    defaultOption.value = "";
+    methodSelect.append(defaultOption);
+    for (let method of methodList) {
+        let methodOption = document.createElement("option");
+        methodOption.innerText = method.name;
+        methodOption.value = method.name;
+        methodSelect.append(methodOption);
+    }
+
+    methodSelect.onchange = () => {
+        element.setAttribute("_method", methodSelect.value);
+    };
+
+    row.append(methodSelect);
+    manu.append(row);
 }
 
 function renderAPIInputBox(manu) {
@@ -97,32 +133,24 @@ function renderAPIInputBox(manu) {
     manu.append(anotherRow);
 }
 
-function renderCustomizedDataBox(manu) {
-    let anotherRow = document.createElement("div");
-    anotherRow.id = "dragging-annotherRow";
-    anotherRow.classList.add("dragging-icon-rightClick-manu-row");
-
-    let word = document.createElement("div");
-    word.classList.add("dragging-rightClick-text");
-    word.innerText = "Data";
-    anotherRow.append(word);
-
-    let textarea = document.createElement("textarea");
-    textarea.classList.add("dragging-rightClick-textarea");
-
-    anotherRow.append(textarea);
-    manu.append(anotherRow);
-}
 
 function saveObject(manu, element) {
     removeConnectingPoints(element);
     let apiInfo = apiTest(manu);
+    let dataPointIN;
+    let dataPointOut;
     if (apiInfo !== null) {
         let apiURL = manu.getElementsByClassName("dragging-rightClick-input")[0].value;
         element.setAttribute("_toolApi",apiURL);
         element.getElementsByClassName("dragging-icon-sub-title")[0].innerText = apiInfo.name;
-        let dataPointIN = createConnectingPointsIn(element, apiInfo.parameter.length);
-        let dataPointOut = createConnectingPointsOut(element, apiInfo.output.length);
+        let methodName = element.getAttribute("_method");
+        for (let method of apiInfo.methods) {
+            if (method.name === methodName) {
+                dataPointIN = createConnectingPointsIn(element, method.parameter.length);
+                dataPointOut = createConnectingPointsOut(element, method.output.length);
+                break;
+            }
+        }
 
         element.setAttribute("_dataPointIn", JSON.stringify(dataPointIN));
         element.setAttribute("_dataPointOut", JSON.stringify(dataPointOut));

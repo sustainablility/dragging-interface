@@ -1,5 +1,7 @@
 import getDataViaAPI from '../ajax/getDataViaAPI';
+import {cacheAPIGetData} from '../config';
 import runToolByAPI from '../ajax/runToolByAPI';
+import putDataToCache from '../ajax/cache/putDataToCache';
 async function runTheProcedure(workspace) {
 
     let que = [];
@@ -12,6 +14,7 @@ async function runTheProcedure(workspace) {
     for (let i of startPoints2) {
         que.push(i);
     }
+    putLineNumberToTools(workspace);
 
 
     while (que.length > 0) {
@@ -26,36 +29,55 @@ async function runTheProcedure(workspace) {
                     let dest = getConnectingElement(workspace, element);
                     let destPoint = dest[0];
                     let destElement = dest[1];
+                    let dataType = element.getAttribute("_datatype");
                     let url = element.getAttribute("_dataapi");
-                    let dataFromAPI = getDataViaAPI(url);
-                    if (destPoint !== null) {
-                        destPoint.setAttribute("_result", JSON.stringify(dataFromAPI));
+                    if (dataType === "api") {
+                        destPoint.setAttribute("_result", url);
+                    }else if (dataType === "custom"){
+                        let dataText = element.getAttribute("_datatext");
+                        let dataID = putDataToCache(JSON.parse(dataText));
+                        destPoint.setAttribute("_result", cacheAPIGetData + "?" + dataID);
                     }
                     if (!que.includes(destElement)) {
-                        que.push(destElement);
+                        if (destElement.getAttribute("_type") === "tool") {
+                            let lineNumberLeft = Number(destElement.getAttribute("_line_in_number_left"));
+                            if (lineNumberLeft <= 1) {
+                                que.push(destElement);
+                            } else {
+                                lineNumberLeft --;
+                                destElement.setAttribute("_line_in_number_left", String(lineNumberLeft));
+                            }
+                        } else {
+                            que.push(destElement);
+                        }
                     }
                 }
+                console.log("Done Data");
                 break;
             case "tool":
                 let pointInIDList = JSON.parse(element.getAttribute("_datapointin"));
                 let pointInDataList = [];
+                pointInDataList.push(element.getAttribute("_method"));
                 for (let pointID of pointInIDList) {
                     let point = document.getElementById(pointID);
-                    let dataFromPoint = JSON.parse(point.getAttribute("_result"));
-                    pointInDataList.push(dataFromPoint);
+                    let urlFromPoint = point.getAttribute("_result");
+                    pointInDataList.push(urlFromPoint);
                 }
                 let result = runToolByAPI(element.getAttribute("_toolapi"), pointInDataList);
                 if(result == null) {
                     console.log("Tool Error");
                     break;
                 }
+
                 let connectingElements = getConnectingElements(workspace,element);
+
                 for (let i = 0; i < result.length; i ++) {
-                    connectingElements[i][0].setAttribute("_result",JSON.stringify(result[i]));
+                    connectingElements[i][0].setAttribute("_result",result[i]);
                     if (!que.includes(connectingElements[i])) {
                         que.push(connectingElements[i][1]);
                     }
                 }
+                console.log("Done Tool");
                 break;
             case "output":
                 if (element.getAttribute("_usefor") === "odas") {
@@ -78,6 +100,20 @@ async function runTheProcedure(workspace) {
         }
     }
 
+}
+
+function putLineNumberToTools(workspace) {
+    let tools = workspace.querySelectorAll("[_type='tool']");
+    for (let tool of tools) {
+        let num = 0;
+        let dataPointIns = JSON.parse(tool.getAttribute("_datapointin"));
+        for (let dataPointIn of dataPointIns) {
+            if (workspace.querySelector("[_to='" + dataPointIn + "']") !== null) {
+                num ++;
+            }
+        }
+        tool.setAttribute("_line_in_number_left",String(num));
+    }
 }
 
 function getConnectingElement(workspace, element) {
