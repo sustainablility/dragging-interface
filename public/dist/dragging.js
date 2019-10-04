@@ -12490,8 +12490,11 @@ function getConnectingElements(workspace, element) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ajax_saveProcedure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ajax/saveProcedure */ "./src/ajax/saveProcedure.js");
+
+
 function saveProcedure(workspace) {
-  console.log(workspace.innerHTML);
+  Object(_ajax_saveProcedure__WEBPACK_IMPORTED_MODULE_0__["default"])("test", "lji8wkbovlhjcbilimjgt", workspace.innerHTML);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (saveProcedure);
@@ -12578,11 +12581,44 @@ function run(url, dataIn) {
 
 /***/ }),
 
+/***/ "./src/ajax/saveProcedure.js":
+/*!***********************************!*\
+  !*** ./src/ajax/saveProcedure.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var config = __webpack_require__(/*! ../config */ "./src/config.js");
+
+function saveProcedure(procedureName, userToken, procedureData) {
+  var ajax = new XMLHttpRequest();
+  var postData = {
+    procedureName: procedureName,
+    procedure: procedureData,
+    userToken: userToken
+  };
+  ajax.open("POST", config.procedureManagementAPI.updateProcedure, false);
+  ajax.setRequestHeader("Content-Type", "application/json");
+  ajax.send(JSON.stringify(postData));
+
+  if (ajax.status === 200) {
+    return ajax.responseText === "1";
+  } else {
+    return null;
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (saveProcedure);
+
+/***/ }),
+
 /***/ "./src/config.js":
 /*!***********************!*\
   !*** ./src/config.js ***!
   \***********************/
-/*! exports provided: cacheAPIPutData, cacheAPIGetData, cacheAPIPutDataAPI */
+/*! exports provided: cacheAPIPutData, cacheAPIGetData, cacheAPIPutDataAPI, procedureManagementAPI */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12590,9 +12626,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cacheAPIPutData", function() { return cacheAPIPutData; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cacheAPIGetData", function() { return cacheAPIGetData; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cacheAPIPutDataAPI", function() { return cacheAPIPutDataAPI; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "procedureManagementAPI", function() { return procedureManagementAPI; });
 var cacheAPIPutData = "http://127.0.0.1:2223/putData";
 var cacheAPIGetData = "http://127.0.0.1:2223/getData";
 var cacheAPIPutDataAPI = "http://127.0.0.1:2223/putDataAPI";
+var procedureManagementAPI = {
+  updateProcedure: "http://127.0.0.1:23232/updateProcedure"
+};
 
 /***/ }),
 

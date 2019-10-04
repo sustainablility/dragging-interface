@@ -1,5 +1,6 @@
+import saveProcedureToBackEnd from '../ajax/saveProcedure';
 function saveProcedure(workspace) {
-    console.log(workspace.innerHTML);
+    saveProcedureToBackEnd("test","lji8wkbovlhjcbilimjgt",workspace.innerHTML);
 }
 
 export default saveProcedure;
