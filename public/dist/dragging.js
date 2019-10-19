@@ -11899,6 +11899,60 @@ function createLine(workspaceObject, pointObject) {
 
 /***/ }),
 
+/***/ "./src/action/getProcedure.js":
+/*!************************************!*\
+  !*** ./src/action/getProcedure.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _action_iconMouseTracing__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../action/iconMouseTracing */ "./src/action/iconMouseTracing.js");
+/* harmony import */ var _ajax_getProcedure__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ajax/getProcedure */ "./src/ajax/getProcedure.js");
+
+
+
+function loadProcedure(workspace) {
+  var procedure = Object(_ajax_getProcedure__WEBPACK_IMPORTED_MODULE_1__["default"])(window.draggingInterface.procedureName, window.draggingInterface.userToken);
+
+  if (procedure === null || procedure === "") {
+    console.log("error");
+    return null;
+  }
+
+  workspace.innerHTML = procedure["procedure"];
+  var iconsFrame = workspace.getElementsByClassName("dragging-icon-frame");
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = iconsFrame[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var iconFrame = _step.value;
+      var iconForClick = iconFrame.getElementsByClassName("dragging-icon")[0];
+      Object(_action_iconMouseTracing__WEBPACK_IMPORTED_MODULE_0__["default"])(iconFrame, iconForClick, workspace);
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (loadProcedure);
+
+/***/ }),
+
 /***/ "./src/action/iconMouseTracing.js":
 /*!****************************************!*\
   !*** ./src/action/iconMouseTracing.js ***!
@@ -12027,52 +12081,6 @@ function mouseTracing(iconFrame, iconForClick, workspace) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (mouseTracing);
-
-/***/ }),
-
-/***/ "./src/action/loadFromLocal.js":
-/*!*************************************!*\
-  !*** ./src/action/loadFromLocal.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _action_iconMouseTracing__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../action/iconMouseTracing */ "./src/action/iconMouseTracing.js");
-
-var testingData = "<div class=\"dragging-icon-frame\" _type=\"data\" id=\"cfqq3o1djb\" _datatype_temp=\"api\" _datatype=\"api\" _dataapi=\"http://127.0.0.1:3000/data1\" _datapoint=\"[&quot;7nfpzo8jhq4&quot;]\" style=\"top: 3.9375rem; left: 6.6875rem;\"><div class=\"dragging-icon\"><div class=\"dragging-icon-main-title\">Data</div><div class=\"dragging-icon-sub-title\">API</div></div><div class=\"dragging-icon-connecting-point dragging-icon-connecting-point-position-out\" id=\"7nfpzo8jhq4\" style=\"left: 50%;\"></div></div><div class=\"dragging-icon-frame\" _type=\"data\" id=\"udgx3nd9ld\" _datatype_temp=\"api\" _datatype=\"api\" _dataapi=\"http://127.0.0.1:3000/data2\" _datapoint=\"[&quot;2e0rq8640jm&quot;]\" style=\"top: 3.0625rem; left: 25.3125rem;\"><div class=\"dragging-icon\"><div class=\"dragging-icon-main-title\">Data</div><div class=\"dragging-icon-sub-title\">API</div></div><div class=\"dragging-icon-connecting-point dragging-icon-connecting-point-position-out\" id=\"2e0rq8640jm\" style=\"left: 50%;\"></div></div><div class=\"dragging-icon-frame\" _type=\"tool\" id=\"gzhmzcrb05f\" _method=\"Add up two Dataset\" _toolapi=\"http://127.0.0.1:3000/tool1\" _datapointin=\"[&quot;uysyojz196q&quot;,&quot;onelye9hazs&quot;]\" _datapointout=\"[&quot;qug0furi3a&quot;]\" _line_in_number_left=\"1\" style=\"top: 9.625rem; left: 14.125rem;\"><div class=\"dragging-icon\"><div class=\"dragging-icon-main-title\">Tool</div><div class=\"dragging-icon-sub-title\">Add up</div></div><div class=\"dragging-icon-connecting-point dragging-icon-connecting-point-position-in\" id=\"uysyojz196q\" _result=\"http://127.0.0.1:3000/data1\" style=\"left: 33.3333%;\"></div><div class=\"dragging-icon-connecting-point dragging-icon-connecting-point-position-in\" id=\"onelye9hazs\" _result=\"http://127.0.0.1:3000/data2\" style=\"left: 66.6667%;\"></div><div class=\"dragging-icon-connecting-point dragging-icon-connecting-point-position-out\" id=\"qug0furi3a\" style=\"left: 50%;\"></div></div><div class=\"dragging-icon-frame\" _type=\"output\" id=\"s0mjwlmuwuc\" _usefor=\"odas\" _datapoint=\"[&quot;f0hgnnuwwf&quot;]\" style=\"top: 19.5625rem; left: 8.375rem;\"><div class=\"dragging-icon\"><div class=\"dragging-icon-main-title\">Output</div><div class=\"dragging-icon-sub-title\">Output and Stop</div></div><div class=\"dragging-icon-connecting-point dragging-icon-connecting-point-position-in\" id=\"f0hgnnuwwf\" _result=\"http://127.0.0.1:2223/getData?dvo4lb1lynw\" style=\"left: 50%;\"></div></div><div class=\"dragging-lineSet\" id=\"xy0741rntha\" _from=\"7nfpzo8jhq4\" _to=\"uysyojz196q\" style=\"height: 1.6084rem; width: 6.77051rem; top: 8.13672rem; left: 8.88672rem;\"><div class=\"dragging-line-vertical\" style=\"height: 0.804199rem; left: 0rem; top: 0rem;\"></div><div class=\"dragging-line-horizontal\" style=\"width: 6.77051rem; left: 0rem; top: 0.804199rem;\"></div><div class=\"dragging-line-vertical\" style=\"height: 0.804199rem; left: 6.77051rem; top: 0.804199rem;\"></div></div><div class=\"dragging-lineSet\" id=\"v72jogjxqg\" _from=\"2e0rq8640jm\" _to=\"onelye9hazs\" style=\"height: 2.4834rem; width: 10.5215rem; top: 7.26172rem; left: 16.9902rem;\"><div class=\"dragging-line-vertical\" style=\"height: 1.2417rem; left: 10.5215rem; top: 0rem;\"></div><div class=\"dragging-line-horizontal\" style=\"width: 10.5215rem; left: 0rem; top: 1.2417rem;\"></div><div class=\"dragging-line-vertical\" style=\"height: 1.2417rem; left: 0rem; top: 1.2417rem;\"></div></div><div class=\"dragging-lineSet\" id=\"ce7kxgzuzef\" _from=\"qug0furi3a\" _to=\"f0hgnnuwwf\" style=\"height: 5.8584rem; width: 5.75rem; top: 13.8242rem; left: 10.5742rem;\"><div class=\"dragging-line-vertical\" style=\"height: 2.9292rem; left: 5.75rem; top: 0rem;\"></div><div class=\"dragging-line-horizontal\" style=\"width: 5.75rem; left: 0rem; top: 2.9292rem;\"></div><div class=\"dragging-line-vertical\" style=\"height: 2.9292rem; left: 0rem; top: 2.9292rem;\"></div></div>";
-
-function loadProcedure(workspace) {
-  workspace.innerHTML = testingData;
-  var iconsFrame = workspace.getElementsByClassName("dragging-icon-frame");
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
-
-  try {
-    for (var _iterator = iconsFrame[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var iconFrame = _step.value;
-      var iconForClick = iconFrame.getElementsByClassName("dragging-icon")[0];
-      Object(_action_iconMouseTracing__WEBPACK_IMPORTED_MODULE_0__["default"])(iconFrame, iconForClick, workspace);
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-        _iterator["return"]();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (loadProcedure);
 
 /***/ }),
 
@@ -12494,7 +12502,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function saveProcedure(workspace) {
-  Object(_ajax_saveProcedure__WEBPACK_IMPORTED_MODULE_0__["default"])("test", "lji8wkbovlhjcbilimjgt", workspace.innerHTML);
+  Object(_ajax_saveProcedure__WEBPACK_IMPORTED_MODULE_0__["default"])(window.draggingInterface.procedureName, window.draggingInterface.userToken, workspace.innerHTML);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (saveProcedure);
@@ -12552,6 +12560,38 @@ function getData(url) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (getData);
+
+/***/ }),
+
+/***/ "./src/ajax/getProcedure.js":
+/*!**********************************!*\
+  !*** ./src/ajax/getProcedure.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var config = __webpack_require__(/*! ../config */ "./src/config.js");
+
+function getProcedure(procedureName, userToken) {
+  var ajax = new XMLHttpRequest();
+  var postData = {
+    procedureName: procedureName,
+    userToken: userToken
+  };
+  ajax.open("POST", config.procedureManagementAPI.getProcedure, false);
+  ajax.setRequestHeader("Content-Type", "application/json");
+  ajax.send(JSON.stringify(postData));
+
+  if (ajax.status === 200) {
+    return JSON.parse(ajax.responseText);
+  } else {
+    return null;
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (getProcedure);
 
 /***/ }),
 
@@ -12631,7 +12671,8 @@ var cacheAPIPutData = "http://127.0.0.1:2223/putData";
 var cacheAPIGetData = "http://127.0.0.1:2223/getData";
 var cacheAPIPutDataAPI = "http://127.0.0.1:2223/putDataAPI";
 var procedureManagementAPI = {
-  updateProcedure: "http://127.0.0.1:23232/updateProcedure"
+  updateProcedure: "http://127.0.0.1:23232/updateProcedure",
+  getProcedure: "http://127.0.0.1:23232/getProcedure"
 };
 
 /***/ }),
@@ -12647,9 +12688,10 @@ var procedureManagementAPI = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _render_frameWork__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./render/frameWork */ "./src/render/frameWork.js");
 /* harmony import */ var _render_iconOnSide__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./render/iconOnSide */ "./src/render/iconOnSide.js");
-/* harmony import */ var _render_toolsBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./render/toolsBar */ "./src/render/toolsBar.js");
-/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style/index.scss */ "./src/style/index.scss");
-/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_index_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _action_getProcedure__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./action/getProcedure */ "./src/action/getProcedure.js");
+/* harmony import */ var _render_toolsBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./render/toolsBar */ "./src/render/toolsBar.js");
+/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style/index.scss */ "./src/style/index.scss");
+/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_index_scss__WEBPACK_IMPORTED_MODULE_4__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -12669,14 +12711,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-function handler(_x) {
+
+function handler(_x, _x2, _x3) {
   return _handler.apply(this, arguments);
 }
 
 function _handler() {
   _handler = _asyncToGenerator(
   /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee(basicElementSelector) {
+  regeneratorRuntime.mark(function _callee(basicElementSelector, userToken, procedureName) {
     var basicElement, _ref, _ref2, frameSide, frameMain, frameToolsBar;
 
     return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -12693,28 +12736,34 @@ function _handler() {
             throw new Error("element does not existed");
 
           case 3:
-            _context.next = 5;
+            window.draggingInterface = {
+              userToken: userToken,
+              procedureName: procedureName
+            };
+            _context.next = 6;
             return Object(_render_frameWork__WEBPACK_IMPORTED_MODULE_0__["default"])(basicElement);
 
-          case 5:
+          case 6:
             _ref = _context.sent;
             _ref2 = _slicedToArray(_ref, 3);
             frameSide = _ref2[0];
             frameMain = _ref2[1];
             frameToolsBar = _ref2[2];
-            _context.next = 12;
+            _context.next = 13;
             return Object(_render_iconOnSide__WEBPACK_IMPORTED_MODULE_1__["default"])(frameSide);
 
-          case 12:
-            _context.next = 14;
-            return Object(_render_toolsBar__WEBPACK_IMPORTED_MODULE_2__["default"])(frameToolsBar, frameMain);
+          case 13:
+            _context.next = 15;
+            return Object(_render_toolsBar__WEBPACK_IMPORTED_MODULE_3__["default"])(frameToolsBar, frameMain);
 
-          case 14:
+          case 15:
+            Object(_action_getProcedure__WEBPACK_IMPORTED_MODULE_2__["default"])(frameMain);
+
             document.oncontextmenu = function () {
               return false;
             };
 
-          case 15:
+          case 17:
           case "end":
             return _context.stop();
         }
@@ -14138,7 +14187,7 @@ function createConnectingPointsOut(element, number) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _action_runTheProcedure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../action/runTheProcedure */ "./src/action/runTheProcedure.js");
 /* harmony import */ var _action_saveProcedure__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../action/saveProcedure */ "./src/action/saveProcedure.js");
-/* harmony import */ var _action_loadFromLocal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../action/loadFromLocal */ "./src/action/loadFromLocal.js");
+/* harmony import */ var _action_getProcedure__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../action/getProcedure */ "./src/action/getProcedure.js");
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
@@ -14178,7 +14227,7 @@ function _toolsBar() {
             loadButton.innerText = "Load";
 
             loadButton.onclick = function () {
-              Object(_action_loadFromLocal__WEBPACK_IMPORTED_MODULE_2__["default"])(workspace);
+              Object(_action_getProcedure__WEBPACK_IMPORTED_MODULE_2__["default"])(workspace);
             };
 
             father.append(runButton);

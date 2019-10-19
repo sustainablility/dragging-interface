@@ -1,6 +1,6 @@
 import runProcedure from '../action/runTheProcedure';
 import saveProcedure from "../action/saveProcedure";
-import loadProcedure from "../action/loadFromLocal";
+import loadProcedure from "../action/getProcedure";
 async function toolsBar(father,workspace) {
     let runButton = document.createElement("button");
     runButton.innerText = "Run";
