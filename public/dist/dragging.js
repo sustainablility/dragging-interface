@@ -11921,7 +11921,7 @@ function loadProcedure(workspace) {
     return null;
   }
 
-  workspace.innerHTML = procedure["procedure"];
+  workspace.innerHTML = procedure["procedure"][procedure["procedure"].length - 1];
   var iconsFrame = workspace.getElementsByClassName("dragging-icon-frame");
   var _iteratorNormalCompletion = true;
   var _didIteratorError = false;

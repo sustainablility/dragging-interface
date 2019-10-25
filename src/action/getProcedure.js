@@ -6,7 +6,7 @@ function loadProcedure(workspace) {
         console.log("error");
         return null;
     }
-    workspace.innerHTML = procedure["procedure"];
+    workspace.innerHTML = procedure["procedure"][procedure["procedure"].length - 1];
     let iconsFrame = workspace.getElementsByClassName("dragging-icon-frame");
     for (let iconFrame of iconsFrame){
         let iconForClick = iconFrame.getElementsByClassName("dragging-icon")[0];
