@@ -6,20 +6,16 @@ import toolsBarRender from './render/toolsBar';
 
 import './style/index.scss';
 
-async function handler(basicElementSelector, userToken, procedureName) {
+async function handler(basicElementSelector, procedureContent, procedureName) {
     let basicElement = document.querySelector(basicElementSelector);
     if (basicElement === undefined || basicElement === null) {
         throw new Error("element does not existed");
     }
-    window.draggingInterface = {
-        userToken: userToken,
-        procedureName: procedureName
-    };
 
     let [frameSide,frameMain,frameToolsBar] = await frameRender(basicElement);
     await iconsRender(frameSide);
     await toolsBarRender(frameToolsBar,frameMain);
-    loadProcedure(frameMain);
+    loadProcedure(frameMain, procedureContent);
     document.oncontextmenu = () => {
         return false;
     };
