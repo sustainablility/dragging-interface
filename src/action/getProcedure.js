@@ -1,7 +1,7 @@
 import iconMouseTracing from "../action/iconMouseTracing";
+import createLine from "./createLine";
 function loadProcedure(workspace, procedure) {
     if (procedure === null || procedure === "") {
-        console.log("error");
         return null;
     }
     workspace.innerHTML = procedure;
@@ -9,6 +9,10 @@ function loadProcedure(workspace, procedure) {
     for (let iconFrame of iconsFrame){
         let iconForClick = iconFrame.getElementsByClassName("dragging-icon")[0];
         iconMouseTracing(iconFrame,iconForClick,workspace);
+    }
+    let connectingPointsOut = workspace.getElementsByClassName("dragging-icon-connecting-point-position-out");
+    for (let connectingPoint of connectingPointsOut) {
+        createLine(workspace, connectingPoint);
     }
 }
 export default loadProcedure;

@@ -10398,7 +10398,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/_css-loade
 
 
 // module
-exports.push([module.i, "#dragging-frame {\n  position: absolute;\n  display: flex;\n  left: 10rem;\n  top: 10rem;\n  width: 50rem;\n  height: 30rem;\n  border: 0.1em #000 solid; }\n\n#dragging-frame-side {\n  position: relative;\n  width: 20%;\n  height: 100%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-main {\n  position: relative;\n  width: 80%;\n  height: 100%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-toolsBar {\n  position: absolute;\n  border: 0.1em #AAA solid;\n  height: 10%;\n  width: 100%;\n  top: -11%;\n  left: -0.1em; }\n\n.dragging-icon-frame {\n  position: absolute;\n  height: 4rem;\n  width: 4rem;\n  border: 0.1rem #000 solid;\n  z-index: 5; }\n\n.dragging-icon-connecting-point {\n  position: absolute;\n  height: 0.5rem;\n  width: 0.5rem;\n  border: 0.05rem #777 solid;\n  border-radius: 50%;\n  margin-left: -0.25rem;\n  margin-top: -0.25rem; }\n\n.dragging-icon-connecting-point-position-in {\n  top: -2%;\n  background-color: #777; }\n\n.dragging-icon-connecting-point-position-out {\n  top: 100%; }\n\n.dragging-icon {\n  position: relative;\n  margin-top: 0.5rem;\n  height: 3rem; }\n\n.dragging-icon-main-title {\n  position: relative;\n  font-size: 0.9em;\n  text-align: center;\n  padding-top: 0.4em; }\n\n.dragging-icon-sub-title {\n  position: relative;\n  font-size: 0.8em;\n  text-align: center;\n  padding-top: 0.4em;\n  color: #666; }\n\n.dragging-icon-side-frame {\n  position: relative;\n  height: 4.5rem;\n  width: 4.5rem;\n  margin-left: 1rem;\n  margin-top: 1rem;\n  padding-left: 0.25rem;\n  padding-top: 0.25rem; }\n\n.dragging-lineSet {\n  position: absolute;\n  z-index: 1; }\n\n.dragging-line-vertical {\n  position: absolute;\n  border: 0.05em #000 solid;\n  width: 0; }\n\n.dragging-line-horizontal {\n  position: absolute;\n  border: 0.05em #000 solid;\n  height: 0; }\n\n.dragging-icon-rightClick-manu {\n  position: absolute;\n  height: 10rem;\n  background-color: #FFF;\n  border: 0.1rem #000 solid;\n  z-index: 10; }\n\n.dragging-icon-rightClick-manu-bg {\n  position: absolute;\n  height: 98%;\n  width: 98%;\n  z-index: 9; }\n\n.dragging-icon-rightClick-manu-row {\n  position: relative;\n  display: flex;\n  height: 2rem;\n  margin: 0.5rem; }\n\n.dragging-rightClick-deleteButton {\n  position: relative;\n  height: 100%;\n  width: 50%; }\n\n.dragging-rightClick-testButton {\n  position: relative;\n  height: 100%;\n  width: 50%; }\n\n.dragging-rightClick-saveButton {\n  position: relative;\n  height: 100%;\n  width: 50%; }\n\n.dragging-rightClick-text {\n  position: relative;\n  height: 100%;\n  margin: 0.5rem; }\n\n.dragging-rightClick-selector {\n  position: relative;\n  height: 100%; }\n\n.dragging-rightClick-input {\n  position: relative;\n  height: 100%; }\n\n.dragging-rightClick-textarea {\n  position: relative;\n  height: 3.5rem; }\n", ""]);
+exports.push([module.i, "#dragging-frame {\n  position: absolute;\n  display: block;\n  width: 50rem;\n  height: 30rem;\n  border: 0.1em #000 solid; }\n\n#dragging-frame-side {\n  position: absolute;\n  top: 11%;\n  width: 20%;\n  height: 89%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-main {\n  position: absolute;\n  top: 11%;\n  left: 20%;\n  width: 80%;\n  height: 89%;\n  border: 0.1em #AAA solid; }\n\n#dragging-frame-toolsBar {\n  position: absolute;\n  border: 0.1em #AAA solid;\n  height: 10%;\n  width: 100%;\n  left: -0.1em; }\n\n.dragging-icon-frame {\n  position: absolute;\n  height: 4rem;\n  width: 4rem;\n  border: 0.1rem #000 solid;\n  z-index: 5; }\n\n.dragging-icon-connecting-point {\n  position: absolute;\n  height: 0.5rem;\n  width: 0.5rem;\n  border: 0.05rem #777 solid;\n  border-radius: 50%;\n  margin-left: -0.25rem;\n  margin-top: -0.25rem; }\n\n.dragging-icon-connecting-point-position-in {\n  top: -2%;\n  background-color: #777; }\n\n.dragging-icon-connecting-point-position-out {\n  top: 100%; }\n\n.dragging-icon {\n  position: relative;\n  margin-top: 0.5rem;\n  height: 3rem; }\n\n.dragging-icon-main-title {\n  position: relative;\n  font-size: 0.9em;\n  text-align: center;\n  padding-top: 0.4em; }\n\n.dragging-icon-sub-title {\n  position: relative;\n  font-size: 0.8em;\n  text-align: center;\n  padding-top: 0.4em;\n  color: #666; }\n\n.dragging-icon-side-frame {\n  position: relative;\n  height: 4.5rem;\n  width: 4.5rem;\n  margin-left: 1rem;\n  margin-top: 1rem;\n  padding-left: 0.25rem;\n  padding-top: 0.25rem; }\n\n.dragging-lineSet {\n  position: absolute;\n  z-index: 1; }\n\n.dragging-line-vertical {\n  position: absolute;\n  border: 0.05em #000 solid;\n  width: 0; }\n\n.dragging-line-horizontal {\n  position: absolute;\n  border: 0.05em #000 solid;\n  height: 0; }\n\n.dragging-icon-rightClick-manu {\n  position: absolute;\n  height: 10rem;\n  background-color: #FFF;\n  border: 0.1rem #000 solid;\n  z-index: 10; }\n\n.dragging-icon-rightClick-manu-bg {\n  position: absolute;\n  height: 98%;\n  width: 98%;\n  z-index: 9; }\n\n.dragging-icon-rightClick-manu-row {\n  position: relative;\n  display: flex;\n  height: 2rem;\n  margin: 0.5rem; }\n\n.dragging-rightClick-deleteButton {\n  position: relative;\n  height: 100%;\n  width: 50%; }\n\n.dragging-rightClick-testButton {\n  position: relative;\n  height: 100%;\n  width: 50%; }\n\n.dragging-rightClick-saveButton {\n  position: relative;\n  height: 100%;\n  width: 50%; }\n\n.dragging-rightClick-text {\n  position: relative;\n  height: 100%;\n  margin: 0.5rem; }\n\n.dragging-rightClick-selector {\n  position: relative;\n  height: 100%; }\n\n.dragging-rightClick-input {\n  position: relative;\n  height: 100%; }\n\n.dragging-rightClick-textarea {\n  position: relative;\n  height: 3.5rem; }\n", ""]);
 
 // exports
 
@@ -11909,19 +11909,16 @@ function createLine(workspaceObject, pointObject) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _action_iconMouseTracing__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../action/iconMouseTracing */ "./src/action/iconMouseTracing.js");
-/* harmony import */ var _ajax_getProcedure__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ajax/getProcedure */ "./src/ajax/getProcedure.js");
+/* harmony import */ var _createLine__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createLine */ "./src/action/createLine.js");
 
 
 
-function loadProcedure(workspace) {
-  var procedure = Object(_ajax_getProcedure__WEBPACK_IMPORTED_MODULE_1__["default"])(window.draggingInterface.procedureName, window.draggingInterface.userToken);
-
+function loadProcedure(workspace, procedure) {
   if (procedure === null || procedure === "") {
-    console.log("error");
     return null;
   }
 
-  workspace.innerHTML = procedure["procedure"][procedure["procedure"].length - 1];
+  workspace.innerHTML = procedure;
   var iconsFrame = workspace.getElementsByClassName("dragging-icon-frame");
   var _iteratorNormalCompletion = true;
   var _didIteratorError = false;
@@ -11944,6 +11941,31 @@ function loadProcedure(workspace) {
     } finally {
       if (_didIteratorError) {
         throw _iteratorError;
+      }
+    }
+  }
+
+  var connectingPointsOut = workspace.getElementsByClassName("dragging-icon-connecting-point-position-out");
+  var _iteratorNormalCompletion2 = true;
+  var _didIteratorError2 = false;
+  var _iteratorError2 = undefined;
+
+  try {
+    for (var _iterator2 = connectingPointsOut[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+      var connectingPoint = _step2.value;
+      Object(_createLine__WEBPACK_IMPORTED_MODULE_1__["default"])(workspace, connectingPoint);
+    }
+  } catch (err) {
+    _didIteratorError2 = true;
+    _iteratorError2 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
+        _iterator2["return"]();
+      }
+    } finally {
+      if (_didIteratorError2) {
+        throw _iteratorError2;
       }
     }
   }
@@ -12084,6 +12106,23 @@ function mouseTracing(iconFrame, iconForClick, workspace) {
 
 /***/ }),
 
+/***/ "./src/action/outputProcedureResult.js":
+/*!*********************************************!*\
+  !*** ./src/action/outputProcedureResult.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function outputProcedureResult(result) {
+  window["draggingInterfaceLib"].cbForRuningProcedure(result);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (outputProcedureResult);
+
+/***/ }),
+
 /***/ "./src/action/runTheProcedure.js":
 /*!***************************************!*\
   !*** ./src/action/runTheProcedure.js ***!
@@ -12097,9 +12136,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config */ "./src/config.js");
 /* harmony import */ var _ajax_runToolByAPI__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ajax/runToolByAPI */ "./src/ajax/runToolByAPI.js");
 /* harmony import */ var _ajax_cache_putDataToCache__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ajax/cache/putDataToCache */ "./src/ajax/cache/putDataToCache.js");
+/* harmony import */ var _outputProcedureResult__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./outputProcedureResult */ "./src/action/outputProcedureResult.js");
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
 
 
@@ -12215,13 +12256,13 @@ function _runTheProcedure() {
 
           case 42:
             if (!(que.length > 0)) {
-              _context.next = 89;
+              _context.next = 91;
               break;
             }
 
             element = que.shift();
             _context.t2 = element.getAttribute("_type");
-            _context.next = _context.t2 === "data" ? 47 : _context.t2 === "tool" ? 50 : _context.t2 === "output" ? 80 : 87;
+            _context.next = _context.t2 === "data" ? 47 : _context.t2 === "tool" ? 50 : _context.t2 === "output" ? 82 : 89;
             break;
 
           case 47:
@@ -12261,7 +12302,7 @@ function _runTheProcedure() {
             }
 
             console.log("Done Data");
-            return _context.abrupt("break", 87);
+            return _context.abrupt("break", 89);
 
           case 50:
             pointInIDList = JSON.parse(element.getAttribute("_datapointin"));
@@ -12313,17 +12354,23 @@ function _runTheProcedure() {
             return _context.finish(64);
 
           case 72:
-            result = Object(_ajax_runToolByAPI__WEBPACK_IMPORTED_MODULE_2__["default"])(element.getAttribute("_toolapi"), pointInDataList);
+            _context.next = 74;
+            return Object(_ajax_runToolByAPI__WEBPACK_IMPORTED_MODULE_2__["default"])(element.getAttribute("_toolapi"), pointInDataList)["catch"](function (err) {
+              console.log(err);
+            });
 
-            if (!(result == null)) {
-              _context.next = 76;
+          case 74:
+            result = _context.sent;
+
+            if (!(result === undefined)) {
+              _context.next = 78;
               break;
             }
 
             console.log("Tool Error");
-            return _context.abrupt("break", 87);
+            return _context.abrupt("break", 89);
 
-          case 76:
+          case 78:
             connectingElements = getConnectingElements(workspace, element);
 
             for (i = 0; i < result.length; i++) {
@@ -12335,22 +12382,22 @@ function _runTheProcedure() {
             }
 
             console.log("Done Tool");
-            return _context.abrupt("break", 87);
+            return _context.abrupt("break", 89);
 
-          case 80:
+          case 82:
             if (!(element.getAttribute("_usefor") === "odas")) {
-              _context.next = 86;
+              _context.next = 88;
               break;
             }
 
             _dataInElement = element.getElementsByClassName("dragging-icon-connecting-point-position-in")[0];
-            console.log(_dataInElement.getAttribute("_result"));
-            return _context.abrupt("break", 87);
+            Object(_outputProcedureResult__WEBPACK_IMPORTED_MODULE_4__["default"])(_dataInElement.getAttribute("_result"));
+            return _context.abrupt("break", 89);
 
-          case 86:
+          case 88:
             if (element.getAttribute("_usefor") === "odac") {
               _dataInElement2 = element.getElementsByClassName("dragging-icon-connecting-point-position-in")[0];
-              console.log(_dataInElement2.getAttribute("_result"));
+              Object(_outputProcedureResult__WEBPACK_IMPORTED_MODULE_4__["default"])(_dataInElement2.getAttribute("_result"));
               _dest = getConnectingElements(workspace, element)[0];
               _destPoint = _dest[0];
               _destElement = _dest[1];
@@ -12364,11 +12411,11 @@ function _runTheProcedure() {
               }
             }
 
-          case 87:
+          case 89:
             _context.next = 42;
             break;
 
-          case 89:
+          case 91:
           case "end":
             return _context.stop();
         }
@@ -12498,11 +12545,10 @@ function getConnectingElements(workspace, element) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ajax_saveProcedure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ajax/saveProcedure */ "./src/ajax/saveProcedure.js");
-
-
 function saveProcedure(workspace) {
-  Object(_ajax_saveProcedure__WEBPACK_IMPORTED_MODULE_0__["default"])(window.draggingInterface.procedureName, window.draggingInterface.userToken, workspace.innerHTML);
+  if (window["draggingInterfaceLib"].cbForSavingProcedure !== undefined) {
+    window["draggingInterfaceLib"].cbForSavingProcedure(workspace.innerHTML);
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (saveProcedure);
@@ -12548,50 +12594,30 @@ function putData(data) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 function getData(url) {
-  var ajax = new XMLHttpRequest();
-  ajax.open("GET", url, false);
-  ajax.send(null);
+  return new Promise(function (resolve, reject) {
+    var ajax = new XMLHttpRequest();
+    ajax.open("GET", url, true);
+    ajax.send(null);
 
-  if (ajax.status === 200) {
-    return JSON.parse(ajax.responseText);
-  } else {
-    return null;
-  }
+    ajax.onload = function () {
+      if (ajax.status === 200) {
+        var resultObject;
+
+        try {
+          resultObject = JSON.parse(ajax.responseText);
+        } catch (e) {
+          reject("Response text is not json");
+        }
+
+        resolve(resultObject);
+      } else {
+        reject("Network error");
+      }
+    };
+  });
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (getData);
-
-/***/ }),
-
-/***/ "./src/ajax/getProcedure.js":
-/*!**********************************!*\
-  !*** ./src/ajax/getProcedure.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var config = __webpack_require__(/*! ../config */ "./src/config.js");
-
-function getProcedure(procedureName, userToken) {
-  var ajax = new XMLHttpRequest();
-  var postData = {
-    procedureName: procedureName,
-    userToken: userToken
-  };
-  ajax.open("POST", config.procedureManagementAPI.getProcedure, false);
-  ajax.setRequestHeader("Content-Type", "application/json");
-  ajax.send(JSON.stringify(postData));
-
-  if (ajax.status === 200) {
-    return JSON.parse(ajax.responseText);
-  } else {
-    return null;
-  }
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (getProcedure);
 
 /***/ }),
 
@@ -12605,52 +12631,31 @@ function getProcedure(procedureName, userToken) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 function run(url, dataIn) {
-  var ajax = new XMLHttpRequest();
-  ajax.open("POST", url, false);
-  ajax.setRequestHeader("Content-Type", "application/json");
-  ajax.send(JSON.stringify(dataIn));
+  return new Promise(function (resolve, reject) {
+    var ajax = new XMLHttpRequest();
+    ajax.open("POST", url, true);
+    ajax.setRequestHeader("Content-Type", "application/json");
+    ajax.send(JSON.stringify(dataIn));
 
-  if (ajax.status === 200) {
-    return JSON.parse(ajax.responseText);
-  } else {
-    return null;
-  }
+    ajax.onload = function () {
+      if (ajax.status === 200) {
+        var resultObject;
+
+        try {
+          resultObject = JSON.parse(ajax.responseText);
+        } catch (e) {
+          reject("Response text is not json");
+        }
+
+        resolve(resultObject);
+      } else {
+        reject("Network error");
+      }
+    };
+  });
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (run);
-
-/***/ }),
-
-/***/ "./src/ajax/saveProcedure.js":
-/*!***********************************!*\
-  !*** ./src/ajax/saveProcedure.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var config = __webpack_require__(/*! ../config */ "./src/config.js");
-
-function saveProcedure(procedureName, userToken, procedureData) {
-  var ajax = new XMLHttpRequest();
-  var postData = {
-    procedureName: procedureName,
-    procedure: procedureData,
-    userToken: userToken
-  };
-  ajax.open("POST", config.procedureManagementAPI.updateProcedure, false);
-  ajax.setRequestHeader("Content-Type", "application/json");
-  ajax.send(JSON.stringify(postData));
-
-  if (ajax.status === 200) {
-    return ajax.responseText === "1";
-  } else {
-    return null;
-  }
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (saveProcedure);
 
 /***/ }),
 
@@ -12704,6 +12709,12 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
  // render frame
 
  // render icons
@@ -12712,68 +12723,133 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-function handler(_x, _x2, _x3) {
-  return _handler.apply(this, arguments);
-}
+var DraggingInterface =
+/*#__PURE__*/
+function () {
+  function DraggingInterface() {
+    _classCallCheck(this, DraggingInterface);
+  }
 
-function _handler() {
-  _handler = _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee(basicElementSelector, userToken, procedureName) {
-    var basicElement, _ref, _ref2, frameSide, frameMain, frameToolsBar;
+  _createClass(DraggingInterface, [{
+    key: "init",
+    value: function () {
+      var _init = _asyncToGenerator(
+      /*#__PURE__*/
+      regeneratorRuntime.mark(function _callee(basicElementSelector) {
+        var basicElement, _ref, _ref2, frameSide, frameMain, frameToolsBar;
 
-    return regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            basicElement = document.querySelector(basicElementSelector);
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                basicElement = document.querySelector(basicElementSelector);
 
-            if (!(basicElement === undefined || basicElement === null)) {
-              _context.next = 3;
-              break;
+                if (!(basicElement === undefined || basicElement === null)) {
+                  _context.next = 3;
+                  break;
+                }
+
+                throw new Error("element does not existed");
+
+              case 3:
+                _context.next = 5;
+                return Object(_render_frameWork__WEBPACK_IMPORTED_MODULE_0__["default"])(basicElement);
+
+              case 5:
+                _ref = _context.sent;
+                _ref2 = _slicedToArray(_ref, 3);
+                frameSide = _ref2[0];
+                frameMain = _ref2[1];
+                frameToolsBar = _ref2[2];
+                this.frameSide = frameSide;
+                this.frameMain = frameMain;
+                this.frameToolsBar = frameToolsBar;
+                _context.next = 15;
+                return Object(_render_iconOnSide__WEBPACK_IMPORTED_MODULE_1__["default"])(frameSide);
+
+              case 15:
+                _context.next = 17;
+                return Object(_render_toolsBar__WEBPACK_IMPORTED_MODULE_3__["default"])(frameToolsBar, frameMain);
+
+              case 17:
+                document.oncontextmenu = function () {
+                  return false;
+                };
+
+              case 18:
+              case "end":
+                return _context.stop();
             }
+          }
+        }, _callee, this);
+      }));
 
-            throw new Error("element does not existed");
-
-          case 3:
-            window.draggingInterface = {
-              userToken: userToken,
-              procedureName: procedureName
-            };
-            _context.next = 6;
-            return Object(_render_frameWork__WEBPACK_IMPORTED_MODULE_0__["default"])(basicElement);
-
-          case 6:
-            _ref = _context.sent;
-            _ref2 = _slicedToArray(_ref, 3);
-            frameSide = _ref2[0];
-            frameMain = _ref2[1];
-            frameToolsBar = _ref2[2];
-            _context.next = 13;
-            return Object(_render_iconOnSide__WEBPACK_IMPORTED_MODULE_1__["default"])(frameSide);
-
-          case 13:
-            _context.next = 15;
-            return Object(_render_toolsBar__WEBPACK_IMPORTED_MODULE_3__["default"])(frameToolsBar, frameMain);
-
-          case 15:
-            Object(_action_getProcedure__WEBPACK_IMPORTED_MODULE_2__["default"])(frameMain);
-
-            document.oncontextmenu = function () {
-              return false;
-            };
-
-          case 17:
-          case "end":
-            return _context.stop();
-        }
+      function init(_x) {
+        return _init.apply(this, arguments);
       }
-    }, _callee);
-  }));
-  return _handler.apply(this, arguments);
-}
 
-window.dragging = handler;
+      return init;
+    }()
+  }, {
+    key: "addProcedure",
+    value: function () {
+      var _addProcedure = _asyncToGenerator(
+      /*#__PURE__*/
+      regeneratorRuntime.mark(function _callee2(procedureContent, procedureName) {
+        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                Object(_action_getProcedure__WEBPACK_IMPORTED_MODULE_2__["default"])(this.frameMain, procedureContent);
+
+              case 1:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, this);
+      }));
+
+      function addProcedure(_x2, _x3) {
+        return _addProcedure.apply(this, arguments);
+      }
+
+      return addProcedure;
+    }()
+  }, {
+    key: "hookers",
+    value: function () {
+      var _hookers = _asyncToGenerator(
+      /*#__PURE__*/
+      regeneratorRuntime.mark(function _callee3(cbForSavingProcedure, cbForRuningProcedure) {
+        return regeneratorRuntime.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                window["draggingInterfaceLib"] = {};
+                window["draggingInterfaceLib"].cbForSavingProcedure = cbForSavingProcedure;
+                window["draggingInterfaceLib"].cbForRuningProcedure = cbForRuningProcedure;
+
+              case 3:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3);
+      }));
+
+      function hookers(_x4, _x5) {
+        return _hookers.apply(this, arguments);
+      }
+
+      return hookers;
+    }()
+  }]);
+
+  return DraggingInterface;
+}();
+
+window.DraggingInterface = DraggingInterface;
 
 /***/ }),
 
@@ -13275,6 +13351,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./renderPointsWhenSave */ "./src/render/rightClickManu/renderPointsWhenSave.js");
 /* harmony import */ var _connectingLine_removeConnectingPoint__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../connectingLine/removeConnectingPoint */ "./src/render/connectingLine/removeConnectingPoint.js");
 /* harmony import */ var _ajax_getDataViaAPI__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../ajax/getDataViaAPI */ "./src/ajax/getDataViaAPI.js");
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
 
 
@@ -13423,53 +13503,85 @@ function renderCustomizedDataBox(manu, element) {
   manu.append(anotherRow);
 }
 
-function saveObject(manu, element) {
-  var tempDataType = element.getAttribute("_dataType_temp");
+function saveObject(_x, _x2) {
+  return _saveObject.apply(this, arguments);
+}
 
-  if (tempDataType === null || tempDataType === "") {
-    return null;
-  }
+function _saveObject() {
+  _saveObject = _asyncToGenerator(
+  /*#__PURE__*/
+  regeneratorRuntime.mark(function _callee(manu, element) {
+    var tempDataType, pointID, apiInputBox, apiInputValue, apiData, apiURL, dataInputBox;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            tempDataType = element.getAttribute("_dataType_temp");
 
-  element.setAttribute("_dataType", tempDataType);
-  var pointID;
+            if (!(tempDataType === null || tempDataType === "")) {
+              _context.next = 3;
+              break;
+            }
 
-  switch (tempDataType) {
-    case "api":
-      var apiInputBox = manu.getElementsByClassName("dragging-rightClick-input")[0];
-      var apiData = Object(_ajax_getDataViaAPI__WEBPACK_IMPORTED_MODULE_2__["default"])(apiInputBox.value);
+            return _context.abrupt("return", null);
 
-      if (apiData !== null) {
-        var apiURL = document.getElementsByClassName("dragging-rightClick-input")[0].value;
+          case 3:
+            element.setAttribute("_dataType", tempDataType);
+            _context.t0 = tempDataType;
+            _context.next = _context.t0 === "api" ? 7 : _context.t0 === "output" ? 14 : _context.t0 === "custom" ? 18 : 21;
+            break;
 
-        if (apiURL !== null) {
-          element.setAttribute("_dataAPI", apiURL);
+          case 7:
+            apiInputBox = manu.getElementsByClassName("dragging-rightClick-input")[0];
+            apiInputValue = apiInputBox.value;
+            _context.next = 11;
+            return Object(_ajax_getDataViaAPI__WEBPACK_IMPORTED_MODULE_2__["default"])(apiInputValue)["catch"](function (e) {
+              console.log(e);
+            });
+
+          case 11:
+            apiData = _context.sent;
+
+            if (apiData !== undefined) {
+              apiURL = apiInputValue;
+
+              if (apiURL !== null) {
+                element.setAttribute("_dataAPI", apiURL);
+              }
+
+              element.getElementsByClassName("dragging-icon-sub-title")[0].innerText = "API";
+              pointID = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsOut"])(element, 1);
+              element.setAttribute("_dataPoint", JSON.stringify(pointID));
+            }
+
+            return _context.abrupt("return", null);
+
+          case 14:
+            element.getElementsByClassName("dragging-icon-sub-title")[0].innerText = "Output";
+            pointID = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsIn"])(element, 1);
+            element.setAttribute("_dataPoint", JSON.stringify(pointID));
+            return _context.abrupt("return", null);
+
+          case 18:
+            dataInputBox = manu.getElementsByClassName("dragging-rightClick-textarea")[0];
+
+            if (dataInputBox.value !== null) {
+              element.getElementsByClassName("dragging-icon-sub-title")[0].innerText = "Custom";
+              element.setAttribute("_dataText", dataInputBox.value);
+              pointID = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsOut"])(element, 1);
+              element.setAttribute("_dataPoint", JSON.stringify(pointID));
+            }
+
+            return _context.abrupt("return", null);
+
+          case 21:
+          case "end":
+            return _context.stop();
         }
-
-        element.getElementsByClassName("dragging-icon-sub-title")[0].innerText = "API";
-        pointID = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsOut"])(element, 1);
-        element.setAttribute("_dataPoint", JSON.stringify(pointID));
       }
-
-      return null;
-
-    case "output":
-      element.getElementsByClassName("dragging-icon-sub-title")[0].innerText = "Output";
-      pointID = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsIn"])(element, 1);
-      element.setAttribute("_dataPoint", JSON.stringify(pointID));
-      return null;
-
-    case "custom":
-      var dataInputBox = manu.getElementsByClassName("dragging-rightClick-textarea")[0];
-
-      if (dataInputBox.value !== null) {
-        element.getElementsByClassName("dragging-icon-sub-title")[0].innerText = "Custom";
-        element.setAttribute("_dataText", dataInputBox.value);
-        pointID = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsOut"])(element, 1);
-        element.setAttribute("_dataPoint", JSON.stringify(pointID));
-      }
-
-      return null;
-  }
+    }, _callee);
+  }));
+  return _saveObject.apply(this, arguments);
 }
 
 function removeManu(manuBg, man) {
@@ -13887,247 +13999,518 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./renderPointsWhenSave */ "./src/render/rightClickManu/renderPointsWhenSave.js");
 /* harmony import */ var _connectingLine_removeConnectingPoint__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../connectingLine/removeConnectingPoint */ "./src/render/connectingLine/removeConnectingPoint.js");
 /* harmony import */ var _ajax_getDataViaAPI__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../ajax/getDataViaAPI */ "./src/ajax/getDataViaAPI.js");
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 
 
 
-function manuForTool(locationX, locationY, element) {
-  var man = document.createElement("div");
-  var manuBg = document.createElement("div");
-  man.classList.add("dragging-icon-rightClick-manu");
-  manuBg.classList.add("dragging-icon-rightClick-manu-bg");
-  man.style.left = locationX + "em";
-  man.style.top = locationY + "em"; // Render row 1
-  // -------------------------------------------------------
 
-  var row1 = document.createElement("div");
-  row1.classList.add("dragging-icon-rightClick-manu-row");
-  man.append(row1); // Render delete button
-
-  var deleteButton = document.createElement("button");
-  deleteButton.classList.add("dragging-rightClick-deleteButton");
-
-  deleteButton.onclick = function () {
-    deleteElement(element);
-    removeManu(manuBg, man);
-  };
-
-  deleteButton.innerText = "Delete";
-  row1.append(deleteButton); // Render save button
-
-  var saveButton = document.createElement("button");
-  saveButton.classList.add("dragging-rightClick-deleteButton");
-
-  saveButton.onclick = function () {
-    saveObject(man, element);
-    removeManu(manuBg, man);
-  };
-
-  saveButton.innerText = "Save";
-  row1.append(saveButton); // End of Row 1
-  // ----------------------------------------------------------
-  // Render Row 2
-
-  renderAPIInputBox(man); // Render Row 3
-
-  var row3 = document.createElement("div");
-  row3.classList.add("dragging-icon-rightClick-manu-row");
-  man.append(row3); // Render Test button
-
-  var checkButton = document.createElement("button");
-  checkButton.classList.add("dragging-rightClick-testButton");
-
-  checkButton.onclick = function () {
-    checkButtonAction(man, element);
-  };
-
-  checkButton.innerText = "Check";
-  row3.append(checkButton);
-  document.body.append(man);
-  document.body.append(manuBg);
-
-  manuBg.onclick = function () {
-    removeManu(manuBg, man);
-  };
+function manuForTool(_x, _x2, _x3) {
+  return _manuForTool.apply(this, arguments);
 }
 
-function apiTest(manu) {
-  var apiUrl = manu.getElementsByClassName("dragging-rightClick-input")[0];
-  var apiInfo = Object(_ajax_getDataViaAPI__WEBPACK_IMPORTED_MODULE_2__["default"])(apiUrl.value);
+function _manuForTool() {
+  _manuForTool = _asyncToGenerator(
+  /*#__PURE__*/
+  regeneratorRuntime.mark(function _callee(locationX, locationY, element) {
+    var man, manuBg, row1, deleteButton, saveButton, row3, checkButton;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            man = document.createElement("div");
+            manuBg = document.createElement("div");
+            man.classList.add("dragging-icon-rightClick-manu");
+            manuBg.classList.add("dragging-icon-rightClick-manu-bg");
+            man.style.left = locationX + "em";
+            man.style.top = locationY + "em"; // Render row 1
+            // -------------------------------------------------------
 
-  if (apiInfo !== null) {
-    return apiInfo;
-  } else {
-    return null;
-  }
-}
+            row1 = document.createElement("div");
+            row1.classList.add("dragging-icon-rightClick-manu-row");
+            man.append(row1); // Render delete button
 
-function checkButtonAction(manu, element) {
-  var apiInfo = apiTest(manu);
+            deleteButton = document.createElement("button");
+            deleteButton.classList.add("dragging-rightClick-deleteButton");
 
-  if (apiInfo !== null) {
-    manu.getElementsByClassName("dragging-rightClick-testButton")[0].innerHTML = "It works";
-    renderMethodSelection(manu, apiInfo.methods, element);
-  }
-}
+            deleteButton.onclick = function () {
+              deleteElement(element);
+              removeManu(manuBg, man);
+            };
 
-function renderMethodSelection(manu, methodList, element) {
-  var row = document.createElement("div");
-  row.classList.add("dragging-icon-rightClick-manu-row");
-  manu.append(row);
-  var MethodText = document.createElement("div");
-  MethodText.classList.add("dragging-rightClick-text");
-  MethodText.innerText = "Method";
-  row.append(MethodText);
-  var methodSelect = document.createElement("select");
-  var defaultOption = document.createElement("option");
-  defaultOption.innerText = "Select a Method";
-  defaultOption.value = "";
-  methodSelect.append(defaultOption);
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
+            deleteButton.innerText = "Delete";
+            row1.append(deleteButton); // Render save button
 
-  try {
-    for (var _iterator = methodList[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var method = _step.value;
-      var methodOption = document.createElement("option");
-      methodOption.innerText = method.name;
-      methodOption.value = method.name;
-      methodSelect.append(methodOption);
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-        _iterator["return"]();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
+            saveButton = document.createElement("button");
+            saveButton.classList.add("dragging-rightClick-deleteButton");
 
-  methodSelect.onchange = function () {
-    element.setAttribute("_method", methodSelect.value);
-  };
+            saveButton.onclick = function () {
+              saveObject(man, element);
+              removeManu(manuBg, man);
+            };
 
-  row.append(methodSelect);
-  manu.append(row);
-}
+            saveButton.innerText = "Save";
+            row1.append(saveButton); // End of Row 1
+            // ----------------------------------------------------------
+            // Render Row 2
 
-function renderAPIInputBox(manu) {
-  var anotherRow = document.createElement("div");
-  anotherRow.id = "dragging-annotherRow";
-  anotherRow.classList.add("dragging-icon-rightClick-manu-row");
-  var apiWord = document.createElement("div");
-  apiWord.classList.add("dragging-rightClick-text");
-  apiWord.innerText = "API";
-  anotherRow.append(apiWord);
-  var apiInput = document.createElement("input");
-  apiInput.classList.add("dragging-rightClick-input");
-  apiInput.type = "text";
-  anotherRow.append(apiInput);
-  manu.append(anotherRow);
-}
+            renderAPIInputBox(man); // Render Row 3
 
-function saveObject(manu, element) {
-  Object(_connectingLine_removeConnectingPoint__WEBPACK_IMPORTED_MODULE_1__["default"])(element);
-  var apiInfo = apiTest(manu);
-  var dataPointIN;
-  var dataPointOut;
+            row3 = document.createElement("div");
+            row3.classList.add("dragging-icon-rightClick-manu-row");
+            man.append(row3); // Render Test button
 
-  if (apiInfo !== null) {
-    var apiURL = manu.getElementsByClassName("dragging-rightClick-input")[0].value;
-    element.setAttribute("_toolApi", apiURL);
-    element.getElementsByClassName("dragging-icon-sub-title")[0].innerText = apiInfo.name;
-    var methodName = element.getAttribute("_method");
-    var _iteratorNormalCompletion2 = true;
-    var _didIteratorError2 = false;
-    var _iteratorError2 = undefined;
+            checkButton = document.createElement("button");
+            checkButton.classList.add("dragging-rightClick-testButton");
 
-    try {
-      for (var _iterator2 = apiInfo.methods[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-        var method = _step2.value;
+            checkButton.onclick = function () {
+              checkButtonAction(man, element);
+            };
 
-        if (method.name === methodName) {
-          dataPointIN = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsIn"])(element, method.parameter.length);
-          dataPointOut = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsOut"])(element, method.output.length);
-          break;
+            checkButton.innerText = "Check";
+            row3.append(checkButton);
+            document.body.append(man);
+            document.body.append(manuBg);
+
+            manuBg.onclick = function () {
+              removeManu(manuBg, man);
+            };
+
+          case 31:
+          case "end":
+            return _context.stop();
         }
       }
-    } catch (err) {
-      _didIteratorError2 = true;
-      _iteratorError2 = err;
-    } finally {
-      try {
-        if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
-          _iterator2["return"]();
-        }
-      } finally {
-        if (_didIteratorError2) {
-          throw _iteratorError2;
-        }
-      }
-    }
-
-    element.setAttribute("_dataPointIn", JSON.stringify(dataPointIN));
-    element.setAttribute("_dataPointOut", JSON.stringify(dataPointOut));
-  }
+    }, _callee);
+  }));
+  return _manuForTool.apply(this, arguments);
 }
 
-function removeManu(manuBg, man) {
-  document.body.removeChild(manuBg);
-  document.body.removeChild(man);
+function apiTest(_x4) {
+  return _apiTest.apply(this, arguments);
 }
 
-function deleteElement(element) {
-  console.log(element.id);
-  var points = element.childNodes;
-  var workspace = document.getElementById("dragging-frame-main");
-  var _iteratorNormalCompletion3 = true;
-  var _didIteratorError3 = false;
-  var _iteratorError3 = undefined;
+function _apiTest() {
+  _apiTest = _asyncToGenerator(
+  /*#__PURE__*/
+  regeneratorRuntime.mark(function _callee2(manu) {
+    var apiUrl, apiInfo;
+    return regeneratorRuntime.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            apiUrl = manu.getElementsByClassName("dragging-rightClick-input")[0];
+            _context2.next = 3;
+            return Object(_ajax_getDataViaAPI__WEBPACK_IMPORTED_MODULE_2__["default"])(apiUrl.value)["catch"](function (err) {
+              console.log(err);
+            });
 
-  try {
-    for (var _iterator3 = points[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-      var point = _step3.value;
+          case 3:
+            apiInfo = _context2.sent;
 
-      if (point.classList.contains('dragging-icon-connecting-point-position-in')) {
-        var line = document.querySelector("[_to='" + point.id + "']");
+            if (!(apiInfo !== undefined)) {
+              _context2.next = 8;
+              break;
+            }
 
-        if (line !== null) {
-          workspace.removeChild(line);
+            return _context2.abrupt("return", apiInfo);
+
+          case 8:
+            return _context2.abrupt("return", null);
+
+          case 9:
+          case "end":
+            return _context2.stop();
         }
       }
+    }, _callee2);
+  }));
+  return _apiTest.apply(this, arguments);
+}
 
-      if (point.classList.contains('dragging-icon-connecting-point-position-out')) {
-        var _line = document.querySelector("[_from='" + point.id + "']");
+function checkButtonAction(_x5, _x6) {
+  return _checkButtonAction.apply(this, arguments);
+}
 
-        if (_line !== null) {
-          workspace.removeChild(_line);
+function _checkButtonAction() {
+  _checkButtonAction = _asyncToGenerator(
+  /*#__PURE__*/
+  regeneratorRuntime.mark(function _callee3(manu, element) {
+    var apiInfo;
+    return regeneratorRuntime.wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            _context3.next = 2;
+            return apiTest(manu);
+
+          case 2:
+            apiInfo = _context3.sent;
+
+            if (!(apiInfo !== null)) {
+              _context3.next = 7;
+              break;
+            }
+
+            manu.getElementsByClassName("dragging-rightClick-testButton")[0].innerHTML = "It works";
+            _context3.next = 7;
+            return renderMethodSelection(manu, apiInfo.methods, element);
+
+          case 7:
+          case "end":
+            return _context3.stop();
         }
       }
-    }
-  } catch (err) {
-    _didIteratorError3 = true;
-    _iteratorError3 = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
-        _iterator3["return"]();
-      }
-    } finally {
-      if (_didIteratorError3) {
-        throw _iteratorError3;
-      }
-    }
-  }
+    }, _callee3);
+  }));
+  return _checkButtonAction.apply(this, arguments);
+}
 
-  workspace.removeChild(element);
+function renderMethodSelection(_x7, _x8, _x9) {
+  return _renderMethodSelection.apply(this, arguments);
+}
+
+function _renderMethodSelection() {
+  _renderMethodSelection = _asyncToGenerator(
+  /*#__PURE__*/
+  regeneratorRuntime.mark(function _callee4(manu, methodList, element) {
+    var row, MethodText, methodSelect, defaultOption, _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, method, methodOption;
+
+    return regeneratorRuntime.wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            row = document.createElement("div");
+            row.classList.add("dragging-icon-rightClick-manu-row");
+            manu.append(row);
+            MethodText = document.createElement("div");
+            MethodText.classList.add("dragging-rightClick-text");
+            MethodText.innerText = "Method";
+            row.append(MethodText);
+            methodSelect = document.createElement("select");
+            defaultOption = document.createElement("option");
+            defaultOption.innerText = "Select a Method";
+            defaultOption.value = "";
+            methodSelect.append(defaultOption);
+            _iteratorNormalCompletion = true;
+            _didIteratorError = false;
+            _iteratorError = undefined;
+            _context4.prev = 15;
+
+            for (_iterator = methodList[Symbol.iterator](); !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+              method = _step.value;
+              methodOption = document.createElement("option");
+              methodOption.innerText = method.name;
+              methodOption.value = method.name;
+              methodSelect.append(methodOption);
+            }
+
+            _context4.next = 23;
+            break;
+
+          case 19:
+            _context4.prev = 19;
+            _context4.t0 = _context4["catch"](15);
+            _didIteratorError = true;
+            _iteratorError = _context4.t0;
+
+          case 23:
+            _context4.prev = 23;
+            _context4.prev = 24;
+
+            if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+              _iterator["return"]();
+            }
+
+          case 26:
+            _context4.prev = 26;
+
+            if (!_didIteratorError) {
+              _context4.next = 29;
+              break;
+            }
+
+            throw _iteratorError;
+
+          case 29:
+            return _context4.finish(26);
+
+          case 30:
+            return _context4.finish(23);
+
+          case 31:
+            methodSelect.onchange = function () {
+              element.setAttribute("_method", methodSelect.value);
+            };
+
+            row.append(methodSelect);
+            manu.append(row);
+
+          case 34:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4, null, [[15, 19, 23, 31], [24,, 26, 30]]);
+  }));
+  return _renderMethodSelection.apply(this, arguments);
+}
+
+function renderAPIInputBox(_x10) {
+  return _renderAPIInputBox.apply(this, arguments);
+}
+
+function _renderAPIInputBox() {
+  _renderAPIInputBox = _asyncToGenerator(
+  /*#__PURE__*/
+  regeneratorRuntime.mark(function _callee5(manu) {
+    var anotherRow, apiWord, apiInput;
+    return regeneratorRuntime.wrap(function _callee5$(_context5) {
+      while (1) {
+        switch (_context5.prev = _context5.next) {
+          case 0:
+            anotherRow = document.createElement("div");
+            anotherRow.id = "dragging-annotherRow";
+            anotherRow.classList.add("dragging-icon-rightClick-manu-row");
+            apiWord = document.createElement("div");
+            apiWord.classList.add("dragging-rightClick-text");
+            apiWord.innerText = "API";
+            anotherRow.append(apiWord);
+            apiInput = document.createElement("input");
+            apiInput.classList.add("dragging-rightClick-input");
+            apiInput.type = "text";
+            anotherRow.append(apiInput);
+            manu.append(anotherRow);
+
+          case 12:
+          case "end":
+            return _context5.stop();
+        }
+      }
+    }, _callee5);
+  }));
+  return _renderAPIInputBox.apply(this, arguments);
+}
+
+function saveObject(_x11, _x12) {
+  return _saveObject.apply(this, arguments);
+}
+
+function _saveObject() {
+  _saveObject = _asyncToGenerator(
+  /*#__PURE__*/
+  regeneratorRuntime.mark(function _callee6(manu, element) {
+    var apiInfo, dataPointIN, dataPointOut, apiURL, methodName, _iteratorNormalCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, method;
+
+    return regeneratorRuntime.wrap(function _callee6$(_context6) {
+      while (1) {
+        switch (_context6.prev = _context6.next) {
+          case 0:
+            Object(_connectingLine_removeConnectingPoint__WEBPACK_IMPORTED_MODULE_1__["default"])(element);
+            _context6.next = 3;
+            return apiTest(manu);
+
+          case 3:
+            apiInfo = _context6.sent;
+
+            if (!(apiInfo !== null)) {
+              _context6.next = 39;
+              break;
+            }
+
+            apiURL = manu.getElementsByClassName("dragging-rightClick-input")[0].value;
+            element.setAttribute("_toolApi", apiURL);
+            element.getElementsByClassName("dragging-icon-sub-title")[0].innerText = apiInfo.name;
+            methodName = element.getAttribute("_method");
+            _iteratorNormalCompletion2 = true;
+            _didIteratorError2 = false;
+            _iteratorError2 = undefined;
+            _context6.prev = 12;
+            _iterator2 = apiInfo.methods[Symbol.iterator]();
+
+          case 14:
+            if (_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done) {
+              _context6.next = 23;
+              break;
+            }
+
+            method = _step2.value;
+
+            if (!(method.name === methodName)) {
+              _context6.next = 20;
+              break;
+            }
+
+            dataPointIN = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsIn"])(element, method.parameter.length);
+            dataPointOut = Object(_renderPointsWhenSave__WEBPACK_IMPORTED_MODULE_0__["createConnectingPointsOut"])(element, method.output.length);
+            return _context6.abrupt("break", 23);
+
+          case 20:
+            _iteratorNormalCompletion2 = true;
+            _context6.next = 14;
+            break;
+
+          case 23:
+            _context6.next = 29;
+            break;
+
+          case 25:
+            _context6.prev = 25;
+            _context6.t0 = _context6["catch"](12);
+            _didIteratorError2 = true;
+            _iteratorError2 = _context6.t0;
+
+          case 29:
+            _context6.prev = 29;
+            _context6.prev = 30;
+
+            if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
+              _iterator2["return"]();
+            }
+
+          case 32:
+            _context6.prev = 32;
+
+            if (!_didIteratorError2) {
+              _context6.next = 35;
+              break;
+            }
+
+            throw _iteratorError2;
+
+          case 35:
+            return _context6.finish(32);
+
+          case 36:
+            return _context6.finish(29);
+
+          case 37:
+            element.setAttribute("_dataPointIn", JSON.stringify(dataPointIN));
+            element.setAttribute("_dataPointOut", JSON.stringify(dataPointOut));
+
+          case 39:
+          case "end":
+            return _context6.stop();
+        }
+      }
+    }, _callee6, null, [[12, 25, 29, 37], [30,, 32, 36]]);
+  }));
+  return _saveObject.apply(this, arguments);
+}
+
+function removeManu(_x13, _x14) {
+  return _removeManu.apply(this, arguments);
+}
+
+function _removeManu() {
+  _removeManu = _asyncToGenerator(
+  /*#__PURE__*/
+  regeneratorRuntime.mark(function _callee7(manuBg, man) {
+    return regeneratorRuntime.wrap(function _callee7$(_context7) {
+      while (1) {
+        switch (_context7.prev = _context7.next) {
+          case 0:
+            document.body.removeChild(manuBg);
+            document.body.removeChild(man);
+
+          case 2:
+          case "end":
+            return _context7.stop();
+        }
+      }
+    }, _callee7);
+  }));
+  return _removeManu.apply(this, arguments);
+}
+
+function deleteElement(_x15) {
+  return _deleteElement.apply(this, arguments);
+}
+
+function _deleteElement() {
+  _deleteElement = _asyncToGenerator(
+  /*#__PURE__*/
+  regeneratorRuntime.mark(function _callee8(element) {
+    var points, workspace, _iteratorNormalCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, point, line, _line;
+
+    return regeneratorRuntime.wrap(function _callee8$(_context8) {
+      while (1) {
+        switch (_context8.prev = _context8.next) {
+          case 0:
+            console.log(element.id);
+            points = element.childNodes;
+            workspace = document.getElementById("dragging-frame-main");
+            _iteratorNormalCompletion3 = true;
+            _didIteratorError3 = false;
+            _iteratorError3 = undefined;
+            _context8.prev = 6;
+
+            for (_iterator3 = points[Symbol.iterator](); !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+              point = _step3.value;
+
+              if (point.classList.contains('dragging-icon-connecting-point-position-in')) {
+                line = document.querySelector("[_to='" + point.id + "']");
+
+                if (line !== null) {
+                  workspace.removeChild(line);
+                }
+              }
+
+              if (point.classList.contains('dragging-icon-connecting-point-position-out')) {
+                _line = document.querySelector("[_from='" + point.id + "']");
+
+                if (_line !== null) {
+                  workspace.removeChild(_line);
+                }
+              }
+            }
+
+            _context8.next = 14;
+            break;
+
+          case 10:
+            _context8.prev = 10;
+            _context8.t0 = _context8["catch"](6);
+            _didIteratorError3 = true;
+            _iteratorError3 = _context8.t0;
+
+          case 14:
+            _context8.prev = 14;
+            _context8.prev = 15;
+
+            if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
+              _iterator3["return"]();
+            }
+
+          case 17:
+            _context8.prev = 17;
+
+            if (!_didIteratorError3) {
+              _context8.next = 20;
+              break;
+            }
+
+            throw _iteratorError3;
+
+          case 20:
+            return _context8.finish(17);
+
+          case 21:
+            return _context8.finish(14);
+
+          case 22:
+            workspace.removeChild(element);
+
+          case 23:
+          case "end":
+            return _context8.stop();
+        }
+      }
+    }, _callee8, null, [[6, 10, 14, 22], [15,, 17, 21]]);
+  }));
+  return _deleteElement.apply(this, arguments);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (manuForTool);

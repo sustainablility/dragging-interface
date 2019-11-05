@@ -1,22 +1,23 @@
 #dragging-frame {
   position: absolute;
-  display: flex;
-  left: 10rem;
-  top: 10rem;
+  display: block;
   width: 50rem;
   height: 30rem;
   border: 0.1em #000 solid;
 }
 #dragging-frame-side {
-  position: relative;
+  position: absolute;
+  top: 11%;
   width: 20%;
-  height: 100%;
+  height: 89%;
   border: 0.1em #AAA solid;
 }
 #dragging-frame-main {
-  position: relative;
+  position: absolute;
+  top: 11%;
+  left: 20%;
   width: 80%;
-  height: 100%;
+  height: 89%;
   border: 0.1em #AAA solid;
 }
 
@@ -25,6 +26,5 @@
   border: 0.1em #AAA solid;
   height: 10%;
   width: 100%;
-  top: -11%;
   left: -0.1em;
 }

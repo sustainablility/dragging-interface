@@ -2,7 +2,7 @@ import {createConnectingPointsIn, createConnectingPointsOut} from "./renderPoint
 import removeConnectingPoints from "../connectingLine/removeConnectingPoint";
 import getDataViaAPI from '../../ajax/getDataViaAPI';
 
-function manuForTool(locationX, locationY, element) {
+async function manuForTool(locationX, locationY, element) {
     let man = document.createElement("div");
     let manuBg = document.createElement("div");
     man.classList.add("dragging-icon-rightClick-manu");
@@ -66,25 +66,27 @@ function manuForTool(locationX, locationY, element) {
     };
 }
 
-function apiTest(manu) {
+async function apiTest(manu) {
     let apiUrl = manu.getElementsByClassName("dragging-rightClick-input")[0];
-    let apiInfo = getDataViaAPI(apiUrl.value);
-    if (apiInfo !== null) {
+    let apiInfo = await getDataViaAPI(apiUrl.value).catch((err) => {
+        console.log(err);
+    });
+    if (apiInfo !== undefined) {
         return apiInfo;
     }else {
         return null;
     }
 }
 
-function checkButtonAction(manu, element) {
-    let apiInfo = apiTest(manu);
+async function checkButtonAction(manu, element) {
+    let apiInfo = await apiTest(manu);
     if (apiInfo !== null) {
         manu.getElementsByClassName("dragging-rightClick-testButton")[0].innerHTML = "It works";
-        renderMethodSelection(manu, apiInfo.methods, element);
+        await renderMethodSelection(manu, apiInfo.methods, element);
     }
 }
 
-function renderMethodSelection(manu, methodList, element) {
+async function renderMethodSelection(manu, methodList, element) {
     let row = document.createElement("div");
     row.classList.add("dragging-icon-rightClick-manu-row");
     manu.append(row);
@@ -115,7 +117,7 @@ function renderMethodSelection(manu, methodList, element) {
     manu.append(row);
 }
 
-function renderAPIInputBox(manu) {
+async function renderAPIInputBox(manu) {
     let anotherRow = document.createElement("div");
     anotherRow.id = "dragging-annotherRow";
     anotherRow.classList.add("dragging-icon-rightClick-manu-row");
@@ -134,9 +136,9 @@ function renderAPIInputBox(manu) {
 }
 
 
-function saveObject(manu, element) {
+async function saveObject(manu, element) {
     removeConnectingPoints(element);
-    let apiInfo = apiTest(manu);
+    let apiInfo = await apiTest(manu);
     let dataPointIN;
     let dataPointOut;
     if (apiInfo !== null) {
@@ -157,12 +159,12 @@ function saveObject(manu, element) {
     }
 }
 
-function removeManu(manuBg,man) {
+async function removeManu(manuBg,man) {
     document.body.removeChild(manuBg);
     document.body.removeChild(man);
 }
 
-function deleteElement(element) {
+async function deleteElement(element) {
     console.log(element.id);
     let points = element.childNodes;
     let workspace = document.getElementById("dragging-frame-main");

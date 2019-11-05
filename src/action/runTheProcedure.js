@@ -2,6 +2,7 @@ import getDataViaAPI from '../ajax/getDataViaAPI';
 import {cacheAPIGetData} from '../config';
 import runToolByAPI from '../ajax/runToolByAPI';
 import putDataToCache from '../ajax/cache/putDataToCache';
+import outputProcedureResult from "./outputProcedureResult";
 async function runTheProcedure(workspace) {
 
     let que = [];
@@ -63,8 +64,10 @@ async function runTheProcedure(workspace) {
                     let urlFromPoint = point.getAttribute("_result");
                     pointInDataList.push(urlFromPoint);
                 }
-                let result = runToolByAPI(element.getAttribute("_toolapi"), pointInDataList);
-                if(result == null) {
+                let result = await runToolByAPI(element.getAttribute("_toolapi"), pointInDataList).catch(err => {
+                    console.log(err);
+                });
+                if(result === undefined) {
                     console.log("Tool Error");
                     break;
                 }
@@ -82,11 +85,11 @@ async function runTheProcedure(workspace) {
             case "output":
                 if (element.getAttribute("_usefor") === "odas") {
                     let dataInElement = element.getElementsByClassName("dragging-icon-connecting-point-position-in")[0];
-                    console.log(dataInElement.getAttribute("_result"));
+                    outputProcedureResult(dataInElement.getAttribute("_result"));
                     break;
                 }else if (element.getAttribute("_usefor") === "odac"){
                     let dataInElement = element.getElementsByClassName("dragging-icon-connecting-point-position-in")[0];
-                    console.log(dataInElement.getAttribute("_result"));
+                    outputProcedureResult(dataInElement.getAttribute("_result"));
                     let dest = getConnectingElements(workspace, element)[0];
                     let destPoint = dest[0];
                     let destElement = dest[1];

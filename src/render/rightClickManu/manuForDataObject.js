@@ -166,7 +166,7 @@ function renderCustomizedDataBox(manu,element) {
     manu.append(anotherRow);
 }
 
-function saveObject(manu, element) {
+async function saveObject(manu, element) {
     let tempDataType = element.getAttribute("_dataType_temp");
     if (tempDataType === null || tempDataType === "") {
         return null;
@@ -176,9 +176,12 @@ function saveObject(manu, element) {
     switch (tempDataType) {
         case "api":
             let apiInputBox = manu.getElementsByClassName("dragging-rightClick-input")[0];
-            let apiData = getDataViaAPI(apiInputBox.value);
-            if (apiData !== null) {
-                let apiURL = document.getElementsByClassName("dragging-rightClick-input")[0].value;
+            let apiInputValue = apiInputBox.value;
+            let apiData = await getDataViaAPI(apiInputValue).catch((e) => {
+                console.log(e);
+            });
+            if (apiData !== undefined) {
+                let apiURL = apiInputValue;
                 if (apiURL !== null) {
                     element.setAttribute("_dataAPI",apiURL);
                 }

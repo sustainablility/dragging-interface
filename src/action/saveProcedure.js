@@ -1,6 +1,7 @@
-import saveProcedureToBackEnd from '../ajax/saveProcedure';
 function saveProcedure(workspace) {
-    saveProcedureToBackEnd(window.draggingInterface.procedureName,window.draggingInterface.userToken,workspace.innerHTML);
+    if (window["draggingInterfaceLib"].cbForSavingProcedure !== undefined) {
+        window["draggingInterfaceLib"].cbForSavingProcedure(workspace.innerHTML);
+    }
 }
 
 export default saveProcedure;
