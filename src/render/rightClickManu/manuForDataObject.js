@@ -83,6 +83,21 @@ function manuForData(locationX, locationY, element) {
 
     row2.append(useForSelector);
 
+    if (element.getAttribute("_dataType") !== undefined) {
+        switch (element.getAttribute("_dataType")) {
+            case "api":
+                selectorOptionAPI.selected = true;
+                break;
+            case "output":
+                selectorOptionOutputData.selected = true;
+                break;
+            case "custom":
+                selectorOptionCustom.selected = true;
+                break;
+
+        }
+    }
+
     // End of row 2
     // ---------------------------------------------
 

@@ -75,12 +75,30 @@ function manuForOutput(locationX, locationY, element) {
     selectorOptionOutputAndContinue.value = "odac";
     useForSelector.append(selectorOptionOutputAndContinue);
 
+    switch (element.getAttribute("_usefor")) {
+        case "odas":
+            selectorOptionOutputAndStop.selected = true;
+            break;
+        case "odac":
+            selectorOptionOutputAndContinue.selected = true;
+    }
+
+
 
 
     row2.append(useForSelector);
 
     // End of row 2
     // ---------------------------------------------
+
+    if (element.getAttribute("_result") !== null) {
+        let row3 = document.createElement("div");
+        row3.classList.add("dragging-icon-rightClick-manu-row");
+        row3.innerText = element.getAttribute("_result");
+        man.append(row3);
+
+    }
+
 
     document.body.append(man);
     document.body.append(manuBg);

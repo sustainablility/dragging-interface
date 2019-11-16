@@ -43,7 +43,7 @@ async function manuForTool(locationX, locationY, element) {
     // ----------------------------------------------------------
 
     // Render Row 2
-    renderAPIInputBox(man);
+    renderAPIInputBox(man, element);
 
     // Render Row 3
 
@@ -104,6 +104,11 @@ async function renderMethodSelection(manu, methodList, element) {
     methodSelect.append(defaultOption);
     for (let method of methodList) {
         let methodOption = document.createElement("option");
+        if (element.getAttribute("_method") !== undefined) {
+            if (element.getAttribute("_method") === method.name) {
+                methodOption.selected = true;
+            }
+        }
         methodOption.innerText = method.name;
         methodOption.value = method.name;
         methodSelect.append(methodOption);
@@ -117,7 +122,7 @@ async function renderMethodSelection(manu, methodList, element) {
     manu.append(row);
 }
 
-async function renderAPIInputBox(manu) {
+async function renderAPIInputBox(manu, element) {
     let anotherRow = document.createElement("div");
     anotherRow.id = "dragging-annotherRow";
     anotherRow.classList.add("dragging-icon-rightClick-manu-row");
@@ -129,6 +134,9 @@ async function renderAPIInputBox(manu) {
 
     let apiInput = document.createElement("input");
     apiInput.classList.add("dragging-rightClick-input");
+    if (element.getAttribute("_toolApi") !== undefined) {
+        apiInput.value = element.getAttribute("_toolApi");
+    }
     apiInput.type = "text";
 
     anotherRow.append(apiInput);

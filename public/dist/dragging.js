@@ -12256,13 +12256,13 @@ function _runTheProcedure() {
 
           case 42:
             if (!(que.length > 0)) {
-              _context.next = 91;
+              _context.next = 92;
               break;
             }
 
             element = que.shift();
             _context.t2 = element.getAttribute("_type");
-            _context.next = _context.t2 === "data" ? 47 : _context.t2 === "tool" ? 50 : _context.t2 === "output" ? 82 : 89;
+            _context.next = _context.t2 === "data" ? 47 : _context.t2 === "tool" ? 50 : _context.t2 === "output" ? 82 : 90;
             break;
 
           case 47:
@@ -12302,7 +12302,7 @@ function _runTheProcedure() {
             }
 
             console.log("Done Data");
-            return _context.abrupt("break", 89);
+            return _context.abrupt("break", 90);
 
           case 50:
             pointInIDList = JSON.parse(element.getAttribute("_datapointin"));
@@ -12368,7 +12368,7 @@ function _runTheProcedure() {
             }
 
             console.log("Tool Error");
-            return _context.abrupt("break", 89);
+            return _context.abrupt("break", 90);
 
           case 78:
             connectingElements = getConnectingElements(workspace, element);
@@ -12382,21 +12382,23 @@ function _runTheProcedure() {
             }
 
             console.log("Done Tool");
-            return _context.abrupt("break", 89);
+            return _context.abrupt("break", 90);
 
           case 82:
             if (!(element.getAttribute("_usefor") === "odas")) {
-              _context.next = 88;
+              _context.next = 89;
               break;
             }
 
             _dataInElement = element.getElementsByClassName("dragging-icon-connecting-point-position-in")[0];
+            element.setAttribute("_result", _dataInElement.getAttribute("_result"));
             Object(_outputProcedureResult__WEBPACK_IMPORTED_MODULE_4__["default"])(_dataInElement.getAttribute("_result"));
-            return _context.abrupt("break", 89);
+            return _context.abrupt("break", 90);
 
-          case 88:
+          case 89:
             if (element.getAttribute("_usefor") === "odac") {
               _dataInElement2 = element.getElementsByClassName("dragging-icon-connecting-point-position-in")[0];
+              element.setAttribute("_result", _dataInElement2.getAttribute("_result"));
               Object(_outputProcedureResult__WEBPACK_IMPORTED_MODULE_4__["default"])(_dataInElement2.getAttribute("_result"));
               _dest = getConnectingElements(workspace, element)[0];
               _destPoint = _dest[0];
@@ -12411,11 +12413,11 @@ function _runTheProcedure() {
               }
             }
 
-          case 89:
+          case 90:
             _context.next = 42;
             break;
 
-          case 91:
+          case 92:
           case "end":
             return _context.stop();
         }
@@ -13423,8 +13425,25 @@ function manuForData(locationX, locationY, element) {
   selectorOptionCustom.innerText = "Custom Data";
   selectorOptionCustom.value = "custom";
   useForSelector.append(selectorOptionCustom);
-  row2.append(useForSelector); // End of row 2
+  row2.append(useForSelector);
+
+  if (element.getAttribute("_dataType") !== undefined) {
+    switch (element.getAttribute("_dataType")) {
+      case "api":
+        selectorOptionAPI.selected = true;
+        break;
+
+      case "output":
+        selectorOptionOutputData.selected = true;
+        break;
+
+      case "custom":
+        selectorOptionCustom.selected = true;
+        break;
+    }
+  } // End of row 2
   // ---------------------------------------------
+
 
   useForSelector.onchange = function () {
     var anotherRow = document.getElementById("dragging-annotherRow");
@@ -13715,8 +13734,25 @@ function manuForOutput(locationX, locationY, element) {
   selectorOptionOutputAndContinue.innerText = "Output Data and Continue";
   selectorOptionOutputAndContinue.value = "odac";
   useForSelector.append(selectorOptionOutputAndContinue);
+
+  switch (element.getAttribute("_usefor")) {
+    case "odas":
+      selectorOptionOutputAndStop.selected = true;
+      break;
+
+    case "odac":
+      selectorOptionOutputAndContinue.selected = true;
+  }
+
   row2.append(useForSelector); // End of row 2
   // ---------------------------------------------
+
+  if (element.getAttribute("_result") !== null) {
+    var row3 = document.createElement("div");
+    row3.classList.add("dragging-icon-rightClick-manu-row");
+    row3.innerText = element.getAttribute("_result");
+    man.append(row3);
+  }
 
   document.body.append(man);
   document.body.append(manuBg);
@@ -14056,7 +14092,7 @@ function _manuForTool() {
             // ----------------------------------------------------------
             // Render Row 2
 
-            renderAPIInputBox(man); // Render Row 3
+            renderAPIInputBox(man, element); // Render Row 3
 
             row3 = document.createElement("div");
             row3.classList.add("dragging-icon-rightClick-manu-row");
@@ -14202,6 +14238,13 @@ function _renderMethodSelection() {
             for (_iterator = methodList[Symbol.iterator](); !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
               method = _step.value;
               methodOption = document.createElement("option");
+
+              if (element.getAttribute("_method") !== undefined) {
+                if (element.getAttribute("_method") === method.name) {
+                  methodOption.selected = true;
+                }
+              }
+
               methodOption.innerText = method.name;
               methodOption.value = method.name;
               methodSelect.append(methodOption);
@@ -14258,14 +14301,14 @@ function _renderMethodSelection() {
   return _renderMethodSelection.apply(this, arguments);
 }
 
-function renderAPIInputBox(_x10) {
+function renderAPIInputBox(_x10, _x11) {
   return _renderAPIInputBox.apply(this, arguments);
 }
 
 function _renderAPIInputBox() {
   _renderAPIInputBox = _asyncToGenerator(
   /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee5(manu) {
+  regeneratorRuntime.mark(function _callee5(manu, element) {
     var anotherRow, apiWord, apiInput;
     return regeneratorRuntime.wrap(function _callee5$(_context5) {
       while (1) {
@@ -14280,11 +14323,16 @@ function _renderAPIInputBox() {
             anotherRow.append(apiWord);
             apiInput = document.createElement("input");
             apiInput.classList.add("dragging-rightClick-input");
+
+            if (element.getAttribute("_toolApi") !== undefined) {
+              apiInput.value = element.getAttribute("_toolApi");
+            }
+
             apiInput.type = "text";
             anotherRow.append(apiInput);
             manu.append(anotherRow);
 
-          case 12:
+          case 13:
           case "end":
             return _context5.stop();
         }
@@ -14294,7 +14342,7 @@ function _renderAPIInputBox() {
   return _renderAPIInputBox.apply(this, arguments);
 }
 
-function saveObject(_x11, _x12) {
+function saveObject(_x12, _x13) {
   return _saveObject.apply(this, arguments);
 }
 
@@ -14400,7 +14448,7 @@ function _saveObject() {
   return _saveObject.apply(this, arguments);
 }
 
-function removeManu(_x13, _x14) {
+function removeManu(_x14, _x15) {
   return _removeManu.apply(this, arguments);
 }
 
@@ -14425,7 +14473,7 @@ function _removeManu() {
   return _removeManu.apply(this, arguments);
 }
 
-function deleteElement(_x15) {
+function deleteElement(_x16) {
   return _deleteElement.apply(this, arguments);
 }
 
